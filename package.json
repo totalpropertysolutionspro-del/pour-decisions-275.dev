@@ -2,5 +2,6 @@
   "name": "pour-decisions",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Pour Decisions Juice Bar — Albany NY"
 }
