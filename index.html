@@ -9,9 +9,9 @@
 <meta name="apple-mobile-web-app-title" content="Pour Decisions" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="format-detection" content="telephone=yes" />
-<meta name="description" content="Pour Decisions — cold-pressed juice, smoothies & shots in Albany NY. Order ahead, book packages, earn Pour Pass rewards." />
+<meta name="description" content="Pour Decisions — cold-pressed juices, smoothies, wellness shots, salads & wraps in Albany NY. Order ahead, book packages, earn Pour Pass rewards." />
 <meta property="og:title" content="Pour Decisions — Order Ahead" />
-<meta property="og:description" content="Cold-pressed juice and clean fuel · 348 Loudon Rd, Albany NY" />
+<meta property="og:description" content="Cold-pressed juice, smoothies, salads & wraps · 359 Broadway Blvd, Albany NY" />
 <meta property="og:image" content="assets/og-image.png" />
 <meta property="og:type" content="website" />
 <title>Pour Decisions — Cold-Pressed Juice · Albany NY</title>
@@ -184,16 +184,16 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .menu-card .macros{display:flex;gap:6px;flex-wrap:wrap;font-family:var(--f-num);font-size:13px;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:6px;}
 .menu-card .macros span{display:inline-flex;align-items:center;gap:3px}
 .menu-card .macros .dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.45}
-.menu-card[data-cat="greens"] .img{background-color:#d9f99d}
-.menu-card[data-cat="citrus"] .img{background-color:#fed7aa}
-.menu-card[data-cat="roots"] .img{background-color:#fbcfe8}
+.menu-card[data-cat="juices"] .img{background-color:#d9f99d}
 .menu-card[data-cat="smoothies"] .img{background-color:#fef08a}
 .menu-card[data-cat="shots"] .img{background-color:#a5f3fc}
-.menu-card[data-cat="greens"] .add{background:var(--lime);color:var(--teal-deep)}
-.menu-card[data-cat="citrus"] .add{background:var(--orange);color:#fff}
-.menu-card[data-cat="roots"] .add{background:var(--pink);color:#fff}
+.menu-card[data-cat="salads"] .img{background-color:#bbf7d0}
+.menu-card[data-cat="wraps"] .img{background-color:#fed7aa}
+.menu-card[data-cat="juices"] .add{background:var(--lime);color:var(--teal-deep)}
 .menu-card[data-cat="smoothies"] .add{background:var(--yellow);color:var(--teal-deep)}
 .menu-card[data-cat="shots"] .add{background:var(--cyan);color:var(--teal-deep)}
+.menu-card[data-cat="salads"] .add{background:#22c55e;color:#fff}
+.menu-card[data-cat="wraps"] .add{background:var(--orange);color:#fff}
 
 /* SHEET */
 .scrim{position:fixed;inset:0;z-index:120;background:rgba(20,50,65,.55);opacity:0;visibility:hidden;transition:opacity .25s ease, visibility .25s ease}
@@ -221,7 +221,20 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .size-opt .price{display:block;font-family:var(--f-num);font-size:18px;margin-top:2px}
 .boost-row{display:flex;gap:8px;flex-wrap:wrap}
 .boost{padding:9px 14px;border-radius:var(--r-pill);background:#fff;border:2px solid var(--line);font-size:13px;font-weight:700;color:var(--teal)}
+.boost b{font-family:var(--f-num);font-weight:800;opacity:.6;margin-left:2px}
 .boost.active{background:var(--gold);border-color:var(--gold-deep);color:var(--teal-deep)}
+.boost.active b{opacity:.85}
+/* Combos */
+.combo-head{padding:4px 16px 8px}
+.combo-head h3{font-size:20px;color:var(--teal-deep);margin-top:2px}
+.combo-row{display:flex;gap:12px;overflow-x:auto;padding:0 16px 16px;scrollbar-width:none}
+.combo-row::-webkit-scrollbar{display:none}
+.combo-card{flex:0 0 78%;max-width:300px;display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));color:#fff;border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--shadow-card)}
+.combo-ico{font-size:28px;flex:0 0 auto}
+.combo-info{flex:1;min-width:0}
+.combo-info h4{font-size:15px;font-weight:800;margin-bottom:2px}
+.combo-info p{font-size:12px;line-height:1.35;color:rgba(255,255,255,.82)}
+.combo-price{flex:0 0 auto;font-family:var(--f-num);font-size:26px;font-weight:800;color:var(--gold)}
 .sheet-footer{padding:14px 16px calc(16px + var(--safe-bot));border-top:1px solid var(--line);background:var(--cream);display:flex;gap:12px;align-items:center;}
 .qty-stepper{display:flex;align-items:center;gap:4px;background:#fff;border-radius:var(--r-pill);box-shadow:var(--shadow-card);padding:4px}
 .qty-stepper button{width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:18px}
@@ -505,10 +518,10 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     </div>
   </div>
   <div class="quick-actions" style="grid-template-columns:repeat(5,1fr)">
-    <button class="qa" style="background:linear-gradient(180deg,#d9f99d,#a3e635);color:var(--teal-deep)" data-route="menu" data-cat="greens"><span class="ico">🌿</span><span>Greens</span></button>
-    <button class="qa" style="background:linear-gradient(180deg,#fed7aa,#fb923c);color:#fff" data-route="menu" data-cat="citrus"><span class="ico">🍊</span><span>Citrus</span></button>
-    <button class="qa" style="background:linear-gradient(180deg,#fbcfe8,#ec4899);color:#fff" data-route="menu" data-cat="roots"><span class="ico">🥕</span><span>Roots</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#d9f99d,#a3e635);color:var(--teal-deep)" data-route="menu" data-cat="juices"><span class="ico">🥤</span><span>Juices</span></button>
     <button class="qa" style="background:linear-gradient(180deg,#fef08a,#facc15);color:var(--teal-deep)" data-route="menu" data-cat="smoothies"><span class="ico">🍓</span><span>Smoothie</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#bbf7d0,#22c55e);color:#fff" data-route="menu" data-cat="salads"><span class="ico">🥗</span><span>Salads</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#fed7aa,#fb923c);color:#fff" data-route="menu" data-cat="wraps"><span class="ico">🌯</span><span>Wraps</span></button>
     <button class="qa" style="background:linear-gradient(180deg,#a5f3fc,#22d3ee);color:var(--teal-deep)" data-route="menu" data-cat="shots"><span class="ico">⚡</span><span>Shots</span></button>
   </div>
 
@@ -539,9 +552,10 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <img src="assets/logo-pour-decisions.png" alt="Pour Decisions" />
     <p class="tag">Pour with purpose.</p>
     <p class="info">
-      348 Loudon Rd, Albany NY 12211<br/>
+      359 Broadway Blvd, Albany NY 12204<br/>
       <a href="tel:+15185557687">(518) 555-POUR</a> · Open 7AM – 7PM<br/>
-      <a href="mailto:hello@pourdecisions.co">hello@pourdecisions.co</a>
+      <a href="mailto:hello@pourdecisions.co">hello@pourdecisions.co</a><br/>
+      Delivery on DoorDash &amp; Uber Eats
     </p>
     <p class="small">© 2026 POUR DECISIONS LLC · MADE IN ALBANY</p>
   </footer>
@@ -552,16 +566,17 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div class="container" style="padding-top:14px">
     <div class="eyebrow">The Pour Menu</div>
     <h1 style="font-size:clamp(34px,9vw,52px)">Fresh, every <em>damn</em> day.</h1>
-    <p style="color:var(--ink-soft);margin:8px 0 16px;font-size:14px">Cold-pressed in-house. Calorie & macros on every pour.</p>
+    <p style="color:var(--ink-soft);margin:8px 0 16px;font-size:14px">Cold-pressed juices, smoothies, salads & wraps — made fresh daily.</p>
   </div>
   <div class="cat-strip" id="cat-strip">
     <button class="cat-chip active" data-cat="all"><span class="swatch" style="background:var(--teal)"></span>All</button>
-    <button class="cat-chip" data-cat="greens"><span class="swatch" style="background:var(--lime)"></span>Greens</button>
-    <button class="cat-chip" data-cat="citrus"><span class="swatch" style="background:var(--orange)"></span>Citrus</button>
-    <button class="cat-chip" data-cat="roots"><span class="swatch" style="background:var(--pink)"></span>Roots</button>
+    <button class="cat-chip" data-cat="juices"><span class="swatch" style="background:var(--lime)"></span>Juices</button>
     <button class="cat-chip" data-cat="smoothies"><span class="swatch" style="background:var(--yellow)"></span>Smoothies</button>
+    <button class="cat-chip" data-cat="salads"><span class="swatch" style="background:#22c55e"></span>Salads</button>
+    <button class="cat-chip" data-cat="wraps"><span class="swatch" style="background:var(--orange)"></span>Wraps</button>
     <button class="cat-chip" data-cat="shots"><span class="swatch" style="background:var(--cyan)"></span>Shots</button>
   </div>
+  <div id="combo-strip"></div>
   <div class="menu-grid" id="menu-grid"></div>
 </section>
 
@@ -586,7 +601,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <button class="pickup-opt active" data-pickup="asap"><div class="l">ASAP</div><div class="v">~12 min</div></button>
       <button class="pickup-opt" data-pickup="schedule"><div class="l">Schedule</div><div class="v">Pick a time</div></button>
     </div>
-    <div class="field"><label>Pickup location</label><select><option>348 Loudon Rd, Albany NY (Default)</option></select></div>
+    <div class="field"><label>Pickup location</label><select><option>359 Broadway Blvd, Albany NY (Default)</option></select></div>
   </div>
   <div class="checkout-section">
     <h3>Your info</h3>
@@ -626,7 +641,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <p>Ready in ~12 minutes</p>
   </div>
   <div class="confirm-info">
-    <div class="info-row"><span>Pickup</span><strong>348 Loudon Rd</strong></div>
+    <div class="info-row"><span>Pickup</span><strong>359 Broadway Blvd</strong></div>
     <div class="info-row"><span>Order #</span><strong id="conf-num-2">PD-1042</strong></div>
     <div class="info-row"><span>Total</span><strong id="conf-total">$0.00</strong></div>
     <div class="info-row"><span>Pour Pass</span><strong>+1 stamp · 6/9</strong></div>
@@ -669,7 +684,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </div>
   <div class="section-h"><h2 style="font-size:24px">Rewards Vault</h2></div>
   <div class="reward-grid">
-    <div class="reward"><div class="hd"><span class="ico">🥤</span><h4>Free 16oz Pour</h4></div><p>Any green or citrus juice</p><span class="pts">FREE @ 9</span></div>
+    <div class="reward"><div class="hd"><span class="ico">🥤</span><h4>Free 16oz Pour</h4></div><p>Any signature juice</p><span class="pts">FREE @ 9</span></div>
     <div class="reward"><div class="hd"><span class="ico">🎁</span><h4>Birthday Bottle</h4></div><p>32oz on your big day</p><span class="pts">UNLOCKED</span></div>
     <div class="reward"><div class="hd"><span class="ico">⚡</span><h4>2x Stamp Tuesday</h4></div><p>Double up every Tuesday</p><span class="pts">ACTIVE</span></div>
     <div class="reward locked"><div class="hd"><span class="ico">👑</span><h4>VIP Tier</h4></div><p>$200 spend unlocks 15% off</p><span class="pts">$140 / $200</span></div>
@@ -766,7 +781,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </div>
   <div class="checkout-section">
     <div class="field"><label>First delivery / pickup date</label><input type="date" id="pkg-date" /></div>
-    <div class="field"><label>Delivery zip (or pickup)</label><input type="text" placeholder="12211 or 'pickup'" /></div>
+    <div class="field"><label>Delivery zip (or pickup)</label><input type="text" placeholder="12204 or 'pickup'" /></div>
     <div class="field"><label>Anything we should know?</label><textarea rows="2" placeholder="Allergies, occasion, etc."></textarea></div>
   </div>
   <div class="container" style="padding-bottom:20px">
@@ -837,7 +852,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <div class="eyebrow">Ingredients</div>
       <div class="ingredients" id="sheet-ing"></div>
     </div>
-    <div class="opt-group">
+    <div class="opt-group" id="size-group">
       <label>Size</label>
       <div class="size-grid" id="size-grid">
         <div class="size-opt" data-size="12">12oz<span class="price">$8</span></div>
@@ -845,14 +860,15 @@ h3{font-size:22px;font-weight:700;font-style:italic}
         <div class="size-opt" data-size="32">32oz<span class="price">$18</span></div>
       </div>
     </div>
-    <div class="opt-group">
-      <label>Boost it</label>
+    <div class="opt-group" id="boost-group">
+      <label>Add-ons</label>
       <div class="boost-row" id="boost-row">
-        <button class="boost" data-boost="ginger">+ Ginger</button>
-        <button class="boost" data-boost="turmeric">+ Turmeric</button>
-        <button class="boost" data-boost="protein">+ Protein</button>
-        <button class="boost" data-boost="collagen">+ Collagen</button>
-        <button class="boost" data-boost="cbd">+ CBD</button>
+        <button class="boost" data-boost="avocado">+ Avocado <b>$2</b></button>
+        <button class="boost" data-boost="protein">+ Protein Powder <b>$3</b></button>
+        <button class="boost" data-boost="chia">+ Chia Seeds <b>$1</b></button>
+        <button class="boost" data-boost="hemp">+ Hemp Seeds <b>$2</b></button>
+        <button class="boost" data-boost="flax">+ Flax Seeds <b>$1</b></button>
+        <button class="boost" data-boost="fruit">+ Extra Fruit <b>$2</b></button>
       </div>
     </div>
   </div>
@@ -888,82 +904,131 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 
 const PIC = (id) => `https://images.unsplash.com/${id}?w=600&q=70&auto=format&fit=crop`;
 
+// Menu mirrors the in-store Pour Decisions menu board.
+// Juices & smoothies are sized (12/16/32oz); shots, salads & wraps are single-serve (sizes:false).
 const MENU = [
-  {id:'green-reign',name:'Green Reign',cat:'greens',price:11,
-   ing:['kale','spinach','cucumber','green apple','lemon','ginger'],
-   desc:'Cold-pressed leafy fuel. The morning power move.',
-   macros:{cal:140,protein:6,carbs:30,fat:0,sugar:18},
+  // ── SIGNATURE JUICES ──
+  {id:'green-machine',name:'Green Machine',cat:'juices',price:9,
+   ing:['kale','spinach','cucumber','celery','green apple','lemon'],
+   desc:'Refreshing, hydrating, and nutrient-rich. The morning power move.',
+   macros:{cal:120,protein:4,carbs:26,fat:0,sugar:16},
    img:PIC('photo-1610970881699-44a5587cabec')},
-  {id:'celery-clean',name:'Celery Clean',cat:'greens',price:9,
-   ing:['celery','parsley','lemon','green apple'],
-   desc:'A bright-green hydration reset.',
-   macros:{cal:80,protein:4,carbs:18,fat:0,sugar:10},
-   img:PIC('photo-1622485482518-2b5c40f4d9b9')},
-  {id:'matcha-mojo',name:'Matcha Mojo',cat:'greens',price:10,
-   ing:['matcha','spinach','banana','almond milk','honey'],
-   desc:'Slow-burn caffeine, smooth as it gets.',
-   macros:{cal:220,protein:8,carbs:36,fat:6,sugar:24},
-   img:PIC('photo-1545518514-ce8448f542b3')},
-  {id:'pina-power',name:'Pina Power',cat:'citrus',price:10,
-   ing:['pineapple','orange','turmeric','lemon','black pepper'],
-   desc:"Pina the pineapple's signature pour. Anti-inflammatory glow.",
-   macros:{cal:170,protein:2,carbs:42,fat:0,sugar:34},
-   img:PIC('photo-1546173159-315724a31696')},
-  {id:'sunrise-citrus',name:'Sunrise Citrus',cat:'citrus',price:9,
-   ing:['orange','grapefruit','carrot','lemon'],
-   desc:'Liquid sunshine. Vitamin C plus beta-carotene.',
-   macros:{cal:160,protein:3,carbs:38,fat:0,sugar:30},
-   img:PIC('photo-1613478223719-2ab802602423')},
-  {id:'lemon-snap',name:'Lemon Snap',cat:'citrus',price:8,
-   ing:['lemon','green apple','mint','cayenne','agave'],
-   desc:'Tart, sweet, with a slow burn. Wakes you up clean.',
-   macros:{cal:120,protein:1,carbs:30,fat:0,sugar:24},
-   img:PIC('photo-1437418747212-8d9709afab22')},
-  {id:'beet-the-day',name:'Beet The Day',cat:'roots',price:11,
-   ing:['beet','carrot','apple','ginger','lemon'],
-   desc:'Endurance in a bottle. Earthy, sweet, unmistakable.',
-   macros:{cal:180,protein:3,carbs:42,fat:0,sugar:32},
-   img:PIC('photo-1618556658017-fd80b6f8b94c')},
-  {id:'turmeric-tonic',name:'Turmeric Tonic',cat:'roots',price:10,
-   ing:['turmeric','carrot','orange','ginger','black pepper'],
-   desc:'Anti-inflammatory glow tonic. Bright and warm.',
-   macros:{cal:150,protein:2,carbs:34,fat:0,sugar:26},
-   img:PIC('photo-1546039907-7fa05f864c02')},
-  {id:'carrot-glow',name:'Carrot Glow',cat:'roots',price:9,
-   ing:['carrot','apple','ginger','lemon'],
-   desc:'A skin-loving classic. Sweet and approachable.',
+  {id:'sunrise-boost',name:'Sunrise Boost',cat:'juices',price:9,
+   ing:['orange','pineapple','carrot','ginger'],
+   desc:'Packed with vitamin C and natural energy. Liquid sunshine.',
    macros:{cal:140,protein:2,carbs:34,fat:0,sugar:28},
-   img:PIC('photo-1626078436805-49a13aa42aab')},
-  {id:'berry-blitz',name:'Berry Blitz',cat:'smoothies',price:11,
-   ing:['strawberry','blueberry','banana','almond milk','protein'],
-   desc:'Antioxidant heavyweight. Built for recovery.',
-   macros:{cal:280,protein:18,carbs:40,fat:7,sugar:28},
+   img:PIC('photo-1613478223719-2ab802602423')},
+  {id:'berry-blast',name:'Berry Blast',cat:'juices',price:10,
+   ing:['strawberry','blueberry','raspberry','apple'],
+   desc:'Loaded with antioxidants. A berry-forward heavyweight.',
+   macros:{cal:150,protein:2,carbs:36,fat:0,sugar:28},
    img:PIC('photo-1505252585461-04db1eb84625')},
-  {id:'tropic-thunder',name:'Tropic Thunder',cat:'smoothies',price:11,
-   ing:['mango','pineapple','banana','coconut milk','lime'],
-   desc:'Vacation in a glass. Creamy and bright.',
-   macros:{cal:300,protein:5,carbs:54,fat:8,sugar:42},
+  {id:'tropical-paradise',name:'Tropical Paradise',cat:'juices',price:10,
+   ing:['pineapple','mango','coconut water','lime'],
+   desc:'A refreshing tropical escape. Bright and hydrating.',
+   macros:{cal:160,protein:2,carbs:38,fat:0,sugar:32},
    img:PIC('photo-1623065422902-30a2d299bbe4')},
-  {id:'pb-banana',name:'PB Banana Boom',cat:'smoothies',price:11,
-   ing:['banana','peanut butter','oats','almond milk','honey','protein'],
-   desc:'A pre-workout with a dessert problem.',
-   macros:{cal:380,protein:22,carbs:48,fat:14,sugar:24},
+  {id:'beet-power',name:'Beet Power',cat:'juices',price:9,
+   ing:['beet','apple','carrot','ginger'],
+   desc:'Supports circulation and endurance. Earthy, sweet, unmistakable.',
+   macros:{cal:150,protein:3,carbs:36,fat:0,sugar:28},
+   img:PIC('photo-1618556658017-fd80b6f8b94c')},
+  // ── SMOOTHIES ──
+  {id:'island-vibes',name:'Island Vibes',cat:'smoothies',price:11,
+   ing:['mango','pineapple','banana','coconut milk'],
+   desc:'Vacation in a glass. Creamy, bright, and tropical.',
+   macros:{cal:290,protein:5,carbs:52,fat:8,sugar:40},
+   img:PIC('photo-1623065422902-30a2d299bbe4')},
+  {id:'peanut-butter-power',name:'Peanut Butter Power',cat:'smoothies',price:11,
+   ing:['banana','peanut butter','dates','almond milk'],
+   desc:'A pre-workout with a dessert problem. Rich and filling.',
+   macros:{cal:420,protein:14,carbs:52,fat:18,sugar:30},
    img:PIC('photo-1553530666-ba11a7da3888')},
-  {id:'ginger-shot',name:'Ginger Shot',cat:'shots',price:5,
-   ing:['ginger','lemon','cayenne','honey'],
+  {id:'berry-bliss',name:'Berry Bliss',cat:'smoothies',price:10,
+   ing:['mixed berries','banana','protein powder','oat milk'],
+   desc:'Antioxidant-packed and built for recovery.',
+   macros:{cal:300,protein:20,carbs:44,fat:6,sugar:28},
+   img:PIC('photo-1505252585461-04db1eb84625')},
+  {id:'green-energy',name:'Green Energy',cat:'smoothies',price:11,
+   ing:['spinach','banana','mango','coconut water'],
+   desc:'Smooth, green, and clean. Energy without the crash.',
+   macros:{cal:240,protein:6,carbs:48,fat:3,sugar:32},
+   img:PIC('photo-1610970881699-44a5587cabec')},
+  // ── WELLNESS SHOTS ──
+  {id:'ginger-shot',name:'Ginger Shot',cat:'shots',price:4,sizes:false,
+   ing:['fresh ginger','lemon'],
    desc:'2oz of fire. Wake up, fight off, get going.',
-   macros:{cal:35,protein:0,carbs:8,fat:0,sugar:6},
+   macros:{cal:25,protein:0,carbs:6,fat:0,sugar:4},
    img:PIC('photo-1556881286-fc6915169721')},
-  {id:'wheatgrass-shot',name:'Wheatgrass Shot',cat:'shots',price:5,
-   ing:['wheatgrass','lemon'],
-   desc:'Pure chlorophyll. The green machine reset.',
-   macros:{cal:15,protein:1,carbs:2,fat:0,sugar:1},
-   img:PIC('photo-1556228720-da4e85bcdac5')},
-  {id:'turmeric-shot',name:'Turmeric Shot',cat:'shots',price:5,
-   ing:['turmeric','ginger','lemon','black pepper','honey'],
-   desc:"Inflammation's worst enemy.",
+  {id:'immunity-shot',name:'Immunity Shot',cat:'shots',price:5,sizes:false,
+   ing:['turmeric','ginger','lemon','black pepper'],
+   desc:'Anti-inflammatory defense in a 2oz hit.',
    macros:{cal:30,protein:0,carbs:7,fat:0,sugar:5},
-   img:PIC('photo-1597306633535-fdba89e5ea30')}
+   img:PIC('photo-1597306633535-fdba89e5ea30')},
+  {id:'energy-shot',name:'Energy Shot',cat:'shots',price:5,sizes:false,
+   ing:['beet','ginger','lemon'],
+   desc:'Clean, natural energy. No jitters, no sugar crash.',
+   macros:{cal:35,protein:1,carbs:8,fat:0,sugar:6},
+   img:PIC('photo-1556228720-da4e85bcdac5')},
+  // ── FRESH SALADS ──
+  {id:'garden-fresh-salad',name:'Garden Fresh Salad',cat:'salads',price:12,sizes:false,
+   ing:['mixed greens','cucumbers','tomatoes','carrots','red onions'],
+   desc:'Crisp, clean, and simple. Made fresh daily.',
+   macros:{cal:220,protein:6,carbs:24,fat:12,sugar:8},
+   img:PIC('photo-1512621776951-a57141f2eefd')},
+  {id:'mediterranean-salad',name:'Mediterranean Salad',cat:'salads',price:13,sizes:false,
+   ing:['romaine','cucumbers','tomatoes','olives','feta cheese'],
+   desc:'Briny, bright, and satisfying. A coastal classic.',
+   macros:{cal:320,protein:10,carbs:22,fat:22,sugar:7},
+   img:PIC('photo-1540420773420-3366772f4999')},
+  {id:'cranberry-walnut-salad',name:'Cranberry Walnut Salad',cat:'salads',price:13,sizes:false,
+   ing:['spring mix','cranberries','walnuts','apples','goat cheese'],
+   desc:'Sweet, crunchy, and creamy in every bite.',
+   macros:{cal:360,protein:9,carbs:30,fat:24,sugar:16},
+   img:PIC('photo-1546069901-ba9599a7e63c')},
+  {id:'tropical-fruit-salad',name:'Tropical Fruit Salad',cat:'salads',price:10,sizes:false,
+   ing:['spring mix','mango','strawberries','blueberries','almonds'],
+   desc:'Light, sweet, and refreshing. Fruit-forward greens.',
+   macros:{cal:240,protein:6,carbs:34,fat:10,sugar:22},
+   img:PIC('photo-1490474418585-ba9bad8fd0ea')},
+  // ── FRESH WRAPS ──
+  {id:'veggie-hummus-wrap',name:'Veggie Hummus Wrap',cat:'wraps',price:12,sizes:false,
+   ing:['hummus','spinach','cucumbers','peppers','carrots'],
+   desc:'Garden veggies and creamy hummus, rolled up fresh.',
+   macros:{cal:380,protein:12,carbs:52,fat:14,sugar:6},
+   img:PIC('photo-1626700051175-6818013e1d4f')},
+  {id:'mediterranean-wrap',name:'Mediterranean Wrap',cat:'wraps',price:13,sizes:false,
+   ing:['hummus','feta','cucumbers','tomatoes','olives','spinach wrap'],
+   desc:'A Mediterranean spread wrapped to go.',
+   macros:{cal:440,protein:16,carbs:48,fat:22,sugar:6},
+   img:PIC('photo-1509722747041-616f39b57569')},
+  {id:'avocado-crunch-wrap',name:'Avocado Crunch Wrap',cat:'wraps',price:12,sizes:false,
+   ing:['avocado','lettuce','cucumbers','carrots','sprouts'],
+   desc:'Cool, creamy avocado with a satisfying crunch.',
+   macros:{cal:400,protein:10,carbs:46,fat:20,sugar:5},
+   img:PIC('photo-1551782450-a2132b4ba21d')},
+  {id:'southwest-wrap',name:'Southwest Wrap',cat:'wraps',price:13,sizes:false,
+   ing:['black beans','corn','avocado','lettuce','tomatoes'],
+   desc:'Hearty black beans and avocado with a Southwest kick.',
+   macros:{cal:460,protein:15,carbs:60,fat:18,sugar:7},
+   img:PIC('photo-1564093497595-593b96d80180')}
+];
+
+// Add-on prices match the in-store menu board.
+const BOOSTS = {
+  avocado:{label:'Avocado',price:2},
+  protein:{label:'Protein Powder',price:3},
+  chia:{label:'Chia Seeds',price:1},
+  hemp:{label:'Hemp Seeds',price:2},
+  flax:{label:'Flax Seeds',price:1},
+  fruit:{label:'Extra Fruit',price:2}
+};
+
+// Combo deals from the in-store menu board.
+const COMBOS = [
+  {id:'juice-salad',title:'Any Juice + Salad',price:18,ico:'🥤',desc:'Pick any signature juice and any fresh salad.'},
+  {id:'smoothie-wrap',title:'Any Smoothie + Wrap',price:20,ico:'🥗',desc:'Pair any smoothie with any fresh wrap.'},
+  {id:'add-shot',title:'Add a Wellness Shot',price:3,ico:'⚡',desc:'Add any wellness shot to any order.'}
 ];
 
 const NOTIFICATIONS = [
@@ -1078,9 +1143,9 @@ document.querySelectorAll('#cat-strip .cat-chip').forEach(ch => {
 
 function renderFeatured(){
   const carousel = document.getElementById('featured-carousel');
-  const featured = ['green-reign','pina-power','beet-the-day','berry-blitz'].map(id => MENU.find(m => m.id===id));
-  const colorByCat = {greens:'var(--lime)',citrus:'var(--orange)',roots:'var(--pink)',smoothies:'var(--yellow)',shots:'var(--cyan)'};
-  const txtByCat = {greens:'var(--teal-deep)',citrus:'#fff',roots:'#fff',smoothies:'var(--teal-deep)',shots:'var(--teal-deep)'};
+  const featured = ['green-machine','island-vibes','garden-fresh-salad','avocado-crunch-wrap'].map(id => MENU.find(m => m.id===id));
+  const colorByCat = {juices:'var(--lime)',smoothies:'var(--yellow)',shots:'var(--cyan)',salads:'#22c55e',wraps:'var(--orange)'};
+  const txtByCat = {juices:'var(--teal-deep)',smoothies:'var(--teal-deep)',shots:'var(--teal-deep)',salads:'#fff',wraps:'#fff'};
   carousel.innerHTML = featured.map(item => `
     <div class="feat-card" data-id="${item.id}">
       <div class="ph" style="background-image:url('${item.img}')"></div>
@@ -1095,6 +1160,29 @@ function renderFeatured(){
   carousel.querySelectorAll('.feat-card').forEach(c => {
     c.addEventListener('click', () => openSheet(c.dataset.id));
   });
+}
+
+function renderCombos(){
+  const root = document.getElementById('combo-strip');
+  if(!root) return;
+  root.innerHTML = `
+    <div class="combo-head">
+      <div class="eyebrow">Save with</div>
+      <h3>Pour Decisions Combos</h3>
+    </div>
+    <div class="combo-row">
+      ${COMBOS.map(c => `
+        <div class="combo-card">
+          <span class="combo-ico">${c.ico}</span>
+          <div class="combo-info">
+            <h4>${c.title}</h4>
+            <p>${c.desc}</p>
+          </div>
+          <span class="combo-price">${c.id==='add-shot' ? '+' : ''}$${c.price}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
 }
 
 function renderHomeEvents(){
@@ -1124,7 +1212,14 @@ function openSheet(id){
     <div><div class="v">${item.macros.fat}g</div><div class="l">FAT</div></div>
   `;
   document.getElementById('sheet-ing').innerHTML = item.ing.map(i => `<span>${i}</span>`).join('');
+  // Size tiers are derived from the item's base (16oz) price; hidden for single-serve items.
+  const grid = document.getElementById('size-grid');
+  grid.querySelector('[data-size="12"] .price').textContent = '$' + Math.round(item.price * .85);
+  grid.querySelector('[data-size="16"] .price').textContent = '$' + item.price;
+  grid.querySelector('[data-size="32"] .price').textContent = '$' + Math.round(item.price * 1.6);
   document.querySelectorAll('#size-grid .size-opt').forEach(o => o.classList.toggle('active', o.dataset.size==='16'));
+  document.getElementById('size-group').style.display = item.sizes===false ? 'none' : '';
+  document.getElementById('boost-group').style.display = item.cat==='shots' ? 'none' : '';
   document.querySelectorAll('#boost-row .boost').forEach(b => b.classList.remove('active'));
   document.getElementById('qty-n').textContent = '1';
   updateAddPrice();
@@ -1153,9 +1248,11 @@ document.getElementById('qty-minus').addEventListener('click', () => { if(STATE.
 
 function unitPrice(){
   if(!STATE.currentItem) return 0;
-  const base = STATE.currentItem.price;
-  const sizeMult = STATE.size===12 ? .85 : STATE.size===32 ? 1.6 : 1;
-  const boost = STATE.boosts.size * 1.5;
+  const it = STATE.currentItem;
+  const base = it.price;
+  const sizeMult = it.sizes===false ? 1 : (STATE.size===12 ? .85 : STATE.size===32 ? 1.6 : 1);
+  let boost = 0;
+  STATE.boosts.forEach(b => { boost += (BOOSTS[b] ? BOOSTS[b].price : 0); });
   return Math.round((base * sizeMult + boost) * 100) / 100;
 }
 function updateAddPrice(){ document.getElementById('add-price').textContent = '$' + (unitPrice()*STATE.qty).toFixed(2); }
@@ -1163,8 +1260,9 @@ function updateAddPrice(){ document.getElementById('add-price').textContent = '$
 document.getElementById('btn-add-cart').addEventListener('click', () => {
   const item = STATE.currentItem; if(!item) return;
   STATE.cart.push({
-    id:item.id, name:item.name, size:STATE.size+'oz',
-    boosts:[...STATE.boosts], qty:STATE.qty,
+    id:item.id, name:item.name,
+    size: item.sizes===false ? (item.cat==='shots' ? '2oz' : 'regular') : STATE.size+'oz',
+    boosts:[...STATE.boosts].map(b => BOOSTS[b] ? BOOSTS[b].label : b), qty:STATE.qty,
     price:unitPrice(), img:item.img, cat:item.cat
   });
   closeSheet();
@@ -1436,6 +1534,7 @@ function toast(msg){
 
 function init(){
   renderFeatured();
+  renderCombos();
   renderMenu();
   renderHomeEvents();
   updateCartBadge();
