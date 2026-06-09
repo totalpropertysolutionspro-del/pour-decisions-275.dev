@@ -1,7 +1,7 @@
 # Pour Decisions — Customer PWA
 
 Mobile-first, installable Progressive Web App for Pour Decisions juice bar.
-348 Loudon Rd, Albany NY · brand-locked teal `#1F4860` / gold `#E8B547` / cream `#FFF8EC`.
+359 Broadway Blvd, Albany NY 12204 · brand-locked teal `#1F4860` / gold `#E8B547` / cream `#FFF8EC`.
 
 > **Status:** v1.0 — May 2026 demo build. All UI is shipped. Mock data for cart, loyalty, orders, account, notifications. Real payment, backend, and push notifications are stubbed and ready to wire.
 
@@ -22,7 +22,7 @@ app/
 ## Screens shipped (9)
 
 1. **Home** — hero, today's pours, Pour Pass teaser, hours/map/directions, social
-2. **Menu** — 14 pours, 5 category filters + search, heart to favorite, item detail sheet
+2. **Menu** — 20 items (juices, smoothies, shots, salads, wraps), 5 category filters, combo deals, item detail sheet
 3. **Item Detail** — bottom-sheet with size, qty, special requests, benefits chips, add-to-cart
 4. **Order (Cart)** — line items, qty steppers, subtotal/tax/tip/total, "add more" link
 5. **Checkout** — name/phone, pickup time slots, payment method picker (Apple/Google/Card/In-store)

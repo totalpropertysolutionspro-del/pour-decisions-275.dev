@@ -9,9 +9,9 @@
 <meta name="apple-mobile-web-app-title" content="Pour Decisions" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="format-detection" content="telephone=yes" />
-<meta name="description" content="Pour Decisions — cold-pressed juice, smoothies & shots in Albany NY. Order ahead, book packages, earn Pour Pass rewards." />
+<meta name="description" content="Pour Decisions — cold-pressed juices, smoothies, wellness shots, salads & wraps in Albany NY. Order ahead, book packages, earn Pour Pass rewards." />
 <meta property="og:title" content="Pour Decisions — Order Ahead" />
-<meta property="og:description" content="Cold-pressed juice and clean fuel · 348 Loudon Rd, Albany NY" />
+<meta property="og:description" content="Cold-pressed juice, smoothies, salads & wraps · 359 Broadway Blvd, Albany NY" />
 <meta property="og:image" content="assets/og-image.png" />
 <meta property="og:type" content="website" />
 <title>Pour Decisions — Cold-Pressed Juice · Albany NY</title>
@@ -41,6 +41,7 @@
   --orange:#FF6B35; --pink:#FF3D80;
   --lime:#A3E635; --lime-deep:#65A30D;
   --cyan:#22D3EE; --yellow:#FACC15;
+  --pine:#2E7D54; --pine-deep:#1B5E3F; --moss:#7FB069;
   --ink:#1A1A1A; --ink-soft:#3F3F46;
   --muted:#71717A; --line:rgba(31,72,96,.12); --white:#FFFFFF;
   --f-display:'Fraunces', ui-serif, Georgia, serif;
@@ -76,7 +77,8 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .container{padding:0 20px;max-width:520px;margin:0 auto}
 
 /* SPLASH */
-#splash{position:fixed;inset:0;z-index:200;background:radial-gradient(120% 80% at 50% 30%, #2a5a76 0%, var(--teal) 55%, var(--teal-deep) 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .6s ease, visibility .6s ease;}
+#splash{position:fixed;inset:0;z-index:200;background:radial-gradient(120% 80% at 50% 30%, #2a5a76 0%, var(--teal) 50%, var(--pine-deep) 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .6s ease, visibility .6s ease;}
+#splash .treeline{position:absolute;left:0;right:0;bottom:0;height:72px;opacity:.55}
 #splash .glow{position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle, rgba(232,181,71,.45) 0%, rgba(232,181,71,0) 65%);filter:blur(20px);animation:pulse 2.6s ease-in-out infinite;}
 #splash .splash-logo{width:min(78vw,360px);height:auto;filter:drop-shadow(0 12px 40px rgba(0,0,0,.4));animation:logoIn 1.2s cubic-bezier(.2,.7,.2,1) both;position:relative;z-index:2;}
 #splash .splash-tag{margin-top:16px;color:#FCEFD6;font-family:var(--f-num);letter-spacing:.4em;font-size:14px;opacity:0;animation:tagIn .9s ease .8s both;position:relative;z-index:2;}
@@ -114,7 +116,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .btn-lg{padding:18px 28px;font-size:17px}
 
 /* HOME */
-.hero{position:relative;border-radius:var(--r-xl);overflow:hidden;margin:14px 16px 0;background:radial-gradient(120% 80% at 80% 20%, rgba(255,107,53,.85), transparent 50%),radial-gradient(120% 80% at 20% 90%, rgba(255,61,128,.85), transparent 55%),linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 100%);color:#fff;padding:28px 22px 26px;min-height:380px;isolation:isolate;}
+.hero{position:relative;border-radius:var(--r-xl);overflow:hidden;margin:14px 16px 0;background:radial-gradient(120% 80% at 80% 15%, rgba(255,107,53,.95), transparent 52%),radial-gradient(110% 80% at 15% 95%, rgba(163,230,53,.55), transparent 50%),radial-gradient(120% 80% at 20% 45%, rgba(255,61,128,.75), transparent 55%),linear-gradient(160deg, var(--teal) 0%, var(--pine-deep) 100%);color:#fff;padding:28px 22px 80px;min-height:380px;isolation:isolate;}
 .hero::after{content:"";position:absolute;inset:0;background-image:url("https://images.unsplash.com/photo-1570696516188-ade861b84a49?w=900&q=70&auto=format&fit=crop");background-size:cover;background-position:center;mix-blend-mode:overlay;opacity:.32;z-index:-1;}
 .hero .eyebrow{color:var(--gold)}
 .hero h1{color:#fff;margin-top:8px}
@@ -155,11 +157,11 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .colorblock{margin:28px 0;padding:36px 24px;color:#fff;position:relative;overflow:hidden;text-align:center;}
 .colorblock h2{color:#fff}
 .colorblock p{margin:8px 0 18px;color:rgba(255,255,255,.92);max-width:34ch;margin-inline:auto;font-weight:500}
-.colorblock.orange{background:var(--orange)}
-.colorblock.pink{background:var(--pink)}
+.colorblock.orange{background:radial-gradient(110% 90% at 80% 0%, var(--yellow), transparent 55%),linear-gradient(150deg,var(--orange),#E5491D)}
+.colorblock.pink{background:radial-gradient(110% 90% at 15% 0%, var(--orange), transparent 50%),linear-gradient(150deg,var(--pink),#D11A60)}
 .colorblock.lime{background:var(--lime);color:var(--teal-deep)}
 .colorblock.lime h2,.colorblock.lime p{color:var(--teal-deep)}
-.colorblock.teal{background:var(--teal)}
+.colorblock.teal{background:radial-gradient(110% 90% at 85% 10%, rgba(163,230,53,.4), transparent 50%),linear-gradient(150deg,var(--teal),var(--pine-deep))}
 .colorblock .deco{position:absolute;pointer-events:none;opacity:.35}
 
 /* MENU */
@@ -184,16 +186,16 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .menu-card .macros{display:flex;gap:6px;flex-wrap:wrap;font-family:var(--f-num);font-size:13px;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:6px;}
 .menu-card .macros span{display:inline-flex;align-items:center;gap:3px}
 .menu-card .macros .dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.45}
-.menu-card[data-cat="greens"] .img{background-color:#d9f99d}
-.menu-card[data-cat="citrus"] .img{background-color:#fed7aa}
-.menu-card[data-cat="roots"] .img{background-color:#fbcfe8}
+.menu-card[data-cat="juices"] .img{background-color:#d9f99d}
 .menu-card[data-cat="smoothies"] .img{background-color:#fef08a}
 .menu-card[data-cat="shots"] .img{background-color:#a5f3fc}
-.menu-card[data-cat="greens"] .add{background:var(--lime);color:var(--teal-deep)}
-.menu-card[data-cat="citrus"] .add{background:var(--orange);color:#fff}
-.menu-card[data-cat="roots"] .add{background:var(--pink);color:#fff}
+.menu-card[data-cat="salads"] .img{background-color:#bbf7d0}
+.menu-card[data-cat="wraps"] .img{background-color:#fed7aa}
+.menu-card[data-cat="juices"] .add{background:var(--lime);color:var(--teal-deep)}
 .menu-card[data-cat="smoothies"] .add{background:var(--yellow);color:var(--teal-deep)}
 .menu-card[data-cat="shots"] .add{background:var(--cyan);color:var(--teal-deep)}
+.menu-card[data-cat="salads"] .add{background:#22c55e;color:#fff}
+.menu-card[data-cat="wraps"] .add{background:var(--orange);color:#fff}
 
 /* SHEET */
 .scrim{position:fixed;inset:0;z-index:120;background:rgba(20,50,65,.55);opacity:0;visibility:hidden;transition:opacity .25s ease, visibility .25s ease}
@@ -221,7 +223,20 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .size-opt .price{display:block;font-family:var(--f-num);font-size:18px;margin-top:2px}
 .boost-row{display:flex;gap:8px;flex-wrap:wrap}
 .boost{padding:9px 14px;border-radius:var(--r-pill);background:#fff;border:2px solid var(--line);font-size:13px;font-weight:700;color:var(--teal)}
+.boost b{font-family:var(--f-num);font-weight:800;opacity:.6;margin-left:2px}
 .boost.active{background:var(--gold);border-color:var(--gold-deep);color:var(--teal-deep)}
+.boost.active b{opacity:.85}
+/* Combos */
+.combo-head{padding:4px 16px 8px}
+.combo-head h3{font-size:20px;color:var(--teal-deep);margin-top:2px}
+.combo-row{display:flex;gap:12px;overflow-x:auto;padding:0 16px 16px;scrollbar-width:none}
+.combo-row::-webkit-scrollbar{display:none}
+.combo-card{flex:0 0 78%;max-width:300px;display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));color:#fff;border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--shadow-card)}
+.combo-ico{font-size:28px;flex:0 0 auto}
+.combo-info{flex:1;min-width:0}
+.combo-info h4{font-size:15px;font-weight:800;margin-bottom:2px}
+.combo-info p{font-size:12px;line-height:1.35;color:rgba(255,255,255,.82)}
+.combo-price{flex:0 0 auto;font-family:var(--f-num);font-size:26px;font-weight:800;color:var(--gold)}
 .sheet-footer{padding:14px 16px calc(16px + var(--safe-bot));border-top:1px solid var(--line);background:var(--cream);display:flex;gap:12px;align-items:center;}
 .qty-stepper{display:flex;align-items:center;gap:4px;background:#fff;border-radius:var(--r-pill);box-shadow:var(--shadow-card);padding:4px}
 .qty-stepper button{width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:18px}
@@ -355,6 +370,83 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .event-card .body p{font-size:12px;color:var(--muted);margin:0;font-weight:600}
 .event-card .pill{padding:4px 8px;border-radius:var(--r-pill);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#fff}
 
+/* INSTALL / PWA */
+.install-banner{position:fixed;left:12px;right:12px;bottom:calc(80px + var(--safe-bot) + 8px);z-index:150;display:none;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r-lg);color:#fff;background:radial-gradient(120% 100% at 85% 0%, rgba(163,230,53,.45), transparent 55%),linear-gradient(150deg,var(--pine),var(--pine-deep));box-shadow:var(--shadow-pop);}
+.install-banner.show{display:flex;animation:fadeUp .35s ease both}
+.install-banner img{width:42px;height:42px;border-radius:11px;flex:0 0 auto;background:#fff;padding:4px}
+.install-banner .ib-body{flex:1;min-width:0}
+.install-banner .ib-body strong{display:block;font-size:14px;font-weight:800}
+.install-banner .ib-body span{font-size:11.5px;color:rgba(255,255,255,.85)}
+.install-banner .ib-go{flex:0 0 auto;background:var(--gold);color:var(--teal-deep);font-weight:800;padding:10px 16px;border-radius:var(--r-pill);font-size:13px}
+.install-banner .ib-x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:16px;font-weight:800;display:grid;place-items:center}
+/* iOS / install instruction sheet */
+.ios-sheet{position:fixed;inset:0;z-index:210;background:rgba(15,30,40,.55);backdrop-filter:blur(3px);display:none;align-items:flex-end;}
+.ios-sheet.show{display:flex;animation:fadeUp .3s ease both}
+.ios-sheet .card{background:var(--cream);width:100%;border-radius:var(--r-xl) var(--r-xl) 0 0;padding:24px 22px calc(26px + var(--safe-bot));max-width:520px;margin:0 auto;box-shadow:var(--shadow-pop);position:relative}
+.ios-sheet .grab{width:42px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 16px}
+.ios-sheet h3{color:var(--teal-deep);font-size:22px;margin-bottom:4px}
+.ios-sheet .lead{font-size:13px;color:var(--ink-soft);margin-bottom:18px;font-weight:500}
+.ios-step{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.ios-step:last-of-type{border-bottom:0}
+.ios-step .n{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--pine);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px}
+.ios-step .tx{font-size:14px;font-weight:600;color:var(--ink)}
+.ios-step .tx b{color:var(--teal-deep)}
+.ios-step .ic{margin-left:auto;font-size:22px}
+.ios-sheet .done{margin-top:18px}
+
+/* PINE TREELINE — repeating silhouette, two layers for depth */
+.treeline{height:44px;pointer-events:none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='100' viewBox='0 0 70 100'%3E%3Cpath d='M35 5 L20 35 L27 35 L14 62 L23 62 L8 88 L31 88 L31 100 L39 100 L39 88 L62 88 L47 62 L56 62 L43 35 L50 35 Z' fill='%231B5E3F'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='100' viewBox='0 0 70 100'%3E%3Cpath d='M35 5 L20 35 L27 35 L14 62 L23 62 L8 88 L31 88 L31 100 L39 100 L39 88 L62 88 L47 62 L56 62 L43 35 L50 35 Z' fill='%232E7D54'/%3E%3C/svg%3E");
+  background-repeat:repeat-x,repeat-x;
+  background-size:auto 100%,auto 72%;
+  background-position:0 bottom,35px bottom;}
+.treeline.on-dark{filter:none;opacity:.9}
+.treeline.on-cream{opacity:.85;margin-top:28px}
+.hero .treeline{position:absolute;left:0;right:0;bottom:-1px;height:54px;opacity:.55;z-index:0}
+
+/* BOOK THE SPACE */
+.book-cta{margin:18px 16px 0;padding:22px;border-radius:var(--r-lg);position:relative;overflow:hidden;color:#fff;
+  background:radial-gradient(110% 90% at 85% 10%, rgba(163,230,53,.5), transparent 50%),linear-gradient(150deg, var(--pine) 0%, var(--pine-deep) 100%);box-shadow:var(--shadow-card);}
+.book-cta .eyebrow{color:var(--gold)}
+.book-cta h3{color:#fff;font-size:24px;margin:6px 0 4px}
+.book-cta p{font-size:13px;color:rgba(255,255,255,.88);margin:0 0 14px;max-width:32ch;font-weight:500}
+.book-cta .trees{position:absolute;right:10px;bottom:6px;font-size:38px;opacity:.5;letter-spacing:-10px}
+.btn-pine{background:var(--pine);color:#fff;box-shadow:0 6px 20px rgba(46,125,84,.4)}
+.book-card{margin:16px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:20px;border-top:6px solid var(--pine)}
+.book-card .field{margin-bottom:14px}
+.book-card label{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--pine-deep);margin-bottom:6px}
+.book-card input,.book-card select,.book-card textarea{width:100%;padding:13px 14px;border-radius:var(--r-md);border:2px solid var(--line);background:var(--cream);color:var(--ink);font-weight:600}
+.book-card input:focus,.book-card select:focus,.book-card textarea:focus{outline:none;border-color:var(--pine)}
+.book-card textarea{resize:vertical;min-height:70px}
+.book-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.book-confirm{margin:16px;background:linear-gradient(150deg,var(--pine) 0%,var(--pine-deep) 100%);border-radius:var(--r-lg);color:#fff;padding:26px 22px;text-align:center;box-shadow:var(--shadow-pop)}
+.book-confirm .big{font-size:46px;margin-bottom:6px}
+.book-confirm h3{color:#fff;font-size:24px}
+.book-confirm .ref{display:inline-block;margin:12px 0;padding:8px 18px;border-radius:var(--r-pill);background:rgba(255,255,255,.16);font-family:var(--f-num);font-size:20px;letter-spacing:.12em;color:var(--gold)}
+.book-confirm p{font-size:13px;color:rgba(255,255,255,.88)}
+
+/* ADMIN DASHBOARD */
+.admin-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px 10px;flex-wrap:wrap}
+.admin-tabs{display:flex;gap:8px;background:#fff;border-radius:var(--r-pill);padding:4px;box-shadow:var(--shadow-card)}
+.admin-tab{padding:9px 14px;border-radius:var(--r-pill);font-weight:800;font-size:13px;color:var(--teal);display:inline-flex;align-items:center;gap:6px}
+.admin-tab.active{background:var(--pine);color:#fff}
+.tab-badge{background:var(--pink);color:#fff;border-radius:9px;min-width:18px;height:18px;padding:0 5px;font-size:11px;font-weight:800;display:inline-grid;place-items:center}
+.admin-status{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:6px 12px;border-radius:var(--r-pill);background:var(--cream-warm);color:var(--gold-deep)}
+.admin-status.cloud{background:#dcfce7;color:var(--pine-deep)}
+.booking-card{background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-card);padding:14px;margin-bottom:10px;border-left:5px solid var(--pine)}
+.booking-card .top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.booking-card .who{font-family:var(--f-display);font-style:italic;font-weight:800;color:var(--teal-deep);font-size:16px}
+.booking-card .ref{font-family:var(--f-num);font-size:14px;letter-spacing:.08em;color:var(--gold-deep)}
+.booking-card .meta{font-size:12.5px;color:var(--ink-soft);font-weight:600;line-height:1.5}
+.booking-card .meta b{color:var(--teal-deep)}
+.booking-card .notes{font-size:12.5px;color:var(--muted);margin-top:6px;font-style:italic}
+.booking-card .acts{display:flex;gap:8px;margin-top:10px}
+.booking-card .acts a,.booking-card .acts button{flex:1;text-align:center;padding:9px;border-radius:var(--r-md);font-size:12px;font-weight:800}
+.booking-card .acts .reply{background:var(--pine);color:#fff}
+.booking-card .acts .del{background:var(--cream-warm);color:var(--pink)}
+
 /* PACKAGES */
 .pkg-hero{margin:14px 16px;padding:24px 22px;border-radius:var(--r-xl);background:linear-gradient(135deg, var(--pink) 0%, var(--orange) 100%);color:#fff;position:relative;overflow:hidden;}
 .pkg-hero h2{color:#fff}
@@ -439,6 +531,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <span class="sparkle">✦</span><span class="sparkle">✦</span>
   <img class="splash-logo" src="assets/logo-pour-decisions.png" alt="Pour Decisions" />
   <div class="splash-tag">COLD-PRESSED · ALBANY NY</div>
+  <div class="treeline"></div>
 </div>
 
 <!-- HEADER -->
@@ -473,6 +566,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <button class="btn btn-ghost" style="border-color:#fff;color:#fff" data-route="packages">Book Pkgs</button>
     </div>
     <img class="hero-logo-stamp" src="assets/logo-pour-decisions.png" alt="" />
+    <div class="treeline"></div>
   </div>
 
   <div class="quick-actions">
@@ -505,10 +599,10 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     </div>
   </div>
   <div class="quick-actions" style="grid-template-columns:repeat(5,1fr)">
-    <button class="qa" style="background:linear-gradient(180deg,#d9f99d,#a3e635);color:var(--teal-deep)" data-route="menu" data-cat="greens"><span class="ico">🌿</span><span>Greens</span></button>
-    <button class="qa" style="background:linear-gradient(180deg,#fed7aa,#fb923c);color:#fff" data-route="menu" data-cat="citrus"><span class="ico">🍊</span><span>Citrus</span></button>
-    <button class="qa" style="background:linear-gradient(180deg,#fbcfe8,#ec4899);color:#fff" data-route="menu" data-cat="roots"><span class="ico">🥕</span><span>Roots</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#d9f99d,#a3e635);color:var(--teal-deep)" data-route="menu" data-cat="juices"><span class="ico">🥤</span><span>Juices</span></button>
     <button class="qa" style="background:linear-gradient(180deg,#fef08a,#facc15);color:var(--teal-deep)" data-route="menu" data-cat="smoothies"><span class="ico">🍓</span><span>Smoothie</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#bbf7d0,#22c55e);color:#fff" data-route="menu" data-cat="salads"><span class="ico">🥗</span><span>Salads</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#fed7aa,#fb923c);color:#fff" data-route="menu" data-cat="wraps"><span class="ico">🌯</span><span>Wraps</span></button>
     <button class="qa" style="background:linear-gradient(180deg,#a5f3fc,#22d3ee);color:var(--teal-deep)" data-route="menu" data-cat="shots"><span class="ico">⚡</span><span>Shots</span></button>
   </div>
 
@@ -535,13 +629,15 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <button class="btn btn-gold" data-route="packages">See All Packages</button>
   </div>
 
+  <div class="treeline on-cream"></div>
   <footer class="footer">
     <img src="assets/logo-pour-decisions.png" alt="Pour Decisions" />
     <p class="tag">Pour with purpose.</p>
     <p class="info">
-      348 Loudon Rd, Albany NY 12211<br/>
+      359 Broadway Blvd, Albany NY 12204<br/>
       <a href="tel:+15185557687">(518) 555-POUR</a> · Open 7AM – 7PM<br/>
-      <a href="mailto:hello@pourdecisions.co">hello@pourdecisions.co</a>
+      <a href="mailto:hello@pourdecisions.co">hello@pourdecisions.co</a><br/>
+      Delivery on DoorDash &amp; Uber Eats
     </p>
     <p class="small">© 2026 POUR DECISIONS LLC · MADE IN ALBANY</p>
   </footer>
@@ -552,16 +648,17 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div class="container" style="padding-top:14px">
     <div class="eyebrow">The Pour Menu</div>
     <h1 style="font-size:clamp(34px,9vw,52px)">Fresh, every <em>damn</em> day.</h1>
-    <p style="color:var(--ink-soft);margin:8px 0 16px;font-size:14px">Cold-pressed in-house. Calorie & macros on every pour.</p>
+    <p style="color:var(--ink-soft);margin:8px 0 16px;font-size:14px">Cold-pressed juices, smoothies, salads & wraps — made fresh daily.</p>
   </div>
   <div class="cat-strip" id="cat-strip">
     <button class="cat-chip active" data-cat="all"><span class="swatch" style="background:var(--teal)"></span>All</button>
-    <button class="cat-chip" data-cat="greens"><span class="swatch" style="background:var(--lime)"></span>Greens</button>
-    <button class="cat-chip" data-cat="citrus"><span class="swatch" style="background:var(--orange)"></span>Citrus</button>
-    <button class="cat-chip" data-cat="roots"><span class="swatch" style="background:var(--pink)"></span>Roots</button>
+    <button class="cat-chip" data-cat="juices"><span class="swatch" style="background:var(--lime)"></span>Juices</button>
     <button class="cat-chip" data-cat="smoothies"><span class="swatch" style="background:var(--yellow)"></span>Smoothies</button>
+    <button class="cat-chip" data-cat="salads"><span class="swatch" style="background:#22c55e"></span>Salads</button>
+    <button class="cat-chip" data-cat="wraps"><span class="swatch" style="background:var(--orange)"></span>Wraps</button>
     <button class="cat-chip" data-cat="shots"><span class="swatch" style="background:var(--cyan)"></span>Shots</button>
   </div>
+  <div id="combo-strip"></div>
   <div class="menu-grid" id="menu-grid"></div>
 </section>
 
@@ -586,7 +683,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <button class="pickup-opt active" data-pickup="asap"><div class="l">ASAP</div><div class="v">~12 min</div></button>
       <button class="pickup-opt" data-pickup="schedule"><div class="l">Schedule</div><div class="v">Pick a time</div></button>
     </div>
-    <div class="field"><label>Pickup location</label><select><option>348 Loudon Rd, Albany NY (Default)</option></select></div>
+    <div class="field"><label>Pickup location</label><select><option>359 Broadway Blvd, Albany NY (Default)</option></select></div>
   </div>
   <div class="checkout-section">
     <h3>Your info</h3>
@@ -626,7 +723,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <p>Ready in ~12 minutes</p>
   </div>
   <div class="confirm-info">
-    <div class="info-row"><span>Pickup</span><strong>348 Loudon Rd</strong></div>
+    <div class="info-row"><span>Pickup</span><strong>359 Broadway Blvd</strong></div>
     <div class="info-row"><span>Order #</span><strong id="conf-num-2">PD-1042</strong></div>
     <div class="info-row"><span>Total</span><strong id="conf-total">$0.00</strong></div>
     <div class="info-row"><span>Pour Pass</span><strong>+1 stamp · 6/9</strong></div>
@@ -669,7 +766,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </div>
   <div class="section-h"><h2 style="font-size:24px">Rewards Vault</h2></div>
   <div class="reward-grid">
-    <div class="reward"><div class="hd"><span class="ico">🥤</span><h4>Free 16oz Pour</h4></div><p>Any green or citrus juice</p><span class="pts">FREE @ 9</span></div>
+    <div class="reward"><div class="hd"><span class="ico">🥤</span><h4>Free 16oz Pour</h4></div><p>Any signature juice</p><span class="pts">FREE @ 9</span></div>
     <div class="reward"><div class="hd"><span class="ico">🎁</span><h4>Birthday Bottle</h4></div><p>32oz on your big day</p><span class="pts">UNLOCKED</span></div>
     <div class="reward"><div class="hd"><span class="ico">⚡</span><h4>2x Stamp Tuesday</h4></div><p>Double up every Tuesday</p><span class="pts">ACTIVE</span></div>
     <div class="reward locked"><div class="hd"><span class="ico">👑</span><h4>VIP Tier</h4></div><p>$200 spend unlocks 15% off</p><span class="pts">$140 / $200</span></div>
@@ -704,6 +801,125 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <div class="cal-list">
       <h3>Coming Up</h3>
       <div id="cal-event-list"></div>
+    </div>
+  </div>
+  <div class="book-cta">
+    <span class="eyebrow">Host With Us</span>
+    <h3>Book the space</h3>
+    <p>Birthdays, team off-sites, wellness classes, pop-ups — our bar is yours after hours.</p>
+    <button class="btn btn-gold" data-route="book">Start a Booking →</button>
+    <span class="trees">🌲🌲🌲</span>
+  </div>
+</section>
+
+<!-- BOOK THE SPACE -->
+<section class="view" data-view="book">
+  <div class="container" style="padding-top:14px">
+    <div class="eyebrow" style="color:var(--pine)">Private Events</div>
+    <h1 style="font-size:clamp(34px,9vw,52px)">Your <em>pour</em>, your party.</h1>
+    <p style="color:var(--ink-soft);margin:8px 0 0;font-size:14px">Tell us about your event and we'll confirm within 24 hours. Juice bar, smoothie flights, and salad spreads included on request.</p>
+  </div>
+  <form class="book-card" id="book-form">
+    <div class="field"><label>Your name</label><input type="text" id="bk-name" placeholder="Jordan Rivers" required /></div>
+    <div class="field"><label>Email or phone</label><input type="text" id="bk-contact" placeholder="you@email.com / (518) 555-0123" required /></div>
+    <div class="book-row">
+      <div class="field"><label>Date</label><input type="date" id="bk-date" required /></div>
+      <div class="field"><label>Time window</label>
+        <select id="bk-time">
+          <option>Morning (7–11am)</option>
+          <option>Midday (11am–3pm)</option>
+          <option selected>Evening (5–9pm)</option>
+          <option>After hours (7–11pm)</option>
+        </select>
+      </div>
+    </div>
+    <div class="book-row">
+      <div class="field"><label>Event type</label>
+        <select id="bk-type">
+          <option>Birthday</option>
+          <option>Corporate / team event</option>
+          <option>Wellness class</option>
+          <option>Pop-up / market</option>
+          <option>Private buyout</option>
+        </select>
+      </div>
+      <div class="field"><label>Guests</label>
+        <select id="bk-size">
+          <option>Up to 10</option>
+          <option selected>10 – 25</option>
+          <option>25 – 50</option>
+          <option>50+</option>
+        </select>
+      </div>
+    </div>
+    <div class="field"><label>Anything else?</label><textarea id="bk-notes" placeholder="Smoothie bar for 20, two vegan trays, birthday shout-out for Maya…"></textarea></div>
+    <button type="submit" class="btn btn-pine btn-block btn-lg">Request Booking 🌲</button>
+  </form>
+  <div class="book-confirm" id="book-confirm" style="display:none">
+    <div class="big">🌲🎉</div>
+    <h3>Request received!</h3>
+    <span class="ref" id="bk-ref">PD-EVT-0000</span>
+    <p id="bk-summary">We'll confirm by email within 24 hours.</p>
+    <button class="btn btn-gold" style="margin-top:14px" data-route="calendar">Back to Events</button>
+  </div>
+</section>
+
+<!-- OWNER TOOLS / ADMIN (staff only) -->
+<section class="view" data-view="admin">
+  <div class="container" style="padding-top:14px">
+    <div class="eyebrow" style="color:var(--pine)">Owner Dashboard</div>
+    <h1 style="font-size:clamp(34px,9vw,52px)">Run the <em>show</em>.</h1>
+  </div>
+  <form class="book-card" id="admin-gate">
+    <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;font-weight:500">Staff only. Enter your PIN to manage events and see booking requests.</p>
+    <div class="field"><label>Staff PIN</label><input type="password" inputmode="numeric" maxlength="6" id="ad-pin" placeholder="••••" autocomplete="off" /></div>
+    <button type="submit" class="btn btn-pine btn-block">Unlock Dashboard</button>
+  </form>
+
+  <div id="admin-shell" style="display:none">
+    <div class="admin-bar">
+      <div class="admin-tabs" id="admin-tabs">
+        <button class="admin-tab active" data-tab="events">📅 Events</button>
+        <button class="admin-tab" data-tab="bookings">📩 Bookings <span class="tab-badge" id="bk-badge" style="display:none">0</span></button>
+      </div>
+      <div class="admin-status" id="admin-status">📱 On-device</div>
+    </div>
+
+    <!-- EVENTS PANEL -->
+    <div id="admin-events-panel">
+      <form class="book-card" id="admin-form">
+        <div class="field"><label>Event title</label><input type="text" id="ad-title" placeholder="Smoothie Saturday · Live DJ" required /></div>
+        <div class="book-row">
+          <div class="field"><label>Date</label><input type="date" id="ad-date" required /></div>
+          <div class="field"><label>Type</label>
+            <select id="ad-type">
+              <option value="special">Special</option>
+              <option value="class">Class</option>
+              <option value="popup">Pop-up</option>
+              <option value="cleanse">Cleanse</option>
+              <option value="buyout">Buyout</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>Time</label><input type="text" id="ad-time" placeholder="4:00pm – 6:00pm" required /></div>
+        <div class="field"><label>Description</label><textarea id="ad-desc" placeholder="What's happening, what's included, how to join…"></textarea></div>
+        <button type="submit" class="btn btn-pine btn-block btn-lg">Publish Event 🌲</button>
+      </form>
+      <div class="cal-list" style="padding:0 16px">
+        <h3>Your posted events</h3>
+        <div id="admin-event-list"></div>
+      </div>
+    </div>
+
+    <!-- BOOKINGS PANEL -->
+    <div id="admin-bookings-panel" style="display:none">
+      <div class="cal-list" style="padding:0 16px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <h3>Booking requests</h3>
+          <button class="btn btn-ghost" id="bk-refresh" style="padding:8px 14px;font-size:12px">Refresh</button>
+        </div>
+        <div id="admin-bookings-list"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -766,7 +982,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </div>
   <div class="checkout-section">
     <div class="field"><label>First delivery / pickup date</label><input type="date" id="pkg-date" /></div>
-    <div class="field"><label>Delivery zip (or pickup)</label><input type="text" placeholder="12211 or 'pickup'" /></div>
+    <div class="field"><label>Delivery zip (or pickup)</label><input type="text" placeholder="12204 or 'pickup'" /></div>
     <div class="field"><label>Anything we should know?</label><textarea rows="2" placeholder="Allergies, occasion, etc."></textarea></div>
   </div>
   <div class="container" style="padding-bottom:20px">
@@ -793,6 +1009,8 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <button class="account-row" data-route="notifications"><span class="ico ic-4">🔔</span><div class="body"><h4>Notifications</h4><p>3 unread</p></div><span class="chev">›</span></button>
     <button class="account-row"><span class="ico ic-5">💳</span><div class="body"><h4>Payment Methods</h4><p>Visa •••• 4429</p></div><span class="chev">›</span></button>
     <button class="account-row"><span class="ico ic-6">⚙️</span><div class="body"><h4>Settings & Privacy</h4><p>Preferences, language, support</p></div><span class="chev">›</span></button>
+    <button class="account-row" id="install-row"><span class="ico" style="background:var(--gold);color:var(--teal-deep)">📲</span><div class="body"><h4>Install the App</h4><p id="install-row-sub">Add to your home screen — iPhone & Android</p></div><span class="chev">›</span></button>
+    <button class="account-row" id="owner-login"><span class="ico" style="background:var(--pine);color:#fff">🌲</span><div class="body"><h4>Owner Tools</h4><p>Staff only · post events & manage the board</p></div><span class="chev">›</span></button>
   </div>
   <div style="padding:30px 16px;text-align:center">
     <img src="assets/logo-pour-decisions.png" style="width:90px;opacity:.45;margin:0 auto" />
@@ -827,17 +1045,17 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div class="grab"></div>
   <div class="pic" id="sheet-pic">
     <button class="close" id="sheet-close">×</button>
-    <span class="cat-tag" id="sheet-cat">Greens</span>
+    <span class="cat-tag" id="sheet-cat">Juices</span>
   </div>
   <div class="body">
-    <h2 id="sheet-name">Green Reign</h2>
+    <h2 id="sheet-name">Green Machine</h2>
     <p class="desc" id="sheet-desc"></p>
     <div class="macro-card" id="sheet-macros"></div>
     <div style="margin-top:14px">
       <div class="eyebrow">Ingredients</div>
       <div class="ingredients" id="sheet-ing"></div>
     </div>
-    <div class="opt-group">
+    <div class="opt-group" id="size-group">
       <label>Size</label>
       <div class="size-grid" id="size-grid">
         <div class="size-opt" data-size="12">12oz<span class="price">$8</span></div>
@@ -845,14 +1063,15 @@ h3{font-size:22px;font-weight:700;font-style:italic}
         <div class="size-opt" data-size="32">32oz<span class="price">$18</span></div>
       </div>
     </div>
-    <div class="opt-group">
-      <label>Boost it</label>
+    <div class="opt-group" id="boost-group">
+      <label>Add-ons</label>
       <div class="boost-row" id="boost-row">
-        <button class="boost" data-boost="ginger">+ Ginger</button>
-        <button class="boost" data-boost="turmeric">+ Turmeric</button>
-        <button class="boost" data-boost="protein">+ Protein</button>
-        <button class="boost" data-boost="collagen">+ Collagen</button>
-        <button class="boost" data-boost="cbd">+ CBD</button>
+        <button class="boost" data-boost="avocado">+ Avocado <b>$2</b></button>
+        <button class="boost" data-boost="protein">+ Protein Powder <b>$3</b></button>
+        <button class="boost" data-boost="chia">+ Chia Seeds <b>$1</b></button>
+        <button class="boost" data-boost="hemp">+ Hemp Seeds <b>$2</b></button>
+        <button class="boost" data-boost="flax">+ Flax Seeds <b>$1</b></button>
+        <button class="boost" data-boost="fruit">+ Extra Fruit <b>$2</b></button>
       </div>
     </div>
   </div>
@@ -875,8 +1094,39 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <p id="m-desc">Bring a friend, sip a free pineapple-ginger pour. Live DJ, raffle, and 2x Pour Pass stamps.</p>
     <div class="actions">
       <button class="btn btn-ghost" id="m-close" style="flex:0 0 auto;padding:14px 18px">Close</button>
-      <button class="btn btn-primary" style="flex:1">RSVP →</button>
+      <button class="btn btn-primary" id="m-rsvp" style="flex:1">RSVP →</button>
     </div>
+  </div>
+</div>
+
+<!-- INSTALL BANNER -->
+<div class="install-banner" id="install-banner">
+  <img src="assets/logo-icon-256.png" alt="" />
+  <div class="ib-body">
+    <strong>Get the Pour Decisions app</strong>
+    <span>Install it free — order faster, no app store.</span>
+  </div>
+  <button class="ib-go" id="install-go">Install</button>
+  <button class="ib-x" id="install-x" aria-label="Dismiss">×</button>
+</div>
+
+<!-- INSTALL / ADD-TO-HOME SHEET -->
+<div class="ios-sheet" id="ios-sheet">
+  <div class="card">
+    <div class="grab"></div>
+    <h3>Install Pour Decisions 🌲</h3>
+    <p class="lead" id="ios-lead">Add our app to your home screen — it opens full-screen, works offline, and lives right next to your other apps.</p>
+    <div id="ios-steps-ios">
+      <div class="ios-step"><span class="n">1</span><span class="tx">Tap the <b>Share</b> button in Safari's toolbar</span><span class="ic">􀈂</span></div>
+      <div class="ios-step"><span class="n">2</span><span class="tx">Scroll and tap <b>Add to Home Screen</b></span><span class="ic">➕</span></div>
+      <div class="ios-step"><span class="n">3</span><span class="tx">Tap <b>Add</b> — done! Open it from your home screen</span><span class="ic">✅</span></div>
+    </div>
+    <div id="ios-steps-android" style="display:none">
+      <div class="ios-step"><span class="n">1</span><span class="tx">Tap the <b>⋮ menu</b> in Chrome (top-right)</span><span class="ic">⋮</span></div>
+      <div class="ios-step"><span class="n">2</span><span class="tx">Tap <b>Install app</b> / Add to Home screen</span><span class="ic">➕</span></div>
+      <div class="ios-step"><span class="n">3</span><span class="tx">Confirm <b>Install</b> — find it in your app drawer</span><span class="ic">✅</span></div>
+    </div>
+    <button class="btn btn-pine btn-block done" id="ios-done">Got it</button>
   </div>
 </div>
 
@@ -888,82 +1138,131 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 
 const PIC = (id) => `https://images.unsplash.com/${id}?w=600&q=70&auto=format&fit=crop`;
 
+// Menu mirrors the in-store Pour Decisions menu board.
+// Juices & smoothies are sized (12/16/32oz); shots, salads & wraps are single-serve (sizes:false).
 const MENU = [
-  {id:'green-reign',name:'Green Reign',cat:'greens',price:11,
-   ing:['kale','spinach','cucumber','green apple','lemon','ginger'],
-   desc:'Cold-pressed leafy fuel. The morning power move.',
-   macros:{cal:140,protein:6,carbs:30,fat:0,sugar:18},
+  // ── SIGNATURE JUICES ──
+  {id:'green-machine',name:'Green Machine',cat:'juices',price:9,
+   ing:['kale','spinach','cucumber','celery','green apple','lemon'],
+   desc:'Refreshing, hydrating, and nutrient-rich. The morning power move.',
+   macros:{cal:120,protein:4,carbs:26,fat:0,sugar:16},
    img:PIC('photo-1610970881699-44a5587cabec')},
-  {id:'celery-clean',name:'Celery Clean',cat:'greens',price:9,
-   ing:['celery','parsley','lemon','green apple'],
-   desc:'A bright-green hydration reset.',
-   macros:{cal:80,protein:4,carbs:18,fat:0,sugar:10},
-   img:PIC('photo-1622485482518-2b5c40f4d9b9')},
-  {id:'matcha-mojo',name:'Matcha Mojo',cat:'greens',price:10,
-   ing:['matcha','spinach','banana','almond milk','honey'],
-   desc:'Slow-burn caffeine, smooth as it gets.',
-   macros:{cal:220,protein:8,carbs:36,fat:6,sugar:24},
-   img:PIC('photo-1545518514-ce8448f542b3')},
-  {id:'pina-power',name:'Pina Power',cat:'citrus',price:10,
-   ing:['pineapple','orange','turmeric','lemon','black pepper'],
-   desc:"Pina the pineapple's signature pour. Anti-inflammatory glow.",
-   macros:{cal:170,protein:2,carbs:42,fat:0,sugar:34},
-   img:PIC('photo-1546173159-315724a31696')},
-  {id:'sunrise-citrus',name:'Sunrise Citrus',cat:'citrus',price:9,
-   ing:['orange','grapefruit','carrot','lemon'],
-   desc:'Liquid sunshine. Vitamin C plus beta-carotene.',
-   macros:{cal:160,protein:3,carbs:38,fat:0,sugar:30},
-   img:PIC('photo-1613478223719-2ab802602423')},
-  {id:'lemon-snap',name:'Lemon Snap',cat:'citrus',price:8,
-   ing:['lemon','green apple','mint','cayenne','agave'],
-   desc:'Tart, sweet, with a slow burn. Wakes you up clean.',
-   macros:{cal:120,protein:1,carbs:30,fat:0,sugar:24},
-   img:PIC('photo-1437418747212-8d9709afab22')},
-  {id:'beet-the-day',name:'Beet The Day',cat:'roots',price:11,
-   ing:['beet','carrot','apple','ginger','lemon'],
-   desc:'Endurance in a bottle. Earthy, sweet, unmistakable.',
-   macros:{cal:180,protein:3,carbs:42,fat:0,sugar:32},
-   img:PIC('photo-1618556658017-fd80b6f8b94c')},
-  {id:'turmeric-tonic',name:'Turmeric Tonic',cat:'roots',price:10,
-   ing:['turmeric','carrot','orange','ginger','black pepper'],
-   desc:'Anti-inflammatory glow tonic. Bright and warm.',
-   macros:{cal:150,protein:2,carbs:34,fat:0,sugar:26},
-   img:PIC('photo-1546039907-7fa05f864c02')},
-  {id:'carrot-glow',name:'Carrot Glow',cat:'roots',price:9,
-   ing:['carrot','apple','ginger','lemon'],
-   desc:'A skin-loving classic. Sweet and approachable.',
+  {id:'sunrise-boost',name:'Sunrise Boost',cat:'juices',price:9,
+   ing:['orange','pineapple','carrot','ginger'],
+   desc:'Packed with vitamin C and natural energy. Liquid sunshine.',
    macros:{cal:140,protein:2,carbs:34,fat:0,sugar:28},
-   img:PIC('photo-1626078436805-49a13aa42aab')},
-  {id:'berry-blitz',name:'Berry Blitz',cat:'smoothies',price:11,
-   ing:['strawberry','blueberry','banana','almond milk','protein'],
-   desc:'Antioxidant heavyweight. Built for recovery.',
-   macros:{cal:280,protein:18,carbs:40,fat:7,sugar:28},
+   img:PIC('photo-1613478223719-2ab802602423')},
+  {id:'berry-blast',name:'Berry Blast',cat:'juices',price:10,
+   ing:['strawberry','blueberry','raspberry','apple'],
+   desc:'Loaded with antioxidants. A berry-forward heavyweight.',
+   macros:{cal:150,protein:2,carbs:36,fat:0,sugar:28},
    img:PIC('photo-1505252585461-04db1eb84625')},
-  {id:'tropic-thunder',name:'Tropic Thunder',cat:'smoothies',price:11,
-   ing:['mango','pineapple','banana','coconut milk','lime'],
-   desc:'Vacation in a glass. Creamy and bright.',
-   macros:{cal:300,protein:5,carbs:54,fat:8,sugar:42},
+  {id:'tropical-paradise',name:'Tropical Paradise',cat:'juices',price:10,
+   ing:['pineapple','mango','coconut water','lime'],
+   desc:'A refreshing tropical escape. Bright and hydrating.',
+   macros:{cal:160,protein:2,carbs:38,fat:0,sugar:32},
    img:PIC('photo-1623065422902-30a2d299bbe4')},
-  {id:'pb-banana',name:'PB Banana Boom',cat:'smoothies',price:11,
-   ing:['banana','peanut butter','oats','almond milk','honey','protein'],
-   desc:'A pre-workout with a dessert problem.',
-   macros:{cal:380,protein:22,carbs:48,fat:14,sugar:24},
+  {id:'beet-power',name:'Beet Power',cat:'juices',price:9,
+   ing:['beet','apple','carrot','ginger'],
+   desc:'Supports circulation and endurance. Earthy, sweet, unmistakable.',
+   macros:{cal:150,protein:3,carbs:36,fat:0,sugar:28},
+   img:PIC('photo-1618556658017-fd80b6f8b94c')},
+  // ── SMOOTHIES ──
+  {id:'island-vibes',name:'Island Vibes',cat:'smoothies',price:11,
+   ing:['mango','pineapple','banana','coconut milk'],
+   desc:'Vacation in a glass. Creamy, bright, and tropical.',
+   macros:{cal:290,protein:5,carbs:52,fat:8,sugar:40},
+   img:PIC('photo-1623065422902-30a2d299bbe4')},
+  {id:'peanut-butter-power',name:'Peanut Butter Power',cat:'smoothies',price:11,
+   ing:['banana','peanut butter','dates','almond milk'],
+   desc:'A pre-workout with a dessert problem. Rich and filling.',
+   macros:{cal:420,protein:14,carbs:52,fat:18,sugar:30},
    img:PIC('photo-1553530666-ba11a7da3888')},
-  {id:'ginger-shot',name:'Ginger Shot',cat:'shots',price:5,
-   ing:['ginger','lemon','cayenne','honey'],
+  {id:'berry-bliss',name:'Berry Bliss',cat:'smoothies',price:10,
+   ing:['mixed berries','banana','protein powder','oat milk'],
+   desc:'Antioxidant-packed and built for recovery.',
+   macros:{cal:300,protein:20,carbs:44,fat:6,sugar:28},
+   img:PIC('photo-1505252585461-04db1eb84625')},
+  {id:'green-energy',name:'Green Energy',cat:'smoothies',price:11,
+   ing:['spinach','banana','mango','coconut water'],
+   desc:'Smooth, green, and clean. Energy without the crash.',
+   macros:{cal:240,protein:6,carbs:48,fat:3,sugar:32},
+   img:PIC('photo-1610970881699-44a5587cabec')},
+  // ── WELLNESS SHOTS ──
+  {id:'ginger-shot',name:'Ginger Shot',cat:'shots',price:4,sizes:false,
+   ing:['fresh ginger','lemon'],
    desc:'2oz of fire. Wake up, fight off, get going.',
-   macros:{cal:35,protein:0,carbs:8,fat:0,sugar:6},
+   macros:{cal:25,protein:0,carbs:6,fat:0,sugar:4},
    img:PIC('photo-1556881286-fc6915169721')},
-  {id:'wheatgrass-shot',name:'Wheatgrass Shot',cat:'shots',price:5,
-   ing:['wheatgrass','lemon'],
-   desc:'Pure chlorophyll. The green machine reset.',
-   macros:{cal:15,protein:1,carbs:2,fat:0,sugar:1},
-   img:PIC('photo-1556228720-da4e85bcdac5')},
-  {id:'turmeric-shot',name:'Turmeric Shot',cat:'shots',price:5,
-   ing:['turmeric','ginger','lemon','black pepper','honey'],
-   desc:"Inflammation's worst enemy.",
+  {id:'immunity-shot',name:'Immunity Shot',cat:'shots',price:5,sizes:false,
+   ing:['turmeric','ginger','lemon','black pepper'],
+   desc:'Anti-inflammatory defense in a 2oz hit.',
    macros:{cal:30,protein:0,carbs:7,fat:0,sugar:5},
-   img:PIC('photo-1597306633535-fdba89e5ea30')}
+   img:PIC('photo-1597306633535-fdba89e5ea30')},
+  {id:'energy-shot',name:'Energy Shot',cat:'shots',price:5,sizes:false,
+   ing:['beet','ginger','lemon'],
+   desc:'Clean, natural energy. No jitters, no sugar crash.',
+   macros:{cal:35,protein:1,carbs:8,fat:0,sugar:6},
+   img:PIC('photo-1556228720-da4e85bcdac5')},
+  // ── FRESH SALADS ──
+  {id:'garden-fresh-salad',name:'Garden Fresh Salad',cat:'salads',price:12,sizes:false,
+   ing:['mixed greens','cucumbers','tomatoes','carrots','red onions'],
+   desc:'Crisp, clean, and simple. Made fresh daily.',
+   macros:{cal:220,protein:6,carbs:24,fat:12,sugar:8},
+   img:PIC('photo-1512621776951-a57141f2eefd')},
+  {id:'mediterranean-salad',name:'Mediterranean Salad',cat:'salads',price:13,sizes:false,
+   ing:['romaine','cucumbers','tomatoes','olives','feta cheese'],
+   desc:'Briny, bright, and satisfying. A coastal classic.',
+   macros:{cal:320,protein:10,carbs:22,fat:22,sugar:7},
+   img:PIC('photo-1540420773420-3366772f4999')},
+  {id:'cranberry-walnut-salad',name:'Cranberry Walnut Salad',cat:'salads',price:13,sizes:false,
+   ing:['spring mix','cranberries','walnuts','apples','goat cheese'],
+   desc:'Sweet, crunchy, and creamy in every bite.',
+   macros:{cal:360,protein:9,carbs:30,fat:24,sugar:16},
+   img:PIC('photo-1546069901-ba9599a7e63c')},
+  {id:'tropical-fruit-salad',name:'Tropical Fruit Salad',cat:'salads',price:10,sizes:false,
+   ing:['spring mix','mango','strawberries','blueberries','almonds'],
+   desc:'Light, sweet, and refreshing. Fruit-forward greens.',
+   macros:{cal:240,protein:6,carbs:34,fat:10,sugar:22},
+   img:PIC('photo-1490474418585-ba9bad8fd0ea')},
+  // ── FRESH WRAPS ──
+  {id:'veggie-hummus-wrap',name:'Veggie Hummus Wrap',cat:'wraps',price:12,sizes:false,
+   ing:['hummus','spinach','cucumbers','peppers','carrots'],
+   desc:'Garden veggies and creamy hummus, rolled up fresh.',
+   macros:{cal:380,protein:12,carbs:52,fat:14,sugar:6},
+   img:PIC('photo-1626700051175-6818013e1d4f')},
+  {id:'mediterranean-wrap',name:'Mediterranean Wrap',cat:'wraps',price:13,sizes:false,
+   ing:['hummus','feta','cucumbers','tomatoes','olives','spinach wrap'],
+   desc:'A Mediterranean spread wrapped to go.',
+   macros:{cal:440,protein:16,carbs:48,fat:22,sugar:6},
+   img:PIC('photo-1509722747041-616f39b57569')},
+  {id:'avocado-crunch-wrap',name:'Avocado Crunch Wrap',cat:'wraps',price:12,sizes:false,
+   ing:['avocado','lettuce','cucumbers','carrots','sprouts'],
+   desc:'Cool, creamy avocado with a satisfying crunch.',
+   macros:{cal:400,protein:10,carbs:46,fat:20,sugar:5},
+   img:PIC('photo-1551782450-a2132b4ba21d')},
+  {id:'southwest-wrap',name:'Southwest Wrap',cat:'wraps',price:13,sizes:false,
+   ing:['black beans','corn','avocado','lettuce','tomatoes'],
+   desc:'Hearty black beans and avocado with a Southwest kick.',
+   macros:{cal:460,protein:15,carbs:60,fat:18,sugar:7},
+   img:PIC('photo-1564093497595-593b96d80180')}
+];
+
+// Add-on prices match the in-store menu board.
+const BOOSTS = {
+  avocado:{label:'Avocado',price:2},
+  protein:{label:'Protein Powder',price:3},
+  chia:{label:'Chia Seeds',price:1},
+  hemp:{label:'Hemp Seeds',price:2},
+  flax:{label:'Flax Seeds',price:1},
+  fruit:{label:'Extra Fruit',price:2}
+};
+
+// Combo deals from the in-store menu board.
+const COMBOS = [
+  {id:'juice-salad',title:'Any Juice + Salad',price:18,ico:'🥤',desc:'Pick any signature juice and any fresh salad.'},
+  {id:'smoothie-wrap',title:'Any Smoothie + Wrap',price:20,ico:'🥗',desc:'Pair any smoothie with any fresh wrap.'},
+  {id:'add-shot',title:'Add a Wellness Shot',price:3,ico:'⚡',desc:'Add any wellness shot to any order.'}
 ];
 
 const NOTIFICATIONS = [
@@ -1004,7 +1303,93 @@ function buildEvents(){
     return {date:new Date(d.getFullYear(), d.getMonth(), d.getDate()), ...s};
   });
 }
-const EVENTS = buildEvents();
+// Owner-posted events live in localStorage and merge with the seed calendar.
+/* ─────────────── DATA STORE (cloud-first, on-device fallback) ───────────────
+ * Talks to /api/events + /api/bookings when a cloud store is attached (the
+ * server reports `configured:true`). Until then, everything persists in
+ * localStorage so the app fully works on a single device. The local copy is
+ * always kept as a mirror, so reads are instant and offline-safe. */
+const Store = {
+  base: 'api',
+  cloud: false,
+  pin: '',
+  _read(k){ try{ return JSON.parse(localStorage.getItem(k)) || []; }catch(_){ return []; } },
+  _write(k,v){ localStorage.setItem(k, JSON.stringify(v)); },
+
+  // EVENTS
+  localEvents(){ return this._read('pd-owner-events'); },
+  async syncEvents(){
+    try{
+      const r = await fetch(this.base + '/events');
+      if(!r.ok) return false;
+      const d = await r.json();
+      this.cloud = !!d.configured;
+      if(d.configured) this._write('pd-owner-events', d.events || []);
+      return this.cloud;
+    }catch(_){ return false; }
+  },
+  async addEvent(ev){
+    if(this.cloud){
+      const r = await fetch(this.base + '/events', { method:'POST',
+        headers:{'Content-Type':'application/json','x-admin-pin':this.pin},
+        body: JSON.stringify(ev) });
+      if(r.status === 401) throw new Error('pin');
+      if(r.ok){ this._write('pd-owner-events', (await r.json()).events || []); return; }
+    }
+    const list = this.localEvents();
+    list.push({ id:'evt_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), ...ev });
+    this._write('pd-owner-events', list);
+  },
+  async deleteEvent(id){
+    if(this.cloud){
+      const r = await fetch(this.base + '/events?id=' + encodeURIComponent(id),
+        { method:'DELETE', headers:{'x-admin-pin':this.pin} });
+      if(r.ok){ this._write('pd-owner-events', (await r.json()).events || []); return; }
+    }
+    this._write('pd-owner-events', this.localEvents().filter(e => e.id !== id));
+  },
+
+  // BOOKINGS
+  localBookings(){ return this._read('pd-bookings'); },
+  async addBooking(b){
+    let rec = null;
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/bookings', { method:'POST',
+          headers:{'Content-Type':'application/json'}, body: JSON.stringify(b) });
+        if(r.ok) rec = (await r.json()).booking;
+      }catch(_){}
+    }
+    if(!rec) rec = { id:'bkg_'+Date.now().toString(36), status:'new', createdAt:new Date().toISOString(), ...b };
+    const list = this.localBookings(); list.unshift(rec); this._write('pd-bookings', list);
+    return rec;
+  },
+  async getBookings(){
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/bookings', { headers:{'x-admin-pin':this.pin} });
+        if(r.ok){ const d = await r.json(); this._write('pd-bookings', d.bookings || []); return d.bookings || []; }
+      }catch(_){}
+    }
+    return this.localBookings();
+  },
+  async deleteBooking(id){
+    if(this.cloud){
+      try{ await fetch(this.base + '/bookings?id=' + encodeURIComponent(id),
+        { method:'DELETE', headers:{'x-admin-pin':this.pin} }); }catch(_){}
+    }
+    this._write('pd-bookings', this.localBookings().filter(b => b.id !== id));
+  }
+};
+
+function loadOwnerEvents(){
+  return Store.localEvents().map(e => ({ ...e, date:new Date(e.iso + 'T12:00:00'), custom:true }));
+}
+let EVENTS = [];
+function rebuildEvents(){
+  EVENTS = buildEvents().concat(loadOwnerEvents()).sort((a,b) => a.date - b.date);
+}
+rebuildEvents();
 
 const STATE = {
   cart:[], view:'home', filter:'all',
@@ -1015,13 +1400,18 @@ const STATE = {
 function go(view){
   STATE.view = view;
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.dataset.view===view));
-  const navMap = {home:'home',menu:'menu',cart:'menu',checkout:'menu',confirm:'home',calendar:'calendar',packages:'packages','pkg-detail':'packages',pass:'account',notifications:'account',account:'account'};
+  const navMap = {home:'home',menu:'menu',cart:'menu',checkout:'menu',confirm:'home',calendar:'calendar',book:'calendar',admin:'account',packages:'packages','pkg-detail':'packages',pass:'account',notifications:'account',account:'account'};
   document.querySelectorAll('.bottom-nav .nav-item').forEach(n => n.classList.toggle('active', n.dataset.route===navMap[view]));
   window.scrollTo({top:0,behavior:'instant'});
   if(view==='cart') renderCart();
   if(view==='checkout') renderCheckoutSummary();
   if(view==='calendar') renderCalendar();
   if(view==='notifications') renderNotifications();
+  if(view==='book'){
+    document.getElementById('book-form').style.display='';
+    document.getElementById('book-confirm').style.display='none';
+  }
+  if(view==='admin'){ hideInstallBanner(); renderAdminList(); }
 }
 
 document.addEventListener('click', (e) => {
@@ -1078,9 +1468,9 @@ document.querySelectorAll('#cat-strip .cat-chip').forEach(ch => {
 
 function renderFeatured(){
   const carousel = document.getElementById('featured-carousel');
-  const featured = ['green-reign','pina-power','beet-the-day','berry-blitz'].map(id => MENU.find(m => m.id===id));
-  const colorByCat = {greens:'var(--lime)',citrus:'var(--orange)',roots:'var(--pink)',smoothies:'var(--yellow)',shots:'var(--cyan)'};
-  const txtByCat = {greens:'var(--teal-deep)',citrus:'#fff',roots:'#fff',smoothies:'var(--teal-deep)',shots:'var(--teal-deep)'};
+  const featured = ['green-machine','island-vibes','garden-fresh-salad','avocado-crunch-wrap'].map(id => MENU.find(m => m.id===id));
+  const colorByCat = {juices:'var(--lime)',smoothies:'var(--yellow)',shots:'var(--cyan)',salads:'#22c55e',wraps:'var(--orange)'};
+  const txtByCat = {juices:'var(--teal-deep)',smoothies:'var(--teal-deep)',shots:'var(--teal-deep)',salads:'#fff',wraps:'#fff'};
   carousel.innerHTML = featured.map(item => `
     <div class="feat-card" data-id="${item.id}">
       <div class="ph" style="background-image:url('${item.img}')"></div>
@@ -1095,6 +1485,29 @@ function renderFeatured(){
   carousel.querySelectorAll('.feat-card').forEach(c => {
     c.addEventListener('click', () => openSheet(c.dataset.id));
   });
+}
+
+function renderCombos(){
+  const root = document.getElementById('combo-strip');
+  if(!root) return;
+  root.innerHTML = `
+    <div class="combo-head">
+      <div class="eyebrow">Save with</div>
+      <h3>Pour Decisions Combos</h3>
+    </div>
+    <div class="combo-row">
+      ${COMBOS.map(c => `
+        <div class="combo-card">
+          <span class="combo-ico">${c.ico}</span>
+          <div class="combo-info">
+            <h4>${c.title}</h4>
+            <p>${c.desc}</p>
+          </div>
+          <span class="combo-price">${c.id==='add-shot' ? '+' : ''}$${c.price}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
 }
 
 function renderHomeEvents(){
@@ -1124,7 +1537,14 @@ function openSheet(id){
     <div><div class="v">${item.macros.fat}g</div><div class="l">FAT</div></div>
   `;
   document.getElementById('sheet-ing').innerHTML = item.ing.map(i => `<span>${i}</span>`).join('');
+  // Size tiers are derived from the item's base (16oz) price; hidden for single-serve items.
+  const grid = document.getElementById('size-grid');
+  grid.querySelector('[data-size="12"] .price').textContent = '$' + Math.round(item.price * .85);
+  grid.querySelector('[data-size="16"] .price').textContent = '$' + item.price;
+  grid.querySelector('[data-size="32"] .price').textContent = '$' + Math.round(item.price * 1.6);
   document.querySelectorAll('#size-grid .size-opt').forEach(o => o.classList.toggle('active', o.dataset.size==='16'));
+  document.getElementById('size-group').style.display = item.sizes===false ? 'none' : '';
+  document.getElementById('boost-group').style.display = item.cat==='shots' ? 'none' : '';
   document.querySelectorAll('#boost-row .boost').forEach(b => b.classList.remove('active'));
   document.getElementById('qty-n').textContent = '1';
   updateAddPrice();
@@ -1153,9 +1573,11 @@ document.getElementById('qty-minus').addEventListener('click', () => { if(STATE.
 
 function unitPrice(){
   if(!STATE.currentItem) return 0;
-  const base = STATE.currentItem.price;
-  const sizeMult = STATE.size===12 ? .85 : STATE.size===32 ? 1.6 : 1;
-  const boost = STATE.boosts.size * 1.5;
+  const it = STATE.currentItem;
+  const base = it.price;
+  const sizeMult = it.sizes===false ? 1 : (STATE.size===12 ? .85 : STATE.size===32 ? 1.6 : 1);
+  let boost = 0;
+  STATE.boosts.forEach(b => { boost += (BOOSTS[b] ? BOOSTS[b].price : 0); });
   return Math.round((base * sizeMult + boost) * 100) / 100;
 }
 function updateAddPrice(){ document.getElementById('add-price').textContent = '$' + (unitPrice()*STATE.qty).toFixed(2); }
@@ -1163,8 +1585,9 @@ function updateAddPrice(){ document.getElementById('add-price').textContent = '$
 document.getElementById('btn-add-cart').addEventListener('click', () => {
   const item = STATE.currentItem; if(!item) return;
   STATE.cart.push({
-    id:item.id, name:item.name, size:STATE.size+'oz',
-    boosts:[...STATE.boosts], qty:STATE.qty,
+    id:item.id, name:item.name,
+    size: item.sizes===false ? (item.cat==='shots' ? '2oz' : 'regular') : STATE.size+'oz',
+    boosts:[...STATE.boosts].map(b => BOOSTS[b] ? BOOSTS[b].label : b), qty:STATE.qty,
     price:unitPrice(), img:item.img, cat:item.cat
   });
   closeSheet();
@@ -1355,10 +1778,164 @@ function openModal(ev){
   pill.textContent = EVENT_TYPES[ev.type].label;
   pill.style.background = EVENT_TYPES[ev.type].color;
   pill.style.color = (ev.type==='class'||ev.type==='special') ? 'var(--teal-deep)' : '#fff';
+  STATE.currentEvent = ev;
+  syncRsvpBtn(ev);
   modal.classList.add('show');
 }
 document.getElementById('m-close').addEventListener('click', () => modal.classList.remove('show'));
 modal.addEventListener('click', e => { if(e.target===modal) modal.classList.remove('show'); });
+
+// RSVP — toggle attendance per event (keyed by title + date)
+STATE.rsvps = new Set();
+const rsvpBtn = document.getElementById('m-rsvp');
+function rsvpKey(ev){ return ev.title + '|' + ev.date.toDateString(); }
+function syncRsvpBtn(ev){
+  const going = STATE.rsvps.has(rsvpKey(ev));
+  rsvpBtn.textContent = going ? "✓ You're going" : 'RSVP →';
+  rsvpBtn.classList.toggle('btn-pine', going);
+  rsvpBtn.classList.toggle('btn-primary', !going);
+}
+rsvpBtn.addEventListener('click', () => {
+  const ev = STATE.currentEvent; if(!ev) return;
+  const k = rsvpKey(ev);
+  if(STATE.rsvps.has(k)){ STATE.rsvps.delete(k); toast('RSVP removed'); }
+  else { STATE.rsvps.add(k); toast("You're on the list · " + ev.title); }
+  syncRsvpBtn(ev);
+});
+
+// BOOK THE SPACE — persists the request (cloud when configured, else on-device)
+document.getElementById('book-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = document.getElementById('bk-name').value.trim();
+  const contact = document.getElementById('bk-contact').value.trim();
+  const date = document.getElementById('bk-date').value;
+  if(!name || !contact || !date){ toast('Please fill name, contact & date'); return; }
+  const type = document.getElementById('bk-type').value;
+  const time = document.getElementById('bk-time').value;
+  const size = document.getElementById('bk-size').value;
+  const ref = 'PD-EVT-' + String(Math.floor(1000 + Math.random()*9000));
+  const rec = await Store.addBooking({ ref, name, contact, date, type, time, size,
+    notes: document.getElementById('bk-notes').value.trim() });
+  document.getElementById('bk-ref').textContent = rec.ref || ref;
+  document.getElementById('bk-summary').textContent =
+    `${type} · ${date} · ${time} · ${size} guests. We'll confirm with ${name} within 24 hours.`;
+  document.getElementById('book-form').style.display = 'none';
+  document.getElementById('book-confirm').style.display = '';
+  document.getElementById('book-form').reset();
+  window.scrollTo({top:0,behavior:'smooth'});
+  toast('Booking request sent 🌲');
+  refreshBkBadge();
+});
+
+/* ─── OWNER DASHBOARD — PIN-gated (default 7687 = "POUR"; set ADMIN_PIN to change) ───
+ * Events publish to the cloud store when attached, so they appear on every
+ * customer's calendar. Booking requests land in the Bookings inbox. */
+STATE.admin = false;
+function setAdminStatus(){
+  const el = document.getElementById('admin-status');
+  el.textContent = Store.cloud ? '☁️ Cloud sync on' : '📱 On-device';
+  el.classList.toggle('cloud', Store.cloud);
+}
+function showAdminShell(){
+  document.getElementById('admin-gate').style.display = STATE.admin ? 'none' : '';
+  document.getElementById('admin-shell').style.display = STATE.admin ? '' : 'none';
+  if(STATE.admin) setAdminStatus();
+}
+document.getElementById('owner-login').addEventListener('click', () => { showAdminShell(); go('admin'); });
+document.getElementById('admin-gate').addEventListener('submit', e => {
+  e.preventDefault();
+  const pin = document.getElementById('ad-pin').value;
+  if(pin === '7687' || (Store.cloud && pin.length >= 4)){
+    STATE.admin = true; Store.pin = pin;
+    showAdminShell(); renderAdminList(); renderBookings();
+    toast('Welcome back, boss 🌲');
+  } else toast('Wrong PIN');
+  document.getElementById('ad-pin').value = '';
+});
+
+// Tabs
+document.querySelectorAll('#admin-tabs .admin-tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('#admin-tabs .admin-tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    const tab = t.dataset.tab;
+    document.getElementById('admin-events-panel').style.display = tab==='events' ? '' : 'none';
+    document.getElementById('admin-bookings-panel').style.display = tab==='bookings' ? '' : 'none';
+    if(tab==='bookings') renderBookings();
+  });
+});
+document.getElementById('bk-refresh').addEventListener('click', renderBookings);
+
+const MONTH_ABBR = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+function renderAdminList(){
+  const root = document.getElementById('admin-event-list');
+  const own = loadOwnerEvents().sort((a,b) => a.date - b.date);
+  root.innerHTML = own.length ? own.map(ev => `
+    <div class="event-card">
+      <div class="date-stack">
+        <div class="mo">${MONTH_ABBR[ev.date.getMonth()]}</div>
+        <div class="d">${ev.date.getDate()}</div>
+      </div>
+      <div class="body"><h4>${ev.title}</h4><p>${ev.time}</p></div>
+      <button class="btn btn-ghost" data-del-ev="${ev.id}" style="padding:8px 12px;font-size:12px;border-color:var(--pink);color:var(--pink)">Delete</button>
+    </div>
+  `).join('') : '<div class="empty-state" style="padding:20px"><p>Nothing posted yet. Publish your first event above.</p></div>';
+  root.querySelectorAll('[data-del-ev]').forEach(b => {
+    b.addEventListener('click', async () => {
+      await Store.deleteEvent(b.dataset.delEv);
+      rebuildEvents(); renderAdminList(); renderHomeEvents();
+      toast('Event removed');
+    });
+  });
+}
+document.getElementById('admin-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const title = document.getElementById('ad-title').value.trim();
+  const iso = document.getElementById('ad-date').value;
+  const time = document.getElementById('ad-time').value.trim();
+  if(!title || !iso || !time){ toast('Title, date & time required'); return; }
+  try{
+    await Store.addEvent({ iso, type:document.getElementById('ad-type').value, title, time,
+      desc:document.getElementById('ad-desc').value.trim() || 'Posted by the Pour Decisions crew.' });
+  }catch(err){
+    if(err.message === 'pin'){ toast('Session expired — re-enter PIN'); STATE.admin=false; showAdminShell(); return; }
+  }
+  rebuildEvents(); renderAdminList(); renderHomeEvents();
+  e.target.reset();
+  toast(Store.cloud ? 'Event published to everyone 🌲' : 'Event live on the calendar 🌲');
+});
+
+// Bookings inbox
+async function refreshBkBadge(){
+  const n = (await Store.getBookings()).filter(b => b.status !== 'done').length;
+  const badge = document.getElementById('bk-badge');
+  if(n > 0){ badge.style.display=''; badge.textContent = n; } else badge.style.display='none';
+}
+async function renderBookings(){
+  const root = document.getElementById('admin-bookings-list');
+  root.innerHTML = '<div class="empty-state" style="padding:20px"><p>Loading…</p></div>';
+  const list = await Store.getBookings();
+  if(Store.cloud) setAdminStatus();
+  refreshBkBadge();
+  if(!list.length){ root.innerHTML = '<div class="empty-state" style="padding:20px"><p>No booking requests yet. They\'ll show up here the moment someone books the space.</p></div>'; return; }
+  root.innerHTML = list.map(b => {
+    const tel = /^[-+()\d\s]+$/.test(b.contact);
+    const link = tel ? 'tel:' + b.contact.replace(/[^\d+]/g,'') : 'mailto:' + b.contact;
+    return `
+    <div class="booking-card">
+      <div class="top"><span class="who">${b.name}</span><span class="ref">${b.ref||''}</span></div>
+      <div class="meta"><b>${b.type||'Event'}</b> · ${b.date}${b.time?' · '+b.time:''}${b.size?' · '+b.size+' guests':''}<br/>${b.contact}</div>
+      ${b.notes ? `<div class="notes">"${b.notes}"</div>` : ''}
+      <div class="acts">
+        <a class="reply" href="${link}">${tel?'Call':'Email'} back</a>
+        <button class="del" data-del-bk="${b.id}">Archive</button>
+      </div>
+    </div>`;
+  }).join('');
+  root.querySelectorAll('[data-del-bk]').forEach(btn => {
+    btn.addEventListener('click', async () => { await Store.deleteBooking(btn.dataset.delBk); renderBookings(); });
+  });
+}
 
 const PKGS = {
   sub:{title:'Weekly subscription',eyebrow:'Subscription',blurb:'Pick a tier. Skip or cancel anytime.',
@@ -1434,15 +2011,96 @@ function toast(msg){
   toastTO = setTimeout(() => document.getElementById('toast').classList.remove('show'), 2200);
 }
 
+/* ───────────────── INSTALL / ADD-TO-HOME (iOS + Android) ───────────────── */
+const PWA = { deferredPrompt:null };
+function isStandalone(){
+  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+}
+function isIOS(){
+  return /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+function platformLabel(){
+  if(isStandalone()) return "You're using the installed app 🎉";
+  return isIOS() ? 'Add to your home screen — iPhone & iPad' : 'Add to your home screen — iPhone & Android';
+}
+const iosSheet = document.getElementById('ios-sheet');
+function openInstallSheet(){
+  // Show platform-appropriate manual steps (used on iOS, or when no native prompt).
+  document.getElementById('ios-steps-ios').style.display = isIOS() ? '' : 'none';
+  document.getElementById('ios-steps-android').style.display = isIOS() ? 'none' : '';
+  document.getElementById('ios-lead').textContent = isIOS()
+    ? "Safari can add Pour Decisions to your home screen — it opens full-screen and works offline."
+    : "Add Pour Decisions to your home screen — it opens full-screen and works offline.";
+  iosSheet.classList.add('show');
+}
+function closeInstallSheet(){ iosSheet.classList.remove('show'); }
+document.getElementById('ios-done').addEventListener('click', closeInstallSheet);
+iosSheet.addEventListener('click', e => { if(e.target===iosSheet) closeInstallSheet(); });
+
+async function triggerInstall(){
+  // Android/desktop Chrome: fire the captured native prompt. iOS/others: show steps.
+  if(PWA.deferredPrompt){
+    PWA.deferredPrompt.prompt();
+    const { outcome } = await PWA.deferredPrompt.userChoice;
+    PWA.deferredPrompt = null;
+    hideInstallBanner();
+    toast(outcome === 'accepted' ? 'Installing the app… 🌲' : 'No worries — install anytime from Account');
+  } else {
+    openInstallSheet();
+  }
+}
+const installBanner = document.getElementById('install-banner');
+function showInstallBanner(){
+  if(isStandalone()) return;
+  if(localStorage.getItem('pd-install-dismissed') === '1') return;
+  installBanner.classList.add('show');
+}
+function hideInstallBanner(){ installBanner.classList.remove('show'); }
+document.getElementById('install-go').addEventListener('click', triggerInstall);
+document.getElementById('install-x').addEventListener('click', () => {
+  hideInstallBanner();
+  localStorage.setItem('pd-install-dismissed','1');
+});
+document.getElementById('install-row').addEventListener('click', () => {
+  if(isStandalone()){ toast("You're already using the installed app 🎉"); return; }
+  triggerInstall();
+});
+
+// Android/desktop Chrome hands us the install event — capture it for our own button.
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  PWA.deferredPrompt = e;
+  setTimeout(showInstallBanner, 2600);
+});
+window.addEventListener('appinstalled', () => {
+  PWA.deferredPrompt = null;
+  hideInstallBanner();
+  toast('Installed! Find Pour Decisions on your home screen 🌲');
+});
+
+function initInstallUI(){
+  document.getElementById('install-row-sub').textContent = platformLabel();
+  if(isStandalone()) return;            // already installed — stay quiet
+  // iOS never fires beforeinstallprompt, so surface the banner ourselves.
+  if(isIOS()) setTimeout(showInstallBanner, 2600);
+}
+
 function init(){
   renderFeatured();
+  renderCombos();
   renderMenu();
   renderHomeEvents();
   updateCartBadge();
+  initInstallUI();
   setTimeout(() => document.getElementById('splash').classList.add('gone'), 1700);
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
+  // Pull any cloud-published events so the calendar/home reflect the latest.
+  Store.syncEvents().then(cloud => {
+    if(cloud){ rebuildEvents(); renderHomeEvents(); if(STATE.view==='calendar') renderCalendar(); }
+  });
 }
 window.addEventListener('DOMContentLoaded', init);
 </script>

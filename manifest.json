@@ -1,7 +1,7 @@
 {
   "name": "Pour Decisions — Order Ahead",
   "short_name": "Pour Decisions",
-  "description": "Cold-pressed juice and clean fuel · 348 Loudon Rd, Albany NY",
+  "description": "Cold-pressed juice, smoothies, salads & wraps · 359 Broadway Blvd, Albany NY",
   "start_url": "./index.html",
   "scope": "./",
   "id": "/pour-decisions-app/",
@@ -25,7 +25,7 @@
   "shortcuts": [
     { "name": "Order Ahead", "short_name": "Order", "url": "./index.html#/order", "description": "Skip the line — order pickup" },
     { "name": "Pour Pass", "short_name": "Pass", "url": "./index.html#/pass", "description": "Track stamps and rewards" },
-    { "name": "Browse Menu", "short_name": "Menu", "url": "./index.html#/menu", "description": "See all 14 pours" }
+    { "name": "Browse Menu", "short_name": "Menu", "url": "./index.html#/menu", "description": "Juices, smoothies, salads, wraps & shots" }
   ],
   "screenshots": [
     { "src": "assets/og-image.png", "sizes": "1200x630", "type": "image/png", "form_factor": "wide" }
