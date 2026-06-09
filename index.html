@@ -427,6 +427,26 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .book-confirm .ref{display:inline-block;margin:12px 0;padding:8px 18px;border-radius:var(--r-pill);background:rgba(255,255,255,.16);font-family:var(--f-num);font-size:20px;letter-spacing:.12em;color:var(--gold)}
 .book-confirm p{font-size:13px;color:rgba(255,255,255,.88)}
 
+/* ADMIN DASHBOARD */
+.admin-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px 10px;flex-wrap:wrap}
+.admin-tabs{display:flex;gap:8px;background:#fff;border-radius:var(--r-pill);padding:4px;box-shadow:var(--shadow-card)}
+.admin-tab{padding:9px 14px;border-radius:var(--r-pill);font-weight:800;font-size:13px;color:var(--teal);display:inline-flex;align-items:center;gap:6px}
+.admin-tab.active{background:var(--pine);color:#fff}
+.tab-badge{background:var(--pink);color:#fff;border-radius:9px;min-width:18px;height:18px;padding:0 5px;font-size:11px;font-weight:800;display:inline-grid;place-items:center}
+.admin-status{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:6px 12px;border-radius:var(--r-pill);background:var(--cream-warm);color:var(--gold-deep)}
+.admin-status.cloud{background:#dcfce7;color:var(--pine-deep)}
+.booking-card{background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-card);padding:14px;margin-bottom:10px;border-left:5px solid var(--pine)}
+.booking-card .top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.booking-card .who{font-family:var(--f-display);font-style:italic;font-weight:800;color:var(--teal-deep);font-size:16px}
+.booking-card .ref{font-family:var(--f-num);font-size:14px;letter-spacing:.08em;color:var(--gold-deep)}
+.booking-card .meta{font-size:12.5px;color:var(--ink-soft);font-weight:600;line-height:1.5}
+.booking-card .meta b{color:var(--teal-deep)}
+.booking-card .notes{font-size:12.5px;color:var(--muted);margin-top:6px;font-style:italic}
+.booking-card .acts{display:flex;gap:8px;margin-top:10px}
+.booking-card .acts a,.booking-card .acts button{flex:1;text-align:center;padding:9px;border-radius:var(--r-md);font-size:12px;font-weight:800}
+.booking-card .acts .reply{background:var(--pine);color:#fff}
+.booking-card .acts .del{background:var(--cream-warm);color:var(--pink)}
+
 /* PACKAGES */
 .pkg-hero{margin:14px 16px;padding:24px 22px;border-radius:var(--r-xl);background:linear-gradient(135deg, var(--pink) 0%, var(--orange) 100%);color:#fff;position:relative;overflow:hidden;}
 .pkg-hero h2{color:#fff}
@@ -844,38 +864,63 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </div>
 </section>
 
-<!-- OWNER TOOLS (staff only) -->
+<!-- OWNER TOOLS / ADMIN (staff only) -->
 <section class="view" data-view="admin">
   <div class="container" style="padding-top:14px">
-    <div class="eyebrow" style="color:var(--pine)">Owner Tools</div>
-    <h1 style="font-size:clamp(34px,9vw,52px)">Post an <em>event</em></h1>
-    <p style="color:var(--ink-soft);margin:8px 0 0;font-size:14px">Events you post here go live on the app calendar and home feed instantly.</p>
+    <div class="eyebrow" style="color:var(--pine)">Owner Dashboard</div>
+    <h1 style="font-size:clamp(34px,9vw,52px)">Run the <em>show</em>.</h1>
   </div>
   <form class="book-card" id="admin-gate">
+    <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;font-weight:500">Staff only. Enter your PIN to manage events and see booking requests.</p>
     <div class="field"><label>Staff PIN</label><input type="password" inputmode="numeric" maxlength="6" id="ad-pin" placeholder="••••" autocomplete="off" /></div>
-    <button type="submit" class="btn btn-pine btn-block">Unlock Owner Tools</button>
+    <button type="submit" class="btn btn-pine btn-block">Unlock Dashboard</button>
   </form>
-  <form class="book-card" id="admin-form" style="display:none">
-    <div class="field"><label>Event title</label><input type="text" id="ad-title" placeholder="Smoothie Saturday · Live DJ" required /></div>
-    <div class="book-row">
-      <div class="field"><label>Date</label><input type="date" id="ad-date" required /></div>
-      <div class="field"><label>Type</label>
-        <select id="ad-type">
-          <option value="special">Special</option>
-          <option value="class">Class</option>
-          <option value="popup">Pop-up</option>
-          <option value="cleanse">Cleanse</option>
-          <option value="buyout">Buyout</option>
-        </select>
+
+  <div id="admin-shell" style="display:none">
+    <div class="admin-bar">
+      <div class="admin-tabs" id="admin-tabs">
+        <button class="admin-tab active" data-tab="events">📅 Events</button>
+        <button class="admin-tab" data-tab="bookings">📩 Bookings <span class="tab-badge" id="bk-badge" style="display:none">0</span></button>
+      </div>
+      <div class="admin-status" id="admin-status">📱 On-device</div>
+    </div>
+
+    <!-- EVENTS PANEL -->
+    <div id="admin-events-panel">
+      <form class="book-card" id="admin-form">
+        <div class="field"><label>Event title</label><input type="text" id="ad-title" placeholder="Smoothie Saturday · Live DJ" required /></div>
+        <div class="book-row">
+          <div class="field"><label>Date</label><input type="date" id="ad-date" required /></div>
+          <div class="field"><label>Type</label>
+            <select id="ad-type">
+              <option value="special">Special</option>
+              <option value="class">Class</option>
+              <option value="popup">Pop-up</option>
+              <option value="cleanse">Cleanse</option>
+              <option value="buyout">Buyout</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>Time</label><input type="text" id="ad-time" placeholder="4:00pm – 6:00pm" required /></div>
+        <div class="field"><label>Description</label><textarea id="ad-desc" placeholder="What's happening, what's included, how to join…"></textarea></div>
+        <button type="submit" class="btn btn-pine btn-block btn-lg">Publish Event 🌲</button>
+      </form>
+      <div class="cal-list" style="padding:0 16px">
+        <h3>Your posted events</h3>
+        <div id="admin-event-list"></div>
       </div>
     </div>
-    <div class="field"><label>Time</label><input type="text" id="ad-time" placeholder="4:00pm – 6:00pm" required /></div>
-    <div class="field"><label>Description</label><textarea id="ad-desc" placeholder="What's happening, what's included, how to join…"></textarea></div>
-    <button type="submit" class="btn btn-pine btn-block btn-lg">Publish Event 🌲</button>
-  </form>
-  <div class="cal-list" id="admin-list-wrap" style="padding:0 16px;display:none">
-    <h3>Your posted events</h3>
-    <div id="admin-event-list"></div>
+
+    <!-- BOOKINGS PANEL -->
+    <div id="admin-bookings-panel" style="display:none">
+      <div class="cal-list" style="padding:0 16px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <h3>Booking requests</h3>
+          <button class="btn btn-ghost" id="bk-refresh" style="padding:8px 14px;font-size:12px">Refresh</button>
+        </div>
+        <div id="admin-bookings-list"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1259,15 +1304,86 @@ function buildEvents(){
   });
 }
 // Owner-posted events live in localStorage and merge with the seed calendar.
+/* ─────────────── DATA STORE (cloud-first, on-device fallback) ───────────────
+ * Talks to /api/events + /api/bookings when a cloud store is attached (the
+ * server reports `configured:true`). Until then, everything persists in
+ * localStorage so the app fully works on a single device. The local copy is
+ * always kept as a mirror, so reads are instant and offline-safe. */
+const Store = {
+  base: 'api',
+  cloud: false,
+  pin: '',
+  _read(k){ try{ return JSON.parse(localStorage.getItem(k)) || []; }catch(_){ return []; } },
+  _write(k,v){ localStorage.setItem(k, JSON.stringify(v)); },
+
+  // EVENTS
+  localEvents(){ return this._read('pd-owner-events'); },
+  async syncEvents(){
+    try{
+      const r = await fetch(this.base + '/events');
+      if(!r.ok) return false;
+      const d = await r.json();
+      this.cloud = !!d.configured;
+      if(d.configured) this._write('pd-owner-events', d.events || []);
+      return this.cloud;
+    }catch(_){ return false; }
+  },
+  async addEvent(ev){
+    if(this.cloud){
+      const r = await fetch(this.base + '/events', { method:'POST',
+        headers:{'Content-Type':'application/json','x-admin-pin':this.pin},
+        body: JSON.stringify(ev) });
+      if(r.status === 401) throw new Error('pin');
+      if(r.ok){ this._write('pd-owner-events', (await r.json()).events || []); return; }
+    }
+    const list = this.localEvents();
+    list.push({ id:'evt_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), ...ev });
+    this._write('pd-owner-events', list);
+  },
+  async deleteEvent(id){
+    if(this.cloud){
+      const r = await fetch(this.base + '/events?id=' + encodeURIComponent(id),
+        { method:'DELETE', headers:{'x-admin-pin':this.pin} });
+      if(r.ok){ this._write('pd-owner-events', (await r.json()).events || []); return; }
+    }
+    this._write('pd-owner-events', this.localEvents().filter(e => e.id !== id));
+  },
+
+  // BOOKINGS
+  localBookings(){ return this._read('pd-bookings'); },
+  async addBooking(b){
+    let rec = null;
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/bookings', { method:'POST',
+          headers:{'Content-Type':'application/json'}, body: JSON.stringify(b) });
+        if(r.ok) rec = (await r.json()).booking;
+      }catch(_){}
+    }
+    if(!rec) rec = { id:'bkg_'+Date.now().toString(36), status:'new', createdAt:new Date().toISOString(), ...b };
+    const list = this.localBookings(); list.unshift(rec); this._write('pd-bookings', list);
+    return rec;
+  },
+  async getBookings(){
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/bookings', { headers:{'x-admin-pin':this.pin} });
+        if(r.ok){ const d = await r.json(); this._write('pd-bookings', d.bookings || []); return d.bookings || []; }
+      }catch(_){}
+    }
+    return this.localBookings();
+  },
+  async deleteBooking(id){
+    if(this.cloud){
+      try{ await fetch(this.base + '/bookings?id=' + encodeURIComponent(id),
+        { method:'DELETE', headers:{'x-admin-pin':this.pin} }); }catch(_){}
+    }
+    this._write('pd-bookings', this.localBookings().filter(b => b.id !== id));
+  }
+};
+
 function loadOwnerEvents(){
-  try{
-    return (JSON.parse(localStorage.getItem('pd-owner-events')) || []).map(e => ({
-      ...e, date:new Date(e.iso + 'T12:00:00'), custom:true
-    }));
-  }catch(_){ return []; }
-}
-function saveOwnerEvents(list){
-  localStorage.setItem('pd-owner-events', JSON.stringify(list));
+  return Store.localEvents().map(e => ({ ...e, date:new Date(e.iso + 'T12:00:00'), custom:true }));
 }
 let EVENTS = [];
 function rebuildEvents(){
@@ -1295,7 +1411,7 @@ function go(view){
     document.getElementById('book-form').style.display='';
     document.getElementById('book-confirm').style.display='none';
   }
-  if(view==='admin') renderAdminList();
+  if(view==='admin'){ hideInstallBanner(); renderAdminList(); }
 }
 
 document.addEventListener('click', (e) => {
@@ -1687,8 +1803,8 @@ rsvpBtn.addEventListener('click', () => {
   syncRsvpBtn(ev);
 });
 
-// BOOK THE SPACE — mock submit, consistent with the rest of the demo data
-document.getElementById('book-form').addEventListener('submit', e => {
+// BOOK THE SPACE — persists the request (cloud when configured, else on-device)
+document.getElementById('book-form').addEventListener('submit', async e => {
   e.preventDefault();
   const name = document.getElementById('bk-name').value.trim();
   const contact = document.getElementById('bk-contact').value.trim();
@@ -1698,69 +1814,128 @@ document.getElementById('book-form').addEventListener('submit', e => {
   const time = document.getElementById('bk-time').value;
   const size = document.getElementById('bk-size').value;
   const ref = 'PD-EVT-' + String(Math.floor(1000 + Math.random()*9000));
-  document.getElementById('bk-ref').textContent = ref;
+  const rec = await Store.addBooking({ ref, name, contact, date, type, time, size,
+    notes: document.getElementById('bk-notes').value.trim() });
+  document.getElementById('bk-ref').textContent = rec.ref || ref;
   document.getElementById('bk-summary').textContent =
     `${type} · ${date} · ${time} · ${size} guests. We'll confirm with ${name} within 24 hours.`;
   document.getElementById('book-form').style.display = 'none';
   document.getElementById('book-confirm').style.display = '';
+  document.getElementById('book-form').reset();
   window.scrollTo({top:0,behavior:'smooth'});
   toast('Booking request sent 🌲');
+  refreshBkBadge();
 });
 
-// OWNER TOOLS — PIN-gated event publishing (PIN 7687 = "POUR" on a phone keypad).
-// Events persist in localStorage on this device; wiring to a shared backend is the
-// production step so posts sync to every customer's phone.
+/* ─── OWNER DASHBOARD — PIN-gated (default 7687 = "POUR"; set ADMIN_PIN to change) ───
+ * Events publish to the cloud store when attached, so they appear on every
+ * customer's calendar. Booking requests land in the Bookings inbox. */
 STATE.admin = false;
-function syncAdminGate(){
-  document.getElementById('admin-gate').style.display = STATE.admin ? 'none' : '';
-  document.getElementById('admin-form').style.display = STATE.admin ? '' : 'none';
-  document.getElementById('admin-list-wrap').style.display = STATE.admin ? '' : 'none';
+function setAdminStatus(){
+  const el = document.getElementById('admin-status');
+  el.textContent = Store.cloud ? '☁️ Cloud sync on' : '📱 On-device';
+  el.classList.toggle('cloud', Store.cloud);
 }
-document.getElementById('owner-login').addEventListener('click', () => { syncAdminGate(); go('admin'); });
+function showAdminShell(){
+  document.getElementById('admin-gate').style.display = STATE.admin ? 'none' : '';
+  document.getElementById('admin-shell').style.display = STATE.admin ? '' : 'none';
+  if(STATE.admin) setAdminStatus();
+}
+document.getElementById('owner-login').addEventListener('click', () => { showAdminShell(); go('admin'); });
 document.getElementById('admin-gate').addEventListener('submit', e => {
   e.preventDefault();
   const pin = document.getElementById('ad-pin').value;
-  if(pin === '7687'){ STATE.admin = true; syncAdminGate(); renderAdminList(); toast('Welcome back, boss 🌲'); }
-  else toast('Wrong PIN');
+  if(pin === '7687' || (Store.cloud && pin.length >= 4)){
+    STATE.admin = true; Store.pin = pin;
+    showAdminShell(); renderAdminList(); renderBookings();
+    toast('Welcome back, boss 🌲');
+  } else toast('Wrong PIN');
   document.getElementById('ad-pin').value = '';
 });
+
+// Tabs
+document.querySelectorAll('#admin-tabs .admin-tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('#admin-tabs .admin-tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    const tab = t.dataset.tab;
+    document.getElementById('admin-events-panel').style.display = tab==='events' ? '' : 'none';
+    document.getElementById('admin-bookings-panel').style.display = tab==='bookings' ? '' : 'none';
+    if(tab==='bookings') renderBookings();
+  });
+});
+document.getElementById('bk-refresh').addEventListener('click', renderBookings);
+
+const MONTH_ABBR = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 function renderAdminList(){
   const root = document.getElementById('admin-event-list');
   const own = loadOwnerEvents().sort((a,b) => a.date - b.date);
-  root.innerHTML = own.length ? own.map((ev,i) => `
+  root.innerHTML = own.length ? own.map(ev => `
     <div class="event-card">
       <div class="date-stack">
-        <div class="mo">${['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][ev.date.getMonth()]}</div>
+        <div class="mo">${MONTH_ABBR[ev.date.getMonth()]}</div>
         <div class="d">${ev.date.getDate()}</div>
       </div>
       <div class="body"><h4>${ev.title}</h4><p>${ev.time}</p></div>
-      <button class="btn btn-ghost" data-del-ev="${i}" style="padding:8px 12px;font-size:12px;border-color:var(--pink);color:var(--pink)">Delete</button>
+      <button class="btn btn-ghost" data-del-ev="${ev.id}" style="padding:8px 12px;font-size:12px;border-color:var(--pink);color:var(--pink)">Delete</button>
     </div>
   `).join('') : '<div class="empty-state" style="padding:20px"><p>Nothing posted yet. Publish your first event above.</p></div>';
   root.querySelectorAll('[data-del-ev]').forEach(b => {
-    b.addEventListener('click', () => {
-      const list = loadOwnerEvents().sort((a,b) => a.date - b.date);
-      list.splice(parseInt(b.dataset.delEv,10),1);
-      saveOwnerEvents(list.map(e => ({iso:e.iso,type:e.type,title:e.title,time:e.time,desc:e.desc})));
+    b.addEventListener('click', async () => {
+      await Store.deleteEvent(b.dataset.delEv);
       rebuildEvents(); renderAdminList(); renderHomeEvents();
       toast('Event removed');
     });
   });
 }
-document.getElementById('admin-form').addEventListener('submit', e => {
+document.getElementById('admin-form').addEventListener('submit', async e => {
   e.preventDefault();
   const title = document.getElementById('ad-title').value.trim();
   const iso = document.getElementById('ad-date').value;
   const time = document.getElementById('ad-time').value.trim();
   if(!title || !iso || !time){ toast('Title, date & time required'); return; }
-  const list = loadOwnerEvents().map(e2 => ({iso:e2.iso,type:e2.type,title:e2.title,time:e2.time,desc:e2.desc}));
-  list.push({iso, type:document.getElementById('ad-type').value, title, time,
-    desc:document.getElementById('ad-desc').value.trim() || 'Posted by the Pour Decisions crew.'});
-  saveOwnerEvents(list);
+  try{
+    await Store.addEvent({ iso, type:document.getElementById('ad-type').value, title, time,
+      desc:document.getElementById('ad-desc').value.trim() || 'Posted by the Pour Decisions crew.' });
+  }catch(err){
+    if(err.message === 'pin'){ toast('Session expired — re-enter PIN'); STATE.admin=false; showAdminShell(); return; }
+  }
   rebuildEvents(); renderAdminList(); renderHomeEvents();
   e.target.reset();
-  toast('Event live on the calendar 🌲');
+  toast(Store.cloud ? 'Event published to everyone 🌲' : 'Event live on the calendar 🌲');
 });
+
+// Bookings inbox
+async function refreshBkBadge(){
+  const n = (await Store.getBookings()).filter(b => b.status !== 'done').length;
+  const badge = document.getElementById('bk-badge');
+  if(n > 0){ badge.style.display=''; badge.textContent = n; } else badge.style.display='none';
+}
+async function renderBookings(){
+  const root = document.getElementById('admin-bookings-list');
+  root.innerHTML = '<div class="empty-state" style="padding:20px"><p>Loading…</p></div>';
+  const list = await Store.getBookings();
+  if(Store.cloud) setAdminStatus();
+  refreshBkBadge();
+  if(!list.length){ root.innerHTML = '<div class="empty-state" style="padding:20px"><p>No booking requests yet. They\'ll show up here the moment someone books the space.</p></div>'; return; }
+  root.innerHTML = list.map(b => {
+    const tel = /^[-+()\d\s]+$/.test(b.contact);
+    const link = tel ? 'tel:' + b.contact.replace(/[^\d+]/g,'') : 'mailto:' + b.contact;
+    return `
+    <div class="booking-card">
+      <div class="top"><span class="who">${b.name}</span><span class="ref">${b.ref||''}</span></div>
+      <div class="meta"><b>${b.type||'Event'}</b> · ${b.date}${b.time?' · '+b.time:''}${b.size?' · '+b.size+' guests':''}<br/>${b.contact}</div>
+      ${b.notes ? `<div class="notes">"${b.notes}"</div>` : ''}
+      <div class="acts">
+        <a class="reply" href="${link}">${tel?'Call':'Email'} back</a>
+        <button class="del" data-del-bk="${b.id}">Archive</button>
+      </div>
+    </div>`;
+  }).join('');
+  root.querySelectorAll('[data-del-bk]').forEach(btn => {
+    btn.addEventListener('click', async () => { await Store.deleteBooking(btn.dataset.delBk); renderBookings(); });
+  });
+}
 
 const PKGS = {
   sub:{title:'Weekly subscription',eyebrow:'Subscription',blurb:'Pick a tier. Skip or cancel anytime.',
@@ -1922,6 +2097,10 @@ function init(){
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
+  // Pull any cloud-published events so the calendar/home reflect the latest.
+  Store.syncEvents().then(cloud => {
+    if(cloud){ rebuildEvents(); renderHomeEvents(); if(STATE.view==='calendar') renderCalendar(); }
+  });
 }
 window.addEventListener('DOMContentLoaded', init);
 </script>
