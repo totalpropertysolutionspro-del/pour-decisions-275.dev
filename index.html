@@ -370,6 +370,30 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .event-card .body p{font-size:12px;color:var(--muted);margin:0;font-weight:600}
 .event-card .pill{padding:4px 8px;border-radius:var(--r-pill);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#fff}
 
+/* INSTALL / PWA */
+.install-banner{position:fixed;left:12px;right:12px;bottom:calc(80px + var(--safe-bot) + 8px);z-index:150;display:none;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r-lg);color:#fff;background:radial-gradient(120% 100% at 85% 0%, rgba(163,230,53,.45), transparent 55%),linear-gradient(150deg,var(--pine),var(--pine-deep));box-shadow:var(--shadow-pop);}
+.install-banner.show{display:flex;animation:fadeUp .35s ease both}
+.install-banner img{width:42px;height:42px;border-radius:11px;flex:0 0 auto;background:#fff;padding:4px}
+.install-banner .ib-body{flex:1;min-width:0}
+.install-banner .ib-body strong{display:block;font-size:14px;font-weight:800}
+.install-banner .ib-body span{font-size:11.5px;color:rgba(255,255,255,.85)}
+.install-banner .ib-go{flex:0 0 auto;background:var(--gold);color:var(--teal-deep);font-weight:800;padding:10px 16px;border-radius:var(--r-pill);font-size:13px}
+.install-banner .ib-x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:16px;font-weight:800;display:grid;place-items:center}
+/* iOS / install instruction sheet */
+.ios-sheet{position:fixed;inset:0;z-index:210;background:rgba(15,30,40,.55);backdrop-filter:blur(3px);display:none;align-items:flex-end;}
+.ios-sheet.show{display:flex;animation:fadeUp .3s ease both}
+.ios-sheet .card{background:var(--cream);width:100%;border-radius:var(--r-xl) var(--r-xl) 0 0;padding:24px 22px calc(26px + var(--safe-bot));max-width:520px;margin:0 auto;box-shadow:var(--shadow-pop);position:relative}
+.ios-sheet .grab{width:42px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 16px}
+.ios-sheet h3{color:var(--teal-deep);font-size:22px;margin-bottom:4px}
+.ios-sheet .lead{font-size:13px;color:var(--ink-soft);margin-bottom:18px;font-weight:500}
+.ios-step{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.ios-step:last-of-type{border-bottom:0}
+.ios-step .n{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--pine);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px}
+.ios-step .tx{font-size:14px;font-weight:600;color:var(--ink)}
+.ios-step .tx b{color:var(--teal-deep)}
+.ios-step .ic{margin-left:auto;font-size:22px}
+.ios-sheet .done{margin-top:18px}
+
 /* PINE TREELINE — repeating silhouette, two layers for depth */
 .treeline{height:44px;pointer-events:none;
   background-image:
@@ -940,6 +964,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <button class="account-row" data-route="notifications"><span class="ico ic-4">🔔</span><div class="body"><h4>Notifications</h4><p>3 unread</p></div><span class="chev">›</span></button>
     <button class="account-row"><span class="ico ic-5">💳</span><div class="body"><h4>Payment Methods</h4><p>Visa •••• 4429</p></div><span class="chev">›</span></button>
     <button class="account-row"><span class="ico ic-6">⚙️</span><div class="body"><h4>Settings & Privacy</h4><p>Preferences, language, support</p></div><span class="chev">›</span></button>
+    <button class="account-row" id="install-row"><span class="ico" style="background:var(--gold);color:var(--teal-deep)">📲</span><div class="body"><h4>Install the App</h4><p id="install-row-sub">Add to your home screen — iPhone & Android</p></div><span class="chev">›</span></button>
     <button class="account-row" id="owner-login"><span class="ico" style="background:var(--pine);color:#fff">🌲</span><div class="body"><h4>Owner Tools</h4><p>Staff only · post events & manage the board</p></div><span class="chev">›</span></button>
   </div>
   <div style="padding:30px 16px;text-align:center">
@@ -1026,6 +1051,37 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <button class="btn btn-ghost" id="m-close" style="flex:0 0 auto;padding:14px 18px">Close</button>
       <button class="btn btn-primary" id="m-rsvp" style="flex:1">RSVP →</button>
     </div>
+  </div>
+</div>
+
+<!-- INSTALL BANNER -->
+<div class="install-banner" id="install-banner">
+  <img src="assets/logo-icon-256.png" alt="" />
+  <div class="ib-body">
+    <strong>Get the Pour Decisions app</strong>
+    <span>Install it free — order faster, no app store.</span>
+  </div>
+  <button class="ib-go" id="install-go">Install</button>
+  <button class="ib-x" id="install-x" aria-label="Dismiss">×</button>
+</div>
+
+<!-- INSTALL / ADD-TO-HOME SHEET -->
+<div class="ios-sheet" id="ios-sheet">
+  <div class="card">
+    <div class="grab"></div>
+    <h3>Install Pour Decisions 🌲</h3>
+    <p class="lead" id="ios-lead">Add our app to your home screen — it opens full-screen, works offline, and lives right next to your other apps.</p>
+    <div id="ios-steps-ios">
+      <div class="ios-step"><span class="n">1</span><span class="tx">Tap the <b>Share</b> button in Safari's toolbar</span><span class="ic">􀈂</span></div>
+      <div class="ios-step"><span class="n">2</span><span class="tx">Scroll and tap <b>Add to Home Screen</b></span><span class="ic">➕</span></div>
+      <div class="ios-step"><span class="n">3</span><span class="tx">Tap <b>Add</b> — done! Open it from your home screen</span><span class="ic">✅</span></div>
+    </div>
+    <div id="ios-steps-android" style="display:none">
+      <div class="ios-step"><span class="n">1</span><span class="tx">Tap the <b>⋮ menu</b> in Chrome (top-right)</span><span class="ic">⋮</span></div>
+      <div class="ios-step"><span class="n">2</span><span class="tx">Tap <b>Install app</b> / Add to Home screen</span><span class="ic">➕</span></div>
+      <div class="ios-step"><span class="n">3</span><span class="tx">Confirm <b>Install</b> — find it in your app drawer</span><span class="ic">✅</span></div>
+    </div>
+    <button class="btn btn-pine btn-block done" id="ios-done">Got it</button>
   </div>
 </div>
 
@@ -1780,12 +1836,88 @@ function toast(msg){
   toastTO = setTimeout(() => document.getElementById('toast').classList.remove('show'), 2200);
 }
 
+/* ───────────────── INSTALL / ADD-TO-HOME (iOS + Android) ───────────────── */
+const PWA = { deferredPrompt:null };
+function isStandalone(){
+  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+}
+function isIOS(){
+  return /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+function platformLabel(){
+  if(isStandalone()) return "You're using the installed app 🎉";
+  return isIOS() ? 'Add to your home screen — iPhone & iPad' : 'Add to your home screen — iPhone & Android';
+}
+const iosSheet = document.getElementById('ios-sheet');
+function openInstallSheet(){
+  // Show platform-appropriate manual steps (used on iOS, or when no native prompt).
+  document.getElementById('ios-steps-ios').style.display = isIOS() ? '' : 'none';
+  document.getElementById('ios-steps-android').style.display = isIOS() ? 'none' : '';
+  document.getElementById('ios-lead').textContent = isIOS()
+    ? "Safari can add Pour Decisions to your home screen — it opens full-screen and works offline."
+    : "Add Pour Decisions to your home screen — it opens full-screen and works offline.";
+  iosSheet.classList.add('show');
+}
+function closeInstallSheet(){ iosSheet.classList.remove('show'); }
+document.getElementById('ios-done').addEventListener('click', closeInstallSheet);
+iosSheet.addEventListener('click', e => { if(e.target===iosSheet) closeInstallSheet(); });
+
+async function triggerInstall(){
+  // Android/desktop Chrome: fire the captured native prompt. iOS/others: show steps.
+  if(PWA.deferredPrompt){
+    PWA.deferredPrompt.prompt();
+    const { outcome } = await PWA.deferredPrompt.userChoice;
+    PWA.deferredPrompt = null;
+    hideInstallBanner();
+    toast(outcome === 'accepted' ? 'Installing the app… 🌲' : 'No worries — install anytime from Account');
+  } else {
+    openInstallSheet();
+  }
+}
+const installBanner = document.getElementById('install-banner');
+function showInstallBanner(){
+  if(isStandalone()) return;
+  if(localStorage.getItem('pd-install-dismissed') === '1') return;
+  installBanner.classList.add('show');
+}
+function hideInstallBanner(){ installBanner.classList.remove('show'); }
+document.getElementById('install-go').addEventListener('click', triggerInstall);
+document.getElementById('install-x').addEventListener('click', () => {
+  hideInstallBanner();
+  localStorage.setItem('pd-install-dismissed','1');
+});
+document.getElementById('install-row').addEventListener('click', () => {
+  if(isStandalone()){ toast("You're already using the installed app 🎉"); return; }
+  triggerInstall();
+});
+
+// Android/desktop Chrome hands us the install event — capture it for our own button.
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  PWA.deferredPrompt = e;
+  setTimeout(showInstallBanner, 2600);
+});
+window.addEventListener('appinstalled', () => {
+  PWA.deferredPrompt = null;
+  hideInstallBanner();
+  toast('Installed! Find Pour Decisions on your home screen 🌲');
+});
+
+function initInstallUI(){
+  document.getElementById('install-row-sub').textContent = platformLabel();
+  if(isStandalone()) return;            // already installed — stay quiet
+  // iOS never fires beforeinstallprompt, so surface the banner ourselves.
+  if(isIOS()) setTimeout(showInstallBanner, 2600);
+}
+
 function init(){
   renderFeatured();
   renderCombos();
   renderMenu();
   renderHomeEvents();
   updateCartBadge();
+  initInstallUI();
   setTimeout(() => document.getElementById('splash').classList.add('gone'), 1700);
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('sw.js').catch(() => {});
