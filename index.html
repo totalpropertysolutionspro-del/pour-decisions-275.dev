@@ -11,9 +11,13 @@
 <meta name="format-detection" content="telephone=yes" />
 <meta name="description" content="Pour Decisions — cold-pressed juices, smoothies, wellness shots, salads & wraps in Albany NY. Order ahead, book packages, earn Pour Pass rewards." />
 <meta property="og:title" content="Pour Decisions — Order Ahead" />
-<meta property="og:description" content="Cold-pressed juice, smoothies, salads & wraps · 359 Broadway Blvd, Albany NY" />
-<meta property="og:image" content="assets/og-image.png" />
+<meta property="og:description" content="Cold-pressed juice, smoothies, salads & wraps · 359 Northern Boulevard, Albany NY" />
+<meta property="og:image" content="https://pourdecisionsjuicebar.com/assets/og-image.png" />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://pourdecisionsjuicebar.com/" />
+<meta property="og:site_name" content="Pour Decisions Juice Bar" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://pourdecisionsjuicebar.com/" />
 <title>Pour Decisions — Cold-Pressed Juice · Albany NY</title>
 
 <link rel="manifest" href="manifest.json" />
@@ -97,6 +101,24 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .app-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:calc(8px + var(--safe-top)) 16px 8px;background:rgba(255,248,236,.92);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;}
 .app-header .logo-wrap{display:flex;align-items:center;flex:1;min-width:0}
 .app-header .logo-wrap img{height:44px;width:auto}
+/* Slide-out nav drawer */
+.drawer-scrim{position:fixed;inset:0;z-index:300;background:rgba(10,28,37,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.drawer-scrim.show{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;bottom:0;left:0;z-index:301;width:82%;max-width:330px;background:var(--cream,#FFF8EC);transform:translateX(-100%);transition:transform .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:6px 0 30px rgba(0,0,0,.25);overflow-y:auto}
+.drawer.show{transform:translateX(0)}
+.drawer-head{background:linear-gradient(150deg,var(--teal,#1F4860),var(--teal-deep,#0a1c25));color:#fff;padding:calc(20px + var(--safe-top)) 20px 20px;display:flex;align-items:center;gap:12px}
+.drawer-head img{width:46px;height:46px;border-radius:12px}
+.drawer-head .dh-t{font-family:var(--f-display);font-style:italic;font-weight:900;font-size:20px;line-height:1}
+.drawer-head .dh-s{font-size:11.5px;opacity:.8;margin-top:3px}
+.drawer-nav{padding:10px 0;flex:1}
+.drawer-nav a,.drawer-nav button{display:flex;align-items:center;gap:14px;width:100%;padding:14px 22px;background:none;border:0;text-align:left;font-size:15.5px;font-weight:600;color:var(--teal-deep,#0a1c25);cursor:pointer;text-decoration:none}
+.drawer-nav a:active,.drawer-nav button:active{background:rgba(31,72,96,.07)}
+.drawer-nav .di{width:26px;text-align:center;font-size:19px}
+.drawer-sep{height:1px;background:var(--line,#eadfce);margin:8px 22px}
+.drawer-foot{padding:16px 22px calc(20px + var(--safe-bot));border-top:1px solid var(--line,#eadfce)}
+.drawer-foot .addr{font-size:12.5px;color:var(--muted,#7a8a93);line-height:1.5}
+.drawer-foot .socials{display:flex;gap:10px;margin-top:12px}
+.drawer-foot .socials a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--teal,#1F4860);color:#fff;font-size:16px}
 .loc-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:var(--r-pill);background:var(--teal);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-left:10px;white-space:nowrap;}
 .loc-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px rgba(163,230,53,.25);animation:beat 1.6s ease-in-out infinite}
 @keyframes beat{50%{transform:scale(1.4)}}
@@ -296,6 +318,12 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .pass-card .progress{height:8px;background:rgba(255,255,255,.15);border-radius:var(--r-pill);margin-top:14px;overflow:hidden}
 .pass-card .progress span{display:block;height:100%;background:linear-gradient(90deg, var(--gold) 0%, var(--orange) 100%);border-radius:var(--r-pill);width:60%}
 .pass-card .lbl{font-size:12px;font-weight:600;opacity:.85;margin-top:8px}
+.qr-card{margin-top:16px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:18px;display:flex;align-items:center;gap:16px}
+.qr-card img{width:104px;height:104px;border-radius:10px;flex:0 0 auto;background:#f4efe3}
+.qr-card .qt{font-family:var(--f-display);font-style:italic;font-weight:800;color:var(--teal-deep);font-size:18px}
+.qr-card .qs{font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.4}
+.reward-banner{margin:14px 16px 0;background:linear-gradient(135deg,var(--gold) 0%,var(--orange) 100%);color:var(--teal-deep);border-radius:var(--r-lg);padding:16px 18px;font-weight:800;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-pop)}
+.reward-banner .rb-ico{font-size:26px}
 .stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px;padding:0 16px}
 .stamp{aspect-ratio:1;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow-card);position:relative;}
 .stamp.filled{background:var(--gold);}
@@ -429,8 +457,28 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 
 /* ADMIN DASHBOARD */
 .admin-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px 10px;flex-wrap:wrap}
-.admin-tabs{display:flex;gap:8px;background:#fff;border-radius:var(--r-pill);padding:4px;box-shadow:var(--shadow-card)}
-.admin-tab{padding:9px 14px;border-radius:var(--r-pill);font-weight:800;font-size:13px;color:var(--teal);display:inline-flex;align-items:center;gap:6px}
+.admin-tabs{display:flex;gap:6px;background:#fff;border-radius:var(--r-pill);padding:4px;box-shadow:var(--shadow-card);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.admin-tab{padding:9px 13px;border-radius:var(--r-pill);font-weight:800;font-size:13px;color:var(--teal);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;flex:0 0 auto}
+/* Owner order + customer cards */
+.order-card{background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-card);padding:14px;margin-bottom:10px;border-left:5px solid var(--orange)}
+.order-card.ready{border-left-color:var(--lime)}
+.order-card.done{border-left-color:var(--muted);opacity:.6}
+.order-card .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.order-card .who{font-weight:800;color:var(--teal-deep)}
+.order-card .ref{font-family:var(--f-num);color:var(--muted);font-size:13px}
+.order-card .lines{font-size:13px;color:var(--ink-soft);margin:8px 0;line-height:1.5}
+.order-card .foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
+.order-card .tot{font-family:var(--f-num);font-weight:800;color:var(--teal-deep)}
+.order-card .ostat{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:var(--r-pill);background:var(--cream-warm);color:var(--gold-deep)}
+.cust-card{background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-card);padding:14px;margin-bottom:10px;display:flex;align-items:center;gap:12px}
+.cust-card .ci{flex:1;min-width:0}
+.cust-card .cn{font-weight:800;color:var(--teal-deep)}
+.cust-card .cm{font-size:12px;color:var(--muted)}
+.cust-card .cstars{font-family:var(--f-num);font-weight:800;color:var(--teal);font-size:18px;text-align:center;min-width:42px}
+.cust-card .cstars small{display:block;font-size:9px;color:var(--muted);font-weight:700}
+.cust-card .cbtn{width:34px;height:34px;border-radius:50%;background:var(--cream-warm);color:var(--teal-deep);font-size:20px;font-weight:800;display:grid;place-items:center;flex:0 0 auto}
+.cust-card .cbtn.plus{background:var(--pine);color:#fff}
+.cust-card .reward-pill{background:var(--gold);color:var(--teal-deep);font-size:10px;font-weight:800;padding:3px 8px;border-radius:var(--r-pill);margin-top:3px;display:inline-block}
 .admin-tab.active{background:var(--pine);color:#fff}
 .tab-badge{background:var(--pink);color:#fff;border-radius:9px;min-width:18px;height:18px;padding:0 5px;font-size:11px;font-weight:800;display:inline-grid;place-items:center}
 .admin-status{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:6px 12px;border-radius:var(--r-pill);background:var(--cream-warm);color:var(--gold-deep)}
@@ -553,6 +601,36 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </button>
 </header>
 
+<!-- NAV DRAWER -->
+<div class="drawer-scrim" id="drawer-scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu">
+  <div class="drawer-head">
+    <img src="assets/logo-icon-256.png" alt="" />
+    <div><div class="dh-t">Pour Decisions</div><div class="dh-s">Cold-pressed · Albany NY</div></div>
+  </div>
+  <nav class="drawer-nav" id="drawer-nav">
+    <button data-route="home"><span class="di">🏠</span>Home</button>
+    <button data-route="menu"><span class="di">🥤</span>Order / Menu</button>
+    <button data-route="pass"><span class="di">★</span>Pour Pass</button>
+    <button data-route="calendar"><span class="di">📅</span>Events Calendar</button>
+    <button data-route="packages"><span class="di">🎁</span>Cleanses &amp; Packages</button>
+    <button data-route="account"><span class="di">👤</span>My Account</button>
+    <div class="drawer-sep"></div>
+    <button id="drawer-install"><span class="di">📲</span>Install the App</button>
+    <button data-route="admin"><span class="di">🔑</span>Owner Login</button>
+    <div class="drawer-sep"></div>
+    <a href="tel:+15185557687"><span class="di">📞</span>Call the Shop</a>
+    <a href="https://maps.google.com/?q=359+Northern+Boulevard+Albany+NY+12204" target="_blank" rel="noopener"><span class="di">📍</span>Get Directions</a>
+  </nav>
+  <div class="drawer-foot">
+    <div class="addr">359 Northern Boulevard<br/>Albany, NY 12204<br/>Open 7AM – 7PM daily</div>
+    <div class="socials">
+      <a href="https://instagram.com/pourdecisionsjuicebar" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+      <a href="https://facebook.com/pourdecisionsjuicebar" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    </div>
+  </div>
+</aside>
+
 <main id="app">
 
 <!-- HOME -->
@@ -634,7 +712,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <img src="assets/logo-pour-decisions.png" alt="Pour Decisions" />
     <p class="tag">Pour with purpose.</p>
     <p class="info">
-      359 Broadway Blvd, Albany NY 12204<br/>
+      359 Northern Boulevard, Albany NY 12204<br/>
       <a href="tel:+15185557687">(518) 555-POUR</a> · Open 7AM – 7PM<br/>
       <a href="mailto:hello@pourdecisions.co">hello@pourdecisions.co</a><br/>
       Delivery on DoorDash &amp; Uber Eats
@@ -683,13 +761,13 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <button class="pickup-opt active" data-pickup="asap"><div class="l">ASAP</div><div class="v">~12 min</div></button>
       <button class="pickup-opt" data-pickup="schedule"><div class="l">Schedule</div><div class="v">Pick a time</div></button>
     </div>
-    <div class="field"><label>Pickup location</label><select><option>359 Broadway Blvd, Albany NY (Default)</option></select></div>
+    <div class="field"><label>Pickup location</label><select><option>359 Northern Boulevard, Albany NY (Default)</option></select></div>
   </div>
   <div class="checkout-section">
     <h3>Your info</h3>
-    <div class="field"><label>Name</label><input type="text" value="Migs Money" /></div>
-    <div class="field"><label>Phone</label><input type="tel" placeholder="(518) 555-1234" /></div>
-    <div class="field"><label>Notes for the bar</label><textarea rows="2" placeholder="Extra ginger, no ice, etc."></textarea></div>
+    <div class="field"><label>Name</label><input type="text" id="co-name" placeholder="Your name" /></div>
+    <div class="field"><label>Phone <span style="font-weight:500;color:var(--muted)">· earns your Pour Pass stamp</span></label><input type="tel" inputmode="tel" id="co-phone" placeholder="(518) 555-1234" /></div>
+    <div class="field"><label>Notes for the bar</label><textarea rows="2" id="co-notes" placeholder="Extra ginger, no ice, etc."></textarea></div>
   </div>
   <div class="checkout-section">
     <h3>Tip the team</h3>
@@ -723,10 +801,10 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <p>Ready in ~12 minutes</p>
   </div>
   <div class="confirm-info">
-    <div class="info-row"><span>Pickup</span><strong>359 Broadway Blvd</strong></div>
+    <div class="info-row"><span>Pickup</span><strong>359 Northern Boulevard</strong></div>
     <div class="info-row"><span>Order #</span><strong id="conf-num-2">PD-1042</strong></div>
     <div class="info-row"><span>Total</span><strong id="conf-total">$0.00</strong></div>
-    <div class="info-row"><span>Pour Pass</span><strong>+1 stamp · 6/9</strong></div>
+    <div class="info-row"><span>Pour Pass</span><strong id="conf-stamp">+1 stamp</strong></div>
   </div>
   <div class="container" style="margin-top:14px">
     <button class="btn btn-primary btn-block btn-lg" data-route="home">Back to Home</button>
@@ -744,25 +822,30 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <div class="eyebrow">Loyalty</div>
     <h1 style="font-size:clamp(34px,9vw,52px)">Pour <em>Pass</em></h1>
   </div>
-  <div class="pass-card">
-    <div class="eyebrow">Member Since 2025</div>
-    <div class="name">Migs Money</div>
-    <div class="num">5<small>/9 stamps</small></div>
-    <div class="progress"><span></span></div>
-    <div class="lbl">4 more pours and your 10th is free</div>
-  </div>
-  <div class="section-h"><h2 style="font-size:24px">Stamp card</h2></div>
-  <div class="stamps">
-    <div class="stamp filled"></div>
-    <div class="stamp filled"></div>
-    <div class="stamp filled"></div>
-    <div class="stamp filled"></div>
-    <div class="stamp filled"></div>
-    <div class="stamp next"><span class="n">6</span></div>
-    <div class="stamp"><span class="n">7</span></div>
-    <div class="stamp"><span class="n">8</span></div>
-    <div class="stamp"><span class="n">9</span></div>
-    <div class="stamp" style="background:var(--gold)"><span class="n" style="color:var(--teal-deep);opacity:1">★</span></div>
+  <!-- Signed-out: capture identity so the pass follows the customer -->
+  <form class="book-card" id="pass-signin" style="display:none">
+    <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;font-weight:500">Start your Pour Pass. Enter your name and phone — your stamps follow your number, so they're safe even if you switch phones.</p>
+    <div class="field"><label>Your name</label><input type="text" id="pass-name" placeholder="Migs Money" required /></div>
+    <div class="field"><label>Mobile number</label><input type="tel" inputmode="tel" id="pass-phone" placeholder="(518) 555-0123" required /></div>
+    <button type="submit" class="btn btn-gold btn-block btn-lg">Start My Pour Pass ★</button>
+  </form>
+
+  <!-- Signed-in: live pass -->
+  <div id="pass-live" style="display:none">
+    <div class="pass-card">
+      <div class="eyebrow" id="pass-eyebrow">Member</div>
+      <div class="name" id="pass-card-name">—</div>
+      <div class="num" id="pass-card-num">0<small>/9 stamps</small></div>
+      <div class="progress"><span id="pass-progress"></span></div>
+      <div class="lbl" id="pass-card-lbl">Earn stamps every visit</div>
+    </div>
+    <div id="pass-reward-banner"></div>
+    <div class="section-h"><h2 style="font-size:24px">Stamp card</h2></div>
+    <div class="stamps" id="pass-stamps"></div>
+    <div class="container">
+      <div class="qr-card" id="pass-qr"></div>
+      <button class="btn btn-ghost btn-block" id="pass-signout" style="margin-top:12px">Sign out of this pass</button>
+    </div>
   </div>
   <div class="section-h"><h2 style="font-size:24px">Rewards Vault</h2></div>
   <div class="reward-grid">
@@ -879,14 +962,47 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div id="admin-shell" style="display:none">
     <div class="admin-bar">
       <div class="admin-tabs" id="admin-tabs">
-        <button class="admin-tab active" data-tab="events">📅 Events</button>
+        <button class="admin-tab active" data-tab="orders">🧾 Orders <span class="tab-badge" id="ord-badge" style="display:none">0</span></button>
+        <button class="admin-tab" data-tab="loyalty">⭐ Loyalty</button>
+        <button class="admin-tab" data-tab="events">📅 Events</button>
         <button class="admin-tab" data-tab="bookings">📩 Bookings <span class="tab-badge" id="bk-badge" style="display:none">0</span></button>
       </div>
       <div class="admin-status" id="admin-status">📱 On-device</div>
     </div>
 
+    <!-- ORDERS PANEL -->
+    <div id="admin-orders-panel">
+      <div class="cal-list" style="padding:0 16px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <h3>Live orders</h3>
+          <button class="btn btn-ghost" id="ord-refresh" style="padding:8px 14px;font-size:12px">Refresh</button>
+        </div>
+        <div id="admin-orders-list"></div>
+      </div>
+    </div>
+
+    <!-- LOYALTY PANEL -->
+    <div id="admin-loyalty-panel" style="display:none">
+      <form class="book-card" id="loyalty-form">
+        <h3 style="margin:0 0 10px;font-size:18px">Log an in-store sale / add a stamp</h3>
+        <div class="field"><label>Customer phone</label><input type="tel" inputmode="tel" id="ly-phone" placeholder="(518) 555-0123" required /></div>
+        <div class="book-row">
+          <div class="field"><label>Name (optional)</label><input type="text" id="ly-name" placeholder="Walk-in" /></div>
+          <div class="field"><label>Sale amount $ (optional)</label><input type="number" step="0.01" id="ly-amount" placeholder="0.00" /></div>
+        </div>
+        <button type="submit" class="btn btn-pine btn-block btn-lg">+1 Stamp ★</button>
+      </form>
+      <div class="cal-list" style="padding:0 16px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <h3>Pour Pass members</h3>
+          <button class="btn btn-ghost" id="ly-refresh" style="padding:8px 14px;font-size:12px">Refresh</button>
+        </div>
+        <div id="admin-loyalty-list"></div>
+      </div>
+    </div>
+
     <!-- EVENTS PANEL -->
-    <div id="admin-events-panel">
+    <div id="admin-events-panel" style="display:none">
       <form class="book-card" id="admin-form">
         <div class="field"><label>Event title</label><input type="text" id="ad-title" placeholder="Smoothie Saturday · Live DJ" required /></div>
         <div class="book-row">
@@ -1003,7 +1119,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <p>Member · 5/9 stamps · 12 orders · since 2025</p>
   </div>
   <div class="account-list">
-    <button class="account-row" data-route="pass"><span class="ico ic-1">★</span><div class="body"><h4>Pour Pass</h4><p>5 of 9 stamps · 4 from your next free pour</p></div><span class="chev">›</span></button>
+    <button class="account-row" data-route="pass"><span class="ico ic-1">★</span><div class="body"><h4>Pour Pass</h4><p id="acct-pass-sub">Tap to start your Pour Pass</p></div><span class="chev">›</span></button>
     <button class="account-row"><span class="ico ic-2">📦</span><div class="body"><h4>Order History</h4><p>12 orders · Last: 2 days ago</p></div><span class="chev">›</span></button>
     <button class="account-row" data-route="packages"><span class="ico ic-3">🔄</span><div class="body"><h4>My Subscriptions</h4><p>1 active · ships every Tuesday</p></div><span class="chev">›</span></button>
     <button class="account-row" data-route="notifications"><span class="ico ic-4">🔔</span><div class="body"><h4>Notifications</h4><p>3 unread</p></div><span class="chev">›</span></button>
@@ -1055,6 +1171,10 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <div class="eyebrow">Ingredients</div>
       <div class="ingredients" id="sheet-ing"></div>
     </div>
+    <div class="opt-group" id="opt-choice-group" style="display:none">
+      <label id="opt-choice-label">Choice</label>
+      <div class="boost-row" id="opt-choice-row"></div>
+    </div>
     <div class="opt-group" id="size-group">
       <label>Size</label>
       <div class="size-grid" id="size-grid">
@@ -1069,7 +1189,6 @@ h3{font-size:22px;font-weight:700;font-style:italic}
         <button class="boost" data-boost="avocado">+ Avocado <b>$2</b></button>
         <button class="boost" data-boost="protein">+ Protein Powder <b>$3</b></button>
         <button class="boost" data-boost="chia">+ Chia Seeds <b>$1</b></button>
-        <button class="boost" data-boost="hemp">+ Hemp Seeds <b>$2</b></button>
         <button class="boost" data-boost="flax">+ Flax Seeds <b>$1</b></button>
         <button class="boost" data-boost="fruit">+ Extra Fruit <b>$2</b></button>
       </div>
@@ -1136,7 +1255,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 <script>
 "use strict";
 
-const PIC = (id) => `https://images.unsplash.com/${id}?w=600&q=70&auto=format&fit=crop`;
+const PIC = (id) => `https://images.unsplash.com/${id}?w=900&h=700&q=80&auto=format&fit=crop`;
 
 // Menu mirrors the in-store Pour Decisions menu board.
 // Juices & smoothies are sized (12/16/32oz); shots, salads & wraps are single-serve (sizes:false).
@@ -1166,7 +1285,7 @@ const MENU = [
    ing:['beet','apple','carrot','ginger'],
    desc:'Supports circulation and endurance. Earthy, sweet, unmistakable.',
    macros:{cal:150,protein:3,carbs:36,fat:0,sugar:28},
-   img:PIC('photo-1618556658017-fd80b6f8b94c')},
+   img:PIC('photo-1620916566398-39f1143ab7be')},
   // ── SMOOTHIES ──
   {id:'island-vibes',name:'Island Vibes',cat:'smoothies',price:11,
    ing:['mango','pineapple','banana','coconut milk'],
@@ -1178,9 +1297,9 @@ const MENU = [
    desc:'A pre-workout with a dessert problem. Rich and filling.',
    macros:{cal:420,protein:14,carbs:52,fat:18,sugar:30},
    img:PIC('photo-1553530666-ba11a7da3888')},
-  {id:'berry-bliss',name:'Berry Bliss',cat:'smoothies',price:10,
+  {id:'berry-bliss',name:'Berry Protein',cat:'smoothies',price:12,
    ing:['mixed berries','banana','protein powder','oat milk'],
-   desc:'Antioxidant-packed and built for recovery.',
+   desc:'Antioxidant-packed and built for recovery. 20g of protein.',
    macros:{cal:300,protein:20,carbs:44,fat:6,sugar:28},
    img:PIC('photo-1505252585461-04db1eb84625')},
   {id:'green-energy',name:'Green Energy',cat:'smoothies',price:11,
@@ -1198,12 +1317,12 @@ const MENU = [
    ing:['turmeric','ginger','lemon','black pepper'],
    desc:'Anti-inflammatory defense in a 2oz hit.',
    macros:{cal:30,protein:0,carbs:7,fat:0,sugar:5},
-   img:PIC('photo-1597306633535-fdba89e5ea30')},
+   img:PIC('photo-1607330289024-1535c6b4e1c1')},
   {id:'energy-shot',name:'Energy Shot',cat:'shots',price:5,sizes:false,
    ing:['beet','ginger','lemon'],
    desc:'Clean, natural energy. No jitters, no sugar crash.',
    macros:{cal:35,protein:1,carbs:8,fat:0,sugar:6},
-   img:PIC('photo-1556228720-da4e85bcdac5')},
+   img:PIC('photo-1622597467836-f3285f2131b8')},
   // ── FRESH SALADS ──
   {id:'garden-fresh-salad',name:'Garden Fresh Salad',cat:'salads',price:12,sizes:false,
    ing:['mixed greens','cucumbers','tomatoes','carrots','red onions'],
@@ -1245,7 +1364,20 @@ const MENU = [
    ing:['black beans','corn','avocado','lettuce','tomatoes'],
    desc:'Hearty black beans and avocado with a Southwest kick.',
    macros:{cal:460,protein:15,carbs:60,fat:18,sugar:7},
-   img:PIC('photo-1564093497595-593b96d80180')}
+   img:PIC('photo-1564093497595-593b96d80180')},
+  // ── SIGNATURE SALADS (with protein) ──
+  {id:'salmon-salad',name:'Salmon Salad',cat:'salads',price:16,sizes:false,
+   opts:{label:'Salmon preparation',choices:['Grilled','Baked']},
+   ing:['salmon','mixed greens','cucumbers','tomatoes','red onion','lemon'],
+   desc:'A generous fillet — grilled or baked — over a crisp garden salad. Protein-packed and clean.',
+   macros:{cal:420,protein:34,carbs:18,fat:24,sugar:6},
+   img:PIC('photo-1467003909585-2f8a72700288')},
+  {id:'shrimp-salad',name:'Shrimp Salad',cat:'salads',price:15,sizes:false,
+   opts:{label:'Shrimp',choices:['On the salad','On the side']},
+   ing:['shrimp','mixed greens','cucumbers','tomatoes','avocado','lemon'],
+   desc:'Seasoned shrimp served right on the greens or plated on the side — your call.',
+   macros:{cal:360,protein:30,carbs:16,fat:18,sugar:5},
+   img:PIC('photo-1432139555190-58524dae6a55')}
 ];
 
 // Add-on prices match the in-store menu board.
@@ -1253,7 +1385,6 @@ const BOOSTS = {
   avocado:{label:'Avocado',price:2},
   protein:{label:'Protein Powder',price:3},
   chia:{label:'Chia Seeds',price:1},
-  hemp:{label:'Hemp Seeds',price:2},
   flax:{label:'Flax Seeds',price:1},
   fruit:{label:'Extra Fruit',price:2}
 };
@@ -1379,6 +1510,119 @@ const Store = {
         { method:'DELETE', headers:{'x-admin-pin':this.pin} }); }catch(_){}
     }
     this._write('pd-bookings', this.localBookings().filter(b => b.id !== id));
+  },
+
+  // ── CUSTOMER IDENTITY (the phone that a Pour Pass belongs to) ──
+  normPhone(p){ return String(p||'').replace(/\D/g,''); },
+  me(){ try{ return JSON.parse(localStorage.getItem('pd-customer')); }catch(_){ return null; } },
+  signIn(name, phone){
+    const rec = { name:(name||'').trim(), phone:this.normPhone(phone) };
+    this._write('pd-customer', rec); return rec;
+  },
+  signOut(){ localStorage.removeItem('pd-customer'); },
+
+  // ── ORDERS ──
+  localOrders(){ return this._read('pd-orders'); },
+  async placeOrder(order){
+    let rec = null;
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/orders', { method:'POST',
+          headers:{'Content-Type':'application/json'}, body: JSON.stringify(order) });
+        if(r.ok){ const d = await r.json(); rec = d.order; if(d.customer) this._write('pd-pass', d.customer); }
+      }catch(_){}
+    }
+    if(!rec){
+      rec = { id:'ord_'+Date.now().toString(36), status:'new', createdAt:new Date().toISOString(), ...order };
+      // On-device: award a stamp locally so the pass still moves.
+      this._awardLocal(order.phone, order.name, order.total);
+    }
+    const list = this.localOrders(); list.unshift(rec); this._write('pd-orders', list);
+    return rec;
+  },
+  async getOrders(){
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/orders', { headers:{'x-admin-pin':this.pin} });
+        if(r.ok){ const d = await r.json(); this._write('pd-orders', d.orders||[]); return d.orders||[]; }
+      }catch(_){}
+    }
+    return this.localOrders();
+  },
+  async setOrderStatus(id, status){
+    if(this.cloud){
+      try{ await fetch(this.base + '/orders?id=' + encodeURIComponent(id), { method:'PATCH',
+        headers:{'Content-Type':'application/json','x-admin-pin':this.pin}, body:JSON.stringify({status}) }); }catch(_){}
+    }
+    const list = this.localOrders().map(o => o.id===id ? {...o, status} : o);
+    this._write('pd-orders', list);
+  },
+
+  // ── LOYALTY / POUR PASS ──
+  _localCustomers(){ return this._read('pd-customers'); },
+  _saveLocalCustomers(l){ this._write('pd-customers', l); },
+  _roll(c){ while(c.stars>=9){c.stars-=9;c.rewards++;} while(c.stars<0){ if(c.rewards>0){c.rewards--;c.stars+=9;} else {c.stars=0;break;} } return c; },
+  _awardLocal(phone, name, amount){
+    const ph = this.normPhone(phone); const l = this._localCustomers();
+    let c = l.find(x=>x.phone===ph);
+    if(!c){ c={phone:ph,name:name||'',stars:0,rewards:0,lifetime:0,spent:0,createdAt:new Date().toISOString(),lastVisit:null}; l.unshift(c); }
+    if(name) c.name=name;
+    c.stars++; c.lifetime++; c.spent+=Number(amount)||0; c.lastVisit=new Date().toISOString();
+    this._roll(c); this._saveLocalCustomers(l);
+    if(this.me() && this.me().phone===ph) this._write('pd-pass', c);
+    return c;
+  },
+  _adjustLocal(phone, delta, name){
+    const ph = this.normPhone(phone); const l = this._localCustomers();
+    let c = l.find(x=>x.phone===ph);
+    if(!c){ c={phone:ph,name:name||'',stars:0,rewards:0,lifetime:0,spent:0,createdAt:new Date().toISOString(),lastVisit:null}; l.unshift(c); }
+    if(name) c.name=name;
+    c.stars+=Number(delta)||0; c.lastVisit=new Date().toISOString();
+    this._roll(c); this._saveLocalCustomers(l);
+    if(this.me() && this.me().phone===ph) this._write('pd-pass', c);
+    return c;
+  },
+  async myPass(){
+    const me = this.me(); if(!me) return null;
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/loyalty?phone=' + encodeURIComponent(me.phone));
+        if(r.ok){ const d = await r.json(); if(d.customer){ this._write('pd-pass', d.customer); return d.customer; } }
+      }catch(_){}
+    }
+    const local = this._localCustomers().find(x=>x.phone===me.phone);
+    return local || { phone:me.phone, name:me.name, stars:0, rewards:0, lifetime:0, spent:0 };
+  },
+  async getCustomers(){
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/loyalty', { headers:{'x-admin-pin':this.pin} });
+        if(r.ok){ const d = await r.json(); this._saveLocalCustomers(d.customers||[]); return d.customers||[]; }
+      }catch(_){}
+    }
+    return this._localCustomers();
+  },
+  async adjustStars(phone, delta, name){
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/loyalty', { method:'POST',
+          headers:{'Content-Type':'application/json','x-admin-pin':this.pin},
+          body: JSON.stringify({phone, delta, name}) });
+        if(r.ok){ const d = await r.json(); this._saveLocalCustomers(d.customers||[]); return d.customer; }
+      }catch(_){}
+    }
+    return this._adjustLocal(phone, delta, name);
+  },
+  async logSale(phone, name, amount){
+    if(this.cloud){
+      try{
+        const r = await fetch(this.base + '/loyalty', { method:'POST',
+          headers:{'Content-Type':'application/json','x-admin-pin':this.pin},
+          body: JSON.stringify({phone, name, sale:amount}) });
+        if(r.ok){ const d = await r.json(); this._saveLocalCustomers(d.customers||[]); return d.customer; }
+      }catch(_){}
+    }
+    return this._awardLocal(phone, name, amount);
   }
 };
 
@@ -1412,6 +1656,8 @@ function go(view){
     document.getElementById('book-confirm').style.display='none';
   }
   if(view==='admin'){ hideInstallBanner(); renderAdminList(); }
+  if(view==='pass') renderPass();
+  if(view==='account') renderAccount();
 }
 
 document.addEventListener('click', (e) => {
@@ -1525,7 +1771,7 @@ function openSheet(id){
   const item = MENU.find(m => m.id===id);
   if(!item) return;
   STATE.currentItem = item;
-  STATE.qty = 1; STATE.size = 16; STATE.boosts = new Set();
+  STATE.qty = 1; STATE.size = 16; STATE.boosts = new Set(); STATE.choice = null;
   document.getElementById('sheet-pic').style.backgroundImage = `url('${item.img}')`;
   document.getElementById('sheet-cat').textContent = item.cat;
   document.getElementById('sheet-name').textContent = item.name;
@@ -1543,8 +1789,19 @@ function openSheet(id){
   grid.querySelector('[data-size="16"] .price').textContent = '$' + item.price;
   grid.querySelector('[data-size="32"] .price').textContent = '$' + Math.round(item.price * 1.6);
   document.querySelectorAll('#size-grid .size-opt').forEach(o => o.classList.toggle('active', o.dataset.size==='16'));
+  // Item choices (e.g. salmon grilled/baked, shrimp on salad/side)
+  const choiceGroup = document.getElementById('opt-choice-group');
+  if(item.opts){
+    STATE.choice = item.opts.choices[0];
+    document.getElementById('opt-choice-label').textContent = item.opts.label;
+    document.getElementById('opt-choice-row').innerHTML = item.opts.choices
+      .map((c,i) => `<button class="boost${i===0?' active':''}" data-choice="${c}">${c}</button>`).join('');
+    choiceGroup.style.display = '';
+  } else {
+    choiceGroup.style.display = 'none';
+  }
   document.getElementById('size-group').style.display = item.sizes===false ? 'none' : '';
-  document.getElementById('boost-group').style.display = item.cat==='shots' ? 'none' : '';
+  document.getElementById('boost-group').style.display = (item.cat==='shots'||item.cat==='salads'||item.cat==='wraps') ? 'none' : '';
   document.querySelectorAll('#boost-row .boost').forEach(b => b.classList.remove('active'));
   document.getElementById('qty-n').textContent = '1';
   updateAddPrice();
@@ -1568,6 +1825,13 @@ document.querySelectorAll('#boost-row .boost').forEach(b => {
     updateAddPrice();
   });
 });
+// Single-select item choices (grilled/baked, on salad/on side)
+document.getElementById('opt-choice-row').addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-choice]'); if(!btn) return;
+  document.querySelectorAll('#opt-choice-row .boost').forEach(x => x.classList.remove('active'));
+  btn.classList.add('active');
+  STATE.choice = btn.dataset.choice;
+});
 document.getElementById('qty-plus').addEventListener('click', () => { STATE.qty++; document.getElementById('qty-n').textContent = STATE.qty; updateAddPrice(); });
 document.getElementById('qty-minus').addEventListener('click', () => { if(STATE.qty>1){STATE.qty--; document.getElementById('qty-n').textContent = STATE.qty; updateAddPrice();} });
 
@@ -1587,6 +1851,7 @@ document.getElementById('btn-add-cart').addEventListener('click', () => {
   STATE.cart.push({
     id:item.id, name:item.name,
     size: item.sizes===false ? (item.cat==='shots' ? '2oz' : 'regular') : STATE.size+'oz',
+    choice: STATE.choice || '',
     boosts:[...STATE.boosts].map(b => BOOSTS[b] ? BOOSTS[b].label : b), qty:STATE.qty,
     price:unitPrice(), img:item.img, cat:item.cat
   });
@@ -1627,7 +1892,7 @@ function renderCart(){
           <div class="pic" style="background-image:url('${it.img}')"></div>
           <div>
             <h4>${it.name}</h4>
-            <div class="opts">${it.size}${it.boosts.length?' · +'+it.boosts.join(' +'):''} · qty ${it.qty}</div>
+            <div class="opts">${it.choice?it.choice+' · ':''}${it.size}${it.boosts.length?' · +'+it.boosts.join(' +'):''} · qty ${it.qty}</div>
             <button class="rm" data-rm="${i}">REMOVE</button>
           </div>
           <span class="price">$${(it.price*it.qty).toFixed(2)}</span>
@@ -1655,6 +1920,12 @@ function renderCart(){
 }
 
 function renderCheckoutSummary(){
+  const me = Store.me();
+  if(me){
+    const nm = document.getElementById('co-name'), ph = document.getElementById('co-phone');
+    if(nm && !nm.value) nm.value = me.name || '';
+    if(ph && !ph.value) ph.value = me.phone || '';
+  }
   const t = cartTotals();
   document.getElementById('checkout-summary').innerHTML = `
     <div class="row"><span>Subtotal</span><span>$${t.subtotal.toFixed(2)}</span></div>
@@ -1677,12 +1948,38 @@ document.querySelectorAll('.pickup-opt').forEach(p => {
     p.classList.add('active');
   });
 });
-document.getElementById('btn-place-order').addEventListener('click', () => {
+document.getElementById('btn-place-order').addEventListener('click', async () => {
+  if(!STATE.cart.length){ toast('Your bag is empty'); return; }
   const t = cartTotals();
   const num = 'PD-' + Math.floor(1000 + Math.random()*9000);
+  const name = (document.getElementById('co-name').value || '').trim();
+  const phone = (document.getElementById('co-phone').value || '').trim();
+  const notes = (document.getElementById('co-notes').value || '').trim();
+
+  // Remember the customer so their pass follows them next time.
+  if(Store.normPhone(phone).length >= 7){ Store.signIn(name || (Store.me()&&Store.me().name) || 'Guest', phone); }
+
+  const order = {
+    num, name, phone: Store.normPhone(phone),
+    items: STATE.cart.map(it => ({ name:it.name, choice:it.choice, size:it.size, boosts:it.boosts, qty:it.qty, price:it.price })),
+    subtotal:+t.subtotal.toFixed(2), tax:+t.tax.toFixed(2), tip:+t.tip.toFixed(2), total:+t.total.toFixed(2),
+    notes, pickup:'359 Northern Boulevard'
+  };
+
+  const btn = document.getElementById('btn-place-order');
+  btn.disabled = true; btn.textContent = 'Placing…';
+  let pass = null;
+  try{
+    if(Store.normPhone(phone).length >= 7){ await Store.placeOrder(order); pass = await Store.myPass(); }
+  }catch(_){}
+  btn.disabled = false; btn.textContent = 'Place Order →';
+
   document.getElementById('conf-num').textContent = '#' + num;
   document.getElementById('conf-num-2').textContent = num;
   document.getElementById('conf-total').textContent = '$' + t.total.toFixed(2);
+  document.getElementById('conf-stamp').textContent = pass
+    ? `+1 stamp · ${pass.stars}/9${pass.rewards?` · ${pass.rewards} free pour ready 🎉`:''}`
+    : 'Add your phone next time to earn stamps';
   STATE.cart = []; updateCartBadge();
   go('confirm');
 });
@@ -1699,6 +1996,72 @@ function renderNotifications(){
       </div>
     </div>
   `).join('');
+}
+
+/* ─────────────── POUR PASS (customer-facing loyalty) ─────────────── */
+async function renderPass(){
+  const me = Store.me();
+  const signin = document.getElementById('pass-signin');
+  const live = document.getElementById('pass-live');
+  if(!me){ signin.style.display=''; live.style.display='none'; return; }
+  signin.style.display='none'; live.style.display='';
+
+  // Optimistic from cache, then refresh from server.
+  let pass = (()=>{ try{ return JSON.parse(localStorage.getItem('pd-pass')); }catch(_){ return null; } })()
+             || { name:me.name, phone:me.phone, stars:0, rewards:0, lifetime:0, spent:0 };
+  paintPass(pass, me);
+  const fresh = await Store.myPass();
+  if(fresh) paintPass(fresh, me);
+}
+function paintPass(p, me){
+  const stars = p.stars||0, rewards = p.rewards||0, left = 9 - stars;
+  document.getElementById('pass-card-name').textContent = p.name || me.name || 'Member';
+  document.getElementById('pass-eyebrow').textContent = p.lifetime ? (p.lifetime + ' pours all-time') : 'New member';
+  document.getElementById('pass-card-num').innerHTML = stars + '<small>/9 stamps</small>';
+  document.getElementById('pass-progress').style.width = Math.round(stars/9*100) + '%';
+  document.getElementById('pass-card-lbl').textContent = stars===0
+    ? 'Buy 9, your 10th pour is free' : (left + (left===1?' more pour and your 10th is free':' more pours and your 10th is free'));
+  // Stamp grid: 9 stamps + the free 10th
+  let html = '';
+  for(let i=1;i<=9;i++){
+    const cls = i<=stars ? 'stamp filled' : (i===stars+1 ? 'stamp next' : 'stamp');
+    html += `<div class="${cls}">${i>stars?`<span class="n">${i}</span>`:''}</div>`;
+  }
+  html += `<div class="stamp" style="background:var(--gold)"><span class="n" style="color:var(--teal-deep);opacity:1">★</span></div>`;
+  document.getElementById('pass-stamps').innerHTML = html;
+  // Banked free pours
+  document.getElementById('pass-reward-banner').innerHTML = rewards>0
+    ? `<div class="reward-banner"><span class="rb-ico">🎉</span><div>You've got ${rewards} free pour${rewards>1?'s':''} waiting! Show this at the counter to redeem.</div></div>`
+    : '';
+  // Scannable pass for the counter (encodes the phone for owner lookup)
+  const data = encodeURIComponent('PDPASS:' + me.phone);
+  document.getElementById('pass-qr').innerHTML = `
+    <img alt="Your Pour Pass QR" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&data=${data}" />
+    <div><div class="qt">Scan at the counter</div><div class="qs">Show this to staff to add a stamp to your pass — no app needed on their end.<br/><b>${me.phone}</b></div></div>`;
+}
+document.getElementById('pass-signin').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('pass-name').value.trim();
+  const phone = document.getElementById('pass-phone').value.trim();
+  if(!name || Store.normPhone(phone).length < 7){ toast('Enter your name and a valid phone'); return; }
+  Store.signIn(name, phone);
+  renderPass();
+  toast('Pour Pass started ★');
+});
+document.getElementById('pass-signout').addEventListener('click', () => {
+  Store.signOut(); renderPass(); renderAccount(); toast('Signed out');
+});
+
+/* ─────────────── ACCOUNT header (who's signed in) ─────────────── */
+function renderAccount(){
+  const me = Store.me();
+  const sub = document.getElementById('acct-pass-sub');
+  if(sub){
+    let pass = (()=>{ try{ return JSON.parse(localStorage.getItem('pd-pass')); }catch(_){ return null; } })();
+    sub.textContent = me
+      ? `${me.name} · ${pass ? pass.stars : 0} of 9 stamps`
+      : 'Tap to start your Pour Pass';
+  }
 }
 
 function renderCalendar(){
@@ -1847,24 +2210,101 @@ document.getElementById('admin-gate').addEventListener('submit', e => {
   const pin = document.getElementById('ad-pin').value;
   if(pin === '7687' || (Store.cloud && pin.length >= 4)){
     STATE.admin = true; Store.pin = pin;
-    showAdminShell(); renderAdminList(); renderBookings();
+    showAdminShell(); renderOrders(); renderCustomers(); renderAdminList(); renderBookings();
     toast('Welcome back, boss 🌲');
   } else toast('Wrong PIN');
   document.getElementById('ad-pin').value = '';
 });
 
 // Tabs
+const ADMIN_PANELS = { orders:'admin-orders-panel', loyalty:'admin-loyalty-panel', events:'admin-events-panel', bookings:'admin-bookings-panel' };
 document.querySelectorAll('#admin-tabs .admin-tab').forEach(t => {
   t.addEventListener('click', () => {
     document.querySelectorAll('#admin-tabs .admin-tab').forEach(x => x.classList.remove('active'));
     t.classList.add('active');
     const tab = t.dataset.tab;
-    document.getElementById('admin-events-panel').style.display = tab==='events' ? '' : 'none';
-    document.getElementById('admin-bookings-panel').style.display = tab==='bookings' ? '' : 'none';
+    Object.entries(ADMIN_PANELS).forEach(([k,id]) => { document.getElementById(id).style.display = k===tab ? '' : 'none'; });
     if(tab==='bookings') renderBookings();
+    if(tab==='orders') renderOrders();
+    if(tab==='loyalty') renderCustomers();
   });
 });
 document.getElementById('bk-refresh').addEventListener('click', renderBookings);
+document.getElementById('ord-refresh').addEventListener('click', renderOrders);
+document.getElementById('ly-refresh').addEventListener('click', renderCustomers);
+
+/* ─── Owner: live orders ─── */
+const ORDER_NEXT = { new:'ready', ready:'done', done:'new' };
+const ORDER_ACTION = { new:'Mark ready', ready:'Mark picked up', done:'Reopen' };
+function timeAgo(iso){
+  const s = Math.floor((Date.now() - new Date(iso).getTime())/1000);
+  if(s<60) return 'just now'; if(s<3600) return Math.floor(s/60)+'m ago';
+  if(s<86400) return Math.floor(s/3600)+'h ago'; return Math.floor(s/86400)+'d ago';
+}
+async function refreshOrdBadge(){
+  const n = (await Store.getOrders()).filter(o => o.status==='new').length;
+  const badge = document.getElementById('ord-badge');
+  if(n>0){ badge.style.display=''; badge.textContent = n; } else badge.style.display='none';
+}
+async function renderOrders(){
+  const root = document.getElementById('admin-orders-list');
+  root.innerHTML = '<div class="empty-state" style="padding:20px"><p>Loading…</p></div>';
+  const list = await Store.getOrders();
+  if(Store.cloud) setAdminStatus();
+  refreshOrdBadge();
+  if(!list.length){ root.innerHTML = '<div class="empty-state" style="padding:20px"><p>No orders yet. Orders placed in the app land here live — name, items, total, and a button to mark them ready.</p></div>'; return; }
+  root.innerHTML = list.map(o => {
+    const lines = (o.items||[]).map(it => `${it.qty}× ${it.name}${it.choice?` (${it.choice})`:''}${it.size&&it.size!=='regular'?` · ${it.size}`:''}`).join('<br/>');
+    return `
+    <div class="order-card ${o.status}">
+      <div class="top"><span class="who">${o.name||'Guest'} ${o.phone?`· ${o.phone}`:''}</span><span class="ref">${o.num}</span></div>
+      <div class="lines">${lines}${o.notes?`<br/><i>"${o.notes}"</i>`:''}</div>
+      <div class="foot">
+        <span class="tot">$${(o.total||0).toFixed(2)} · <span class="ostat">${o.status}</span> · ${timeAgo(o.createdAt)}</span>
+        <button class="btn btn-pine" data-ord="${o.id}" data-st="${ORDER_NEXT[o.status]}" style="padding:7px 12px;font-size:12px">${ORDER_ACTION[o.status]}</button>
+      </div>
+    </div>`;
+  }).join('');
+  root.querySelectorAll('[data-ord]').forEach(b => {
+    b.addEventListener('click', async () => { await Store.setOrderStatus(b.dataset.ord, b.dataset.st); renderOrders(); });
+  });
+}
+
+/* ─── Owner: loyalty / Pour Pass members ─── */
+async function renderCustomers(){
+  const root = document.getElementById('admin-loyalty-list');
+  root.innerHTML = '<div class="empty-state" style="padding:20px"><p>Loading…</p></div>';
+  const list = await Store.getCustomers();
+  if(Store.cloud) setAdminStatus();
+  if(!list.length){ root.innerHTML = '<div class="empty-state" style="padding:20px"><p>No members yet. Customers appear here when they start a Pour Pass or place an order. Use the form above to add a stamp for a walk-in.</p></div>'; return; }
+  const sorted = [...list].sort((a,b) => (b.lastVisit||'').localeCompare(a.lastVisit||''));
+  root.innerHTML = sorted.map(c => `
+    <div class="cust-card">
+      <div class="ci">
+        <div class="cn">${c.name||'Walk-in'}</div>
+        <div class="cm">${c.phone} · ${c.lifetime||0} pours · $${(c.spent||0).toFixed(0)} spent</div>
+        ${c.rewards>0?`<span class="reward-pill">🎉 ${c.rewards} free pour${c.rewards>1?'s':''}</span>`:''}
+      </div>
+      <button class="cbtn" data-star="${c.phone}" data-d="-1" aria-label="Remove stamp">−</button>
+      <div class="cstars">${c.stars||0}<small>/ 9</small></div>
+      <button class="cbtn plus" data-star="${c.phone}" data-d="1" aria-label="Add stamp">+</button>
+    </div>
+  `).join('');
+  root.querySelectorAll('[data-star]').forEach(b => {
+    b.addEventListener('click', async () => { await Store.adjustStars(b.dataset.star, parseInt(b.dataset.d,10)); renderCustomers(); });
+  });
+}
+document.getElementById('loyalty-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const phone = document.getElementById('ly-phone').value.trim();
+  if(Store.normPhone(phone).length < 7){ toast('Enter a valid phone'); return; }
+  const name = document.getElementById('ly-name').value.trim();
+  const amount = parseFloat(document.getElementById('ly-amount').value) || 0;
+  await Store.logSale(phone, name, amount);
+  e.target.reset();
+  renderCustomers();
+  toast('Stamp added ★');
+});
 
 const MONTH_ABBR = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 function renderAdminList(){
@@ -2063,6 +2503,23 @@ document.getElementById('install-x').addEventListener('click', () => {
   localStorage.setItem('pd-install-dismissed','1');
 });
 document.getElementById('install-row').addEventListener('click', () => {
+  if(isStandalone()){ toast("You're already using the installed app 🎉"); return; }
+  triggerInstall();
+});
+
+// ── Nav drawer (top-left hamburger) ──
+const drawer = document.getElementById('drawer');
+const drawerScrim = document.getElementById('drawer-scrim');
+function openDrawer(){ drawer.classList.add('show'); drawerScrim.classList.add('show'); }
+function closeDrawer(){ drawer.classList.remove('show'); drawerScrim.classList.remove('show'); }
+document.getElementById('btn-menu-burger').addEventListener('click', openDrawer);
+drawerScrim.addEventListener('click', closeDrawer);
+// Any route button or link inside the drawer closes it after acting.
+document.getElementById('drawer-nav').addEventListener('click', (e) => {
+  if(e.target.closest('[data-route],a')) closeDrawer();
+});
+document.getElementById('drawer-install').addEventListener('click', () => {
+  closeDrawer();
   if(isStandalone()){ toast("You're already using the installed app 🎉"); return; }
   triggerInstall();
 });
