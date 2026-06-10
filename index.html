@@ -1208,7 +1208,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 <div class="modal" id="modal">
   <div class="panel">
     <span class="pill" id="m-pill">Class</span>
-    <h3 id="m-title">Pina Power Hour</h3>
+    <h3 id="m-title">Piña Power Hour</h3>
     <div class="when" id="m-when">Sat, May 17 · 4:00 – 6:00pm</div>
     <p id="m-desc">Bring a friend, sip a free pineapple-ginger pour. Live DJ, raffle, and 2x Pour Pass stamps.</p>
     <div class="actions">
@@ -1399,7 +1399,7 @@ const COMBOS = [
 const NOTIFICATIONS = [
   {ico:'🥤',color:'var(--orange)',title:'Order PD-1041 ready for pickup',body:'Grab it within 20 minutes for peak freshness.',t:'2 MIN AGO',unread:true},
   {ico:'★',color:'var(--gold)',title:'You unlocked 5 stamps!',body:'4 more pours and your 10th is on us.',t:'2 DAYS AGO',unread:true},
-  {ico:'📅',color:'var(--cyan)',title:'Pina Power Hour Saturday',body:'4-6pm · DJ + 2x stamp · RSVP now',t:'YESTERDAY',unread:true},
+  {ico:'📅',color:'var(--cyan)',title:'Piña Power Hour Saturday',body:'4-6pm · DJ + 2x stamp · RSVP now',t:'YESTERDAY',unread:true},
   {ico:'🎁',color:'var(--pink)',title:'Subscription ships Tuesday',body:'12 bottles · greens-heavy mix · changes close Sun 9pm',t:'3 DAYS AGO',unread:false},
   {ico:'⚡',color:'var(--lime)',title:'Tuesday = 2x stamps',body:'Your weekly reminder.',t:'5 DAYS AGO',unread:false}
 ];
@@ -1418,7 +1418,7 @@ function buildEvents(){
     {offset:2,type:'class',title:'Juice Cleanse Kickoff',time:'6:00pm – 7:00pm',desc:'Free intro to the 3-day cleanse with Q&A from our nutritionist. Includes one shot to take home.'},
     {offset:5,type:'special',title:"Mother's Day Pour",time:'All day',desc:'Free 12oz Berry Blitz with any package booking. Treat the boss lady.'},
     {offset:9,type:'popup',title:'Smoothie Pop-up @ Empire Plaza',time:'11:00am – 2:00pm',desc:"We're posting up at Empire State Plaza. Free samples, surprise menu."},
-    {offset:12,type:'class',title:'Pina Power Hour',time:'4:00pm – 6:00pm',desc:'Bring a friend, sip a free pineapple-ginger pour. Live DJ, raffle, and 2x Pour Pass stamps.'},
+    {offset:12,type:'class',title:'Piña Power Hour',time:'4:00pm – 6:00pm',desc:'Bring a friend, sip a free pineapple-ginger pour. Live DJ, raffle, and 2x Pour Pass stamps.'},
     {offset:15,type:'cleanse',title:'3-Day Cleanse Drop',time:'Pickup window 7am – 12pm',desc:'Pre-orders ship for the May cohort. Pickup Tuesday morning.'},
     {offset:19,type:'buyout',title:'Private Buyout · Anniversary',time:'7:00pm – 10:00pm',desc:'Closed for private event. Doors reopen Friday at 7am.'},
     {offset:24,type:'class',title:'Wellness Wednesday: Macros 101',time:'7:00pm – 8:00pm',desc:'Quick session on building a macro plan around cold-pressed juice.'},
@@ -2564,7 +2564,7 @@ window.addEventListener('DOMContentLoaded', init);
 
 <!-- PINA CHATBOT -->
 <style>
-/* ── Pina Chat Widget ── */
+/* ── Piña Chat Widget ── */
 #pina-fab{position:fixed;bottom:calc(80px + var(--safe-bot) + 12px);right:16px;z-index:200;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--orange));border:none;cursor:pointer;box-shadow:0 4px 18px rgba(232,181,71,.45);display:flex;align-items:center;justify-content:center;font-size:22px;transition:transform .2s ease,box-shadow .2s ease;}
 #pina-fab:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(232,181,71,.55);}
 #pina-fab .pina-badge{position:absolute;top:-4px;right:-4px;background:var(--pink);color:#fff;border-radius:50%;width:18px;height:18px;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;display:none;}
@@ -2605,18 +2605,18 @@ window.addEventListener('DOMContentLoaded', init);
 #pina-send:disabled{opacity:.5;cursor:not-allowed;transform:none;}
 </style>
 
-<!-- Pina FAB -->
-<button id="pina-fab" aria-label="Chat with Pina">
+<!-- Piña FAB -->
+<button id="pina-fab" aria-label="Chat with Piña">
   <span>🍍</span>
   <span class="pina-badge" id="pina-badge">1</span>
 </button>
 
-<!-- Pina Chat Window -->
-<div id="pina-chat" role="dialog" aria-label="Chat with Pina">
+<!-- Piña Chat Window -->
+<div id="pina-chat" role="dialog" aria-label="Chat with Piña">
   <div class="pina-head">
     <div class="pina-avatar">🍍</div>
     <div class="pina-info">
-      <div class="pina-name">Pina</div>
+      <div class="pina-name">Piña</div>
       <div class="pina-status">Your Pour Decisions guide</div>
     </div>
     <button class="pina-close" id="pina-close" aria-label="Close chat">×</button>
@@ -2633,7 +2633,7 @@ window.addEventListener('DOMContentLoaded', init);
     <button class="pina-suggestion" data-msg="Tell me about cleanses">Cleanses</button>
   </div>
   <div class="pina-input-row">
-    <input id="pina-input" type="text" placeholder="Ask Pina anything..." maxlength="300" autocomplete="off" />
+    <input id="pina-input" type="text" placeholder="Ask Piña anything..." maxlength="300" autocomplete="off" />
     <button id="pina-send" aria-label="Send">&#10148;</button>
   </div>
 </div>
@@ -2668,7 +2668,7 @@ window.addEventListener('DOMContentLoaded', init);
   }
 
   function greet() {
-    addMessage("Hey! I'm Pina 🍍 — your guide to Pour Decisions. Ask me about our menu, hours, cleanses, or anything else!", 'assistant');
+    addMessage("Hey! I'm Piña 🍍 — your guide to Pour Decisions. Ask me about our menu, hours, cleanses, or anything else!", 'assistant');
   }
 
   function addMessage(text, role) {
