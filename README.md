@@ -33,7 +33,7 @@ app/
 
 Plus three persistent UI elements:
 
-- **Pina chatbot** — pineapple FAB bottom-right, opens a sheet with scripted responses (hours, menu, loyalty, allergens, payment, events, etc.) and quick-chip suggestions
+- **Piña chatbot** — pineapple FAB bottom-right, opens a sheet with scripted responses (hours, menu, loyalty, allergens, payment, events, etc.) and quick-chip suggestions
 - **Splash screen** — branded teal-gold-leaf gradient with the P mark, fades after ~1.4s
 - **Bottom nav** — Home / Menu / Order / Pass / Account with cart badge
 
@@ -66,7 +66,7 @@ npx serve .
 ### What you'll see on mobile
 
 - Native bottom-nav, safe-area aware (notch + home indicator)
-- Pina FAB pulses gold above the nav bar
+- Piña FAB pulses gold above the nav bar
 - All sheets slide up smoothly
 
 ---
@@ -131,7 +131,7 @@ Everything UI is done. These are the production-readiness items:
 | **POS sync** | When orders arrive at the bar (Square/Toast/Clover), staff needs a screen to mark "ready" — that triggers the order-ready push. |
 | **Push notifications** | Generate VAPID keys → store user subscriptions server-side → send via Web Push protocol. SW already has the `push` and `notificationclick` handlers in place. |
 | **SMS fallback** | For users who don't enable push, send the "ready for pickup" via Twilio when the order is marked ready. |
-| **Pina v2** | Current scripted bot covers the top 12 intents. Wire to OpenAI/Claude API for open-ended Q&A — keep the same FAB + sheet UI. |
+| **Piña v2** | Current scripted bot covers the top 12 intents. Wire to OpenAI/Claude API for open-ended Q&A — keep the same FAB + sheet UI. |
 | **Real order history** | Replace `MOCK_ORDERS` with API call. The shape already matches: `{ id, date, items[], total, status }`. |
 | **Subscriptions / Gift cards** | Account menu items go to `console.log` today — wire to Stripe Subscriptions + Square Gift Cards. |
 | **Auth** | No login today (it's order-as-guest). Add Sign in with Apple / Google when subscriptions and order history go live. |
@@ -143,7 +143,7 @@ Everything UI is done. These are the production-readiness items:
 
 - **Single-file React via Babel-in-browser** — zero build step, ships in seconds. For v2 when bundle size matters, switch to Vite + `npm run build`.
 - **Tailwind via CDN** — same trade-off. Production should use the Tailwind CLI to purge unused classes.
-- **State persists to `localStorage`** — cart, stamps, favorites, profile, notification prefs, Pina chat history. Survives reload + app close.
+- **State persists to `localStorage`** — cart, stamps, favorites, profile, notification prefs, Piña chat history. Survives reload + app close.
 - **Hash routing** for PWA shortcuts — `#/menu`, `#/order`, `#/pass` jump straight to that tab when launched from the home-screen shortcut.
 - **Service worker strategy** — precache shell on install, stale-while-revalidate for runtime, network-first for navigations with offline.html fallback.
 
