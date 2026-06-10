@@ -891,7 +891,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <h3>Book the space</h3>
     <p>Birthdays, team off-sites, wellness classes, pop-ups — our bar is yours after hours.</p>
     <button class="btn btn-gold" data-route="book">Start a Booking →</button>
-    <span class="trees">🌲🌲🌲</span>
+    <span class="trees">🌴🌴🌴</span>
   </div>
 </section>
 
@@ -936,10 +936,10 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       </div>
     </div>
     <div class="field"><label>Anything else?</label><textarea id="bk-notes" placeholder="Smoothie bar for 20, two vegan trays, birthday shout-out for Maya…"></textarea></div>
-    <button type="submit" class="btn btn-pine btn-block btn-lg">Request Booking 🌲</button>
+    <button type="submit" class="btn btn-pine btn-block btn-lg">Request Booking 🌴</button>
   </form>
   <div class="book-confirm" id="book-confirm" style="display:none">
-    <div class="big">🌲🎉</div>
+    <div class="big">🌴🎉</div>
     <h3>Request received!</h3>
     <span class="ref" id="bk-ref">PD-EVT-0000</span>
     <p id="bk-summary">We'll confirm by email within 24 hours.</p>
@@ -1019,7 +1019,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
         </div>
         <div class="field"><label>Time</label><input type="text" id="ad-time" placeholder="4:00pm – 6:00pm" required /></div>
         <div class="field"><label>Description</label><textarea id="ad-desc" placeholder="What's happening, what's included, how to join…"></textarea></div>
-        <button type="submit" class="btn btn-pine btn-block btn-lg">Publish Event 🌲</button>
+        <button type="submit" class="btn btn-pine btn-block btn-lg">Publish Event 🌴</button>
       </form>
       <div class="cal-list" style="padding:0 16px">
         <h3>Your posted events</h3>
@@ -1126,7 +1126,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <button class="account-row"><span class="ico ic-5">💳</span><div class="body"><h4>Payment Methods</h4><p>Visa •••• 4429</p></div><span class="chev">›</span></button>
     <button class="account-row"><span class="ico ic-6">⚙️</span><div class="body"><h4>Settings & Privacy</h4><p>Preferences, language, support</p></div><span class="chev">›</span></button>
     <button class="account-row" id="install-row"><span class="ico" style="background:var(--gold);color:var(--teal-deep)">📲</span><div class="body"><h4>Install the App</h4><p id="install-row-sub">Add to your home screen — iPhone & Android</p></div><span class="chev">›</span></button>
-    <button class="account-row" id="owner-login"><span class="ico" style="background:var(--pine);color:#fff">🌲</span><div class="body"><h4>Owner Tools</h4><p>Staff only · post events & manage the board</p></div><span class="chev">›</span></button>
+    <button class="account-row" id="owner-login"><span class="ico" style="background:var(--pine);color:#fff">🌴</span><div class="body"><h4>Owner Tools</h4><p>Staff only · post events & manage the board</p></div><span class="chev">›</span></button>
   </div>
   <div style="padding:30px 16px;text-align:center">
     <img src="assets/logo-pour-decisions.png" style="width:90px;opacity:.45;margin:0 auto" />
@@ -1233,7 +1233,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 <div class="ios-sheet" id="ios-sheet">
   <div class="card">
     <div class="grab"></div>
-    <h3>Install Pour Decisions 🌲</h3>
+    <h3>Install Pour Decisions 🌴</h3>
     <p class="lead" id="ios-lead">Add our app to your home screen — it opens full-screen, works offline, and lives right next to your other apps.</p>
     <div id="ios-steps-ios">
       <div class="ios-step"><span class="n">1</span><span class="tx">Tap the <b>Share</b> button in Safari's toolbar</span><span class="ic">􀈂</span></div>
@@ -1354,17 +1354,17 @@ const MENU = [
    ing:['hummus','feta','cucumbers','tomatoes','olives','spinach wrap'],
    desc:'A Mediterranean spread wrapped to go.',
    macros:{cal:440,protein:16,carbs:48,fat:22,sugar:6},
-   img:PIC('photo-1509722747041-616f39b57569')},
+   img:PIC('photo-1585238342107-49a3cdace47f')},
   {id:'avocado-crunch-wrap',name:'Avocado Crunch Wrap',cat:'wraps',price:12,sizes:false,
    ing:['avocado','lettuce','cucumbers','carrots','sprouts'],
    desc:'Cool, creamy avocado with a satisfying crunch.',
    macros:{cal:400,protein:10,carbs:46,fat:20,sugar:5},
-   img:PIC('photo-1551782450-a2132b4ba21d')},
+   img:PIC('photo-1576866209830-589e1bfbaa4d')},
   {id:'southwest-wrap',name:'Southwest Wrap',cat:'wraps',price:13,sizes:false,
    ing:['black beans','corn','avocado','lettuce','tomatoes'],
    desc:'Hearty black beans and avocado with a Southwest kick.',
    macros:{cal:460,protein:15,carbs:60,fat:18,sugar:7},
-   img:PIC('photo-1564093497595-593b96d80180')},
+   img:PIC('photo-1621334953222-c60c19143b0a')},
   // ── SIGNATURE SALADS (with protein) ──
   {id:'salmon-salad',name:'Salmon Salad',cat:'salads',price:16,sizes:false,
    opts:{label:'Salmon preparation',choices:['Grilled','Baked']},
@@ -2186,7 +2186,7 @@ document.getElementById('book-form').addEventListener('submit', async e => {
   document.getElementById('book-confirm').style.display = '';
   document.getElementById('book-form').reset();
   window.scrollTo({top:0,behavior:'smooth'});
-  toast('Booking request sent 🌲');
+  toast('Booking request sent 🌴');
   refreshBkBadge();
 });
 
@@ -2211,7 +2211,7 @@ document.getElementById('admin-gate').addEventListener('submit', e => {
   if(pin === '7687' || (Store.cloud && pin.length >= 4)){
     STATE.admin = true; Store.pin = pin;
     showAdminShell(); renderOrders(); renderCustomers(); renderAdminList(); renderBookings();
-    toast('Welcome back, boss 🌲');
+    toast('Welcome back, boss 🌴');
   } else toast('Wrong PIN');
   document.getElementById('ad-pin').value = '';
 });
@@ -2342,7 +2342,7 @@ document.getElementById('admin-form').addEventListener('submit', async e => {
   }
   rebuildEvents(); renderAdminList(); renderHomeEvents();
   e.target.reset();
-  toast(Store.cloud ? 'Event published to everyone 🌲' : 'Event live on the calendar 🌲');
+  toast(Store.cloud ? 'Event published to everyone 🌴' : 'Event live on the calendar 🌴');
 });
 
 // Bookings inbox
@@ -2485,7 +2485,7 @@ async function triggerInstall(){
     const { outcome } = await PWA.deferredPrompt.userChoice;
     PWA.deferredPrompt = null;
     hideInstallBanner();
-    toast(outcome === 'accepted' ? 'Installing the app… 🌲' : 'No worries — install anytime from Account');
+    toast(outcome === 'accepted' ? 'Installing the app… 🌴' : 'No worries — install anytime from Account');
   } else {
     openInstallSheet();
   }
@@ -2533,7 +2533,7 @@ window.addEventListener('beforeinstallprompt', e => {
 window.addEventListener('appinstalled', () => {
   PWA.deferredPrompt = null;
   hideInstallBanner();
-  toast('Installed! Find Pour Decisions on your home screen 🌲');
+  toast('Installed! Find Pour Decisions on your home screen 🌴');
 });
 
 function initInstallUI(){
