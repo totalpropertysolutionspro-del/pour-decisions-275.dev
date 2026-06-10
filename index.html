@@ -166,7 +166,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 /* Featured carousel */
 .carousel{display:flex;gap:14px;overflow-x:auto;padding:6px 16px 22px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
 .carousel::-webkit-scrollbar{display:none}
-.feat-card{flex:0 0 78%;scroll-snap-align:start;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--white);box-shadow:var(--shadow-card);min-height:360px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
+.feat-card{flex:0 0 72%;scroll-snap-align:start;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--white);box-shadow:var(--shadow-card);height:280px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
 .feat-card .ph{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center}
 .feat-card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%, rgba(0,0,0,.65) 100%)}
 .feat-card .meta{position:relative;z-index:1}
@@ -225,7 +225,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .sheet{position:fixed;left:0;right:0;bottom:0;z-index:130;background:var(--cream);border-top-left-radius:24px;border-top-right-radius:24px;transform:translateY(102%);transition:transform .35s cubic-bezier(.2,.7,.2,1);max-height:92dvh;display:flex;flex-direction:column;overflow:hidden;}
 .sheet.show{transform:none}
 .sheet .grab{width:48px;height:5px;background:rgba(31,72,96,.25);border-radius:3px;margin:10px auto 6px}
-.sheet .pic{height:42dvh;background-size:cover;background-position:center;position:relative;margin:0 14px;border-radius:var(--r-lg);overflow:hidden;}
+.sheet .pic{height:32dvh;max-height:300px;background-size:cover;background-position:center;position:relative;margin:0 14px;border-radius:var(--r-lg);overflow:hidden;}
 .sheet .pic .close{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.95);color:var(--teal);display:grid;place-items:center;font-size:18px;font-weight:800;box-shadow:var(--shadow-card)}
 .sheet .pic .cat-tag{position:absolute;top:14px;left:14px;padding:6px 11px;border-radius:var(--r-pill);background:#fff;color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}
 .sheet .body{padding:18px 22px 22px;overflow-y:auto;flex:1}
@@ -1285,7 +1285,7 @@ const MENU = [
    ing:['beet','apple','carrot','ginger'],
    desc:'Supports circulation and endurance. Earthy, sweet, unmistakable.',
    macros:{cal:150,protein:3,carbs:36,fat:0,sugar:28},
-   img:PIC('photo-1620916566398-39f1143ab7be')},
+   img:PIC('photo-1615478503562-ec2d8aa0e24e')},
   // ── SMOOTHIES ──
   {id:'island-vibes',name:'Island Vibes',cat:'smoothies',price:11,
    ing:['mango','pineapple','banana','coconut milk'],
@@ -1377,7 +1377,7 @@ const MENU = [
    ing:['shrimp','mixed greens','cucumbers','tomatoes','avocado','lemon'],
    desc:'Seasoned shrimp served right on the greens or plated on the side — your call.',
    macros:{cal:360,protein:30,carbs:16,fat:18,sugar:5},
-   img:PIC('photo-1432139555190-58524dae6a55')}
+   img:PIC('photo-1551248429-40975aa4de74')}
 ];
 
 // Add-on prices match the in-store menu board.
