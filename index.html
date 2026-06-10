@@ -665,6 +665,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </nav>
   <div class="drawer-foot">
     <div class="addr">359 Northern Boulevard<br/>Albany, NY 12204<br/>Open 7AM – 7PM daily</div>
+    <div class="addr" style="margin-top:8px;font-size:10px;opacity:.7">App v2.6.1</div>
     <div class="socials">
       <a href="https://instagram.com/pourdecisionsjuicebar" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
       <a href="https://facebook.com/pourdecisionsjuicebar" target="_blank" rel="noopener" aria-label="Facebook">f</a>
@@ -2768,7 +2769,22 @@ function init(){
   initInstallUI();
   setTimeout(() => document.getElementById('splash').classList.add('gone'), 1700);
   if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    // Auto-update the installed app: when a new service worker takes control,
+    // reload once so the home-screen app always shows the latest version.
+    if(navigator.serviceWorker.controller){
+      let reloaded = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if(reloaded) return; reloaded = true; location.reload();
+      });
+    }
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      reg.update();
+      // Check for a new version whenever the app is reopened or refocused.
+      document.addEventListener('visibilitychange', () => {
+        if(document.visibilityState === 'visible') reg.update();
+      });
+      setInterval(() => reg.update(), 30*60*1000);
+    }).catch(() => {});
   }
   // Pull any cloud-published events so the calendar/home reflect the latest.
   Store.syncEvents().then(cloud => {
