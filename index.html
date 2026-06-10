@@ -166,7 +166,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 /* Featured carousel */
 .carousel{display:flex;gap:14px;overflow-x:auto;padding:6px 16px 22px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
 .carousel::-webkit-scrollbar{display:none}
-.feat-card{flex:0 0 72%;scroll-snap-align:start;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--white);box-shadow:var(--shadow-card);height:280px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
+.feat-card{flex:0 0 66%;scroll-snap-align:start;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--white);box-shadow:var(--shadow-card);height:230px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
 .feat-card .ph{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center}
 .feat-card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%, rgba(0,0,0,.65) 100%)}
 .feat-card .meta{position:relative;z-index:1}
@@ -422,17 +422,15 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .ios-step .ic{margin-left:auto;font-size:22px}
 .ios-sheet .done{margin-top:18px}
 
-/* PINE TREELINE — repeating silhouette, two layers for depth */
-.treeline{height:44px;pointer-events:none;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='100' viewBox='0 0 70 100'%3E%3Cpath d='M35 5 L20 35 L27 35 L14 62 L23 62 L8 88 L31 88 L31 100 L39 100 L39 88 L62 88 L47 62 L56 62 L43 35 L50 35 Z' fill='%231B5E3F'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='100' viewBox='0 0 70 100'%3E%3Cpath d='M35 5 L20 35 L27 35 L14 62 L23 62 L8 88 L31 88 L31 100 L39 100 L39 88 L62 88 L47 62 L56 62 L43 35 L50 35 Z' fill='%232E7D54'/%3E%3C/svg%3E");
-  background-repeat:repeat-x,repeat-x;
-  background-size:auto 100%,auto 72%;
-  background-position:0 bottom,35px bottom;}
+/* PALM TREELINE — repeating silhouette, two layers for depth */
+.treeline{height:62px;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='150' viewBox='0 0 400 150'%3E%3Cg transform='translate(60 30) scale(0.62 0.62)'%3E%3Cpath d='M30 116 C28 86 27 64 32 46 L36 47 C34 66 34 90 35 116 Z M33 47 Q16 43 3 58 Q18 49 35 50 Z M33 46 Q14 40 2 42 Q17 45 35 49 Z M33 46 Q23 31 17 19 Q28 34 35 48 Z M34 45 Q32 29 35 16 Q39 30 36 47 Z M34 46 Q45 31 52 19 Q41 34 35 48 Z M34 46 Q54 40 66 42 Q51 45 35 49 Z M34 47 Q52 43 65 58 Q51 49 35 50 Z' fill='%23357a52'/%3E%3Ccircle fill='%23357a52' cx='31' cy='49' r='1.6'/%3E%3Ccircle fill='%23357a52' cx='36' cy='49' r='1.6'/%3E%3Ccircle fill='%23357a52' cx='33' cy='51' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(210 28) scale(0.7 0.7)'%3E%3Cpath d='M27 116 C24 88 26 60 34 44 L38 46 C31 62 31 90 32 116 Z M35 45 Q18 36 5 40 Q19 42 36 48 Z M35 44 Q28 28 25 14 Q34 28 37 46 Z M36 44 Q48 28 58 16 Q44 32 37 46 Z M36 45 Q56 34 69 38 Q52 42 37 47 Z M36 46 Q55 44 68 60 Q53 49 36 49 Z M34 46 Q18 44 6 60 Q20 49 35 49 Z' fill='%23357a52'/%3E%3Ccircle fill='%23357a52' cx='34' cy='48' r='1.6'/%3E%3Ccircle fill='%23357a52' cx='37' cy='48' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(320 26) scale(-0.66 0.66)'%3E%3Cpath d='M27 116 C24 88 26 60 34 44 L38 46 C31 62 31 90 32 116 Z M35 45 Q18 36 5 40 Q19 42 36 48 Z M35 44 Q28 28 25 14 Q34 28 37 46 Z M36 44 Q48 28 58 16 Q44 32 37 46 Z M36 45 Q56 34 69 38 Q52 42 37 47 Z M36 46 Q55 44 68 60 Q53 49 36 49 Z M34 46 Q18 44 6 60 Q20 49 35 49 Z' fill='%23357a52'/%3E%3Ccircle fill='%23357a52' cx='34' cy='48' r='1.6'/%3E%3Ccircle fill='%23357a52' cx='37' cy='48' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(6 6) scale(1.05 1.05)'%3E%3Cpath d='M30 116 C28 86 27 64 32 46 L36 47 C34 66 34 90 35 116 Z M33 47 Q16 43 3 58 Q18 49 35 50 Z M33 46 Q14 40 2 42 Q17 45 35 49 Z M33 46 Q23 31 17 19 Q28 34 35 48 Z M34 45 Q32 29 35 16 Q39 30 36 47 Z M34 46 Q45 31 52 19 Q41 34 35 48 Z M34 46 Q54 40 66 42 Q51 45 35 49 Z M34 47 Q52 43 65 58 Q51 49 35 50 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='31' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='36' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='33' cy='51' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(105 -6) scale(1.35 1.35)'%3E%3Cpath d='M27 116 C24 88 26 60 34 44 L38 46 C31 62 31 90 32 116 Z M35 45 Q18 36 5 40 Q19 42 36 48 Z M35 44 Q28 28 25 14 Q34 28 37 46 Z M36 44 Q48 28 58 16 Q44 32 37 46 Z M36 45 Q56 34 69 38 Q52 42 37 47 Z M36 46 Q55 44 68 60 Q53 49 36 49 Z M34 46 Q18 44 6 60 Q20 49 35 49 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='34' cy='48' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='37' cy='48' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(195 4) scale(-0.9 0.9)'%3E%3Cpath d='M30 116 C28 86 27 64 32 46 L36 47 C34 66 34 90 35 116 Z M33 47 Q16 43 3 58 Q18 49 35 50 Z M33 46 Q14 40 2 42 Q17 45 35 49 Z M33 46 Q23 31 17 19 Q28 34 35 48 Z M34 45 Q32 29 35 16 Q39 30 36 47 Z M34 46 Q45 31 52 19 Q41 34 35 48 Z M34 46 Q54 40 66 42 Q51 45 35 49 Z M34 47 Q52 43 65 58 Q51 49 35 50 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='31' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='36' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='33' cy='51' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(285 8) scale(1 1)'%3E%3Cpath d='M27 116 C24 88 26 60 34 44 L38 46 C31 62 31 90 32 116 Z M35 45 Q18 36 5 40 Q19 42 36 48 Z M35 44 Q28 28 25 14 Q34 28 37 46 Z M36 44 Q48 28 58 16 Q44 32 37 46 Z M36 45 Q56 34 69 38 Q52 42 37 47 Z M36 46 Q55 44 68 60 Q53 49 36 49 Z M34 46 Q18 44 6 60 Q20 49 35 49 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='34' cy='48' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='37' cy='48' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(355 2) scale(-0.8 0.8)'%3E%3Cpath d='M30 116 C28 86 27 64 32 46 L36 47 C34 66 34 90 35 116 Z M33 47 Q16 43 3 58 Q18 49 35 50 Z M33 46 Q14 40 2 42 Q17 45 35 49 Z M33 46 Q23 31 17 19 Q28 34 35 48 Z M34 45 Q32 29 35 16 Q39 30 36 47 Z M34 46 Q45 31 52 19 Q41 34 35 48 Z M34 46 Q54 40 66 42 Q51 45 35 49 Z M34 47 Q52 43 65 58 Q51 49 35 50 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='31' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='36' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='33' cy='51' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat:repeat-x;
+  background-size:auto 100%;
+  background-position:center bottom;}
 .treeline.on-dark{filter:none;opacity:.9}
 .treeline.on-cream{opacity:.85;margin-top:28px}
-.hero .treeline{position:absolute;left:0;right:0;bottom:-1px;height:54px;opacity:.55;z-index:0}
+.hero .treeline{position:absolute;left:0;right:0;bottom:-1px;height:92px;opacity:.5;z-index:0}
 
 /* BOOK THE SPACE */
 .book-cta{margin:18px 16px 0;padding:22px;border-radius:var(--r-lg);position:relative;overflow:hidden;color:#fff;
@@ -1306,7 +1304,7 @@ const MENU = [
    ing:['spinach','banana','mango','coconut water'],
    desc:'Smooth, green, and clean. Energy without the crash.',
    macros:{cal:240,protein:6,carbs:48,fat:3,sugar:32},
-   img:PIC('photo-1695634237630-f99602661946')},
+   img:PIC('photo-1610622930110-3c076902312a')},
   // ── WELLNESS SHOTS ──
   {id:'ginger-shot',name:'Ginger Shot',cat:'shots',price:4,sizes:false,
    ing:['fresh ginger','lemon'],
