@@ -38,7 +38,7 @@
    References: Joe & The Juice (color blocks, lifestyle) · Olipop (per-flavor identity, retro-modern type)
 ─────────────────────────────────────────────────────────────── */
 
-:root{
+:root{--palm:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='122' viewBox='0 0 68 122'%3E%3Cpath d='M30 117 C28 88 27 66 32 47 L37 48 C34 68 35 92 35 117 Z M34 44 Q17.5 40.2 4 57 Q17.5 46.8 34 50 Z M34.9 44.1 Q18.8 34.4 4.5 49.4 Q16.8 40.7 33.1 49.9 Z M35.8 44.6 Q23 31.1 10.4 37.5 Q19 36.3 32.2 49.4 Z M36.4 45.7 Q30 30.5 21.8 31 Q24.6 33.3 31.6 48.3 Z M36.5 47 Q36.8 32.4 34 27 Q31.3 32.4 31.5 47 Z M36.4 48.3 Q43.4 33.3 46.2 31 Q38 30.5 31.6 45.7 Z M35.8 49.4 Q49 36.3 57.6 37.5 Q45 31.1 32.2 44.6 Z M34.9 49.9 Q51.2 40.7 63.5 49.4 Q49.2 34.4 33.1 44.1 Z M34 50 Q50.5 46.8 64 57 Q50.5 40.2 34 44 Z' fill='%23000'/%3E%3Ccircle cx='31' cy='50' r='1.8' fill='%23000'/%3E%3Ccircle cx='36' cy='50' r='1.8' fill='%23000'/%3E%3Ccircle cx='33' cy='52' r='1.8' fill='%23000'/%3E%3C/svg%3E");
   --teal:#1F4860; --teal-deep:#143241;
   --gold:#E8B547; --gold-deep:#C68F2C;
   --cream:#FFF8EC; --cream-warm:#FCEFD6;
@@ -566,6 +566,17 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 
 .tc{text-align:center}
 @media (min-width:520px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* Scattered palm-tree silhouettes (tintable via color) */
+.palm{position:absolute;pointer-events:none;z-index:-1;-webkit-mask:var(--palm) center/contain no-repeat;mask:var(--palm) center/contain no-repeat;background-color:currentColor;}
+.palm.flip{transform:scaleX(-1)}
+.pkg-hero,.book-cta{position:relative;overflow:hidden}
+.hero .palm-a{height:212px;width:118px;left:-34px;bottom:-14px;color:#2c6274;opacity:.40}
+.cb-orange-palm{height:212px;width:118px;right:-28px;top:-24px;color:#5e2207;opacity:.20}
+.cb-teal-palm{height:224px;width:125px;left:-30px;bottom:-32px;color:#06231a;opacity:.26}
+.cb-pink-palm{height:196px;width:109px;right:-24px;top:-20px;color:#5e0f33;opacity:.20}
+.pkg-hero .palm-a{height:204px;width:114px;right:-22px;bottom:-18px;color:#06202a;opacity:.34}
+.book-cta .palm-a{height:190px;width:106px;right:-16px;bottom:-12px;color:#0a3322;opacity:.46}
 </style>
 </head>
 <body>
@@ -577,7 +588,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <span class="sparkle">✦</span><span class="sparkle">✦</span>
   <img class="splash-logo" src="assets/logo-pour-decisions.png" alt="Pour Decisions" />
   <div class="splash-tag">COLD-PRESSED · ALBANY NY</div>
-  <div class="treeline"></div>
+  
 </div>
 
 <!-- HEADER -->
@@ -634,6 +645,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 <!-- HOME -->
 <section class="view active" data-view="home">
   <div class="hero">
+  <div class="palm palm-a"></div>
     <span class="eyebrow">Cold-Pressed Daily</span>
     <h1>Pour with <em>purpose.</em></h1>
     <p>Fresh cold-pressed juice, smoothies, and shots. Order ahead and skip the line.</p>
@@ -642,7 +654,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <button class="btn btn-ghost" style="border-color:#fff;color:#fff" data-route="packages">Book Pkgs</button>
     </div>
     <img class="hero-logo-stamp" src="assets/logo-pour-decisions.png" alt="" />
-    <div class="treeline"></div>
+    
   </div>
 
   <div class="quick-actions">
@@ -662,6 +674,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div class="carousel" id="featured-carousel"></div>
 
   <div class="colorblock orange">
+  <div class="palm cb-orange-palm flip"></div>
     <span class="eyebrow" style="color:#fff">7-Day Reset</span>
     <h2>Cleanse like you mean it</h2>
     <p>Curated juice cleanses that actually taste like something. Six bottles a day, zero compromise.</p>
@@ -683,6 +696,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </div>
 
   <div class="colorblock teal">
+  <div class="palm cb-teal-palm"></div>
     <span class="eyebrow" style="color:var(--gold)">Loyalty That Pays</span>
     <h2>Buy 9, the 10th is on us</h2>
     <p>Earn a stamp every visit. Unlock free pours, secret menu drops, and birthday bottles.</p>
@@ -699,13 +713,14 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div id="home-events"></div>
 
   <div class="colorblock pink">
+  <div class="palm cb-pink-palm flip"></div>
     <span class="eyebrow" style="color:#fff">Bottles in Bulk</span>
     <h2>Cleanses, parties, offices</h2>
     <p>Subscriptions, party packs, corporate catering, and cleanses — built around your week.</p>
     <button class="btn btn-gold" data-route="packages">See All Packages</button>
   </div>
 
-  <div class="treeline on-cream"></div>
+  
   <footer class="footer">
     <img src="assets/logo-pour-decisions.png" alt="Pour Decisions" />
     <p class="tag">Pour with purpose.</p>
@@ -885,11 +900,12 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     </div>
   </div>
   <div class="book-cta">
+  <div class="palm palm-a flip"></div>
     <span class="eyebrow">Host With Us</span>
     <h3>Book the space</h3>
     <p>Birthdays, team off-sites, wellness classes, pop-ups — our bar is yours after hours.</p>
     <button class="btn btn-gold" data-route="book">Start a Booking →</button>
-    <span class="trees">🌴🌴🌴</span>
+    
   </div>
 </section>
 
@@ -1041,6 +1057,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 <!-- PACKAGES -->
 <section class="view" data-view="packages">
   <div class="pkg-hero">
+  <div class="palm palm-a flip"></div>
     <span class="eyebrow" style="color:#fff">Pour, in Bulk</span>
     <h2>Bottles for every <em>occasion</em></h2>
     <p>Subscriptions, parties, offices, cleanses. Pick a package, customize the mix, we deliver.</p>
