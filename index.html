@@ -9,15 +9,11 @@
 <meta name="apple-mobile-web-app-title" content="Pour Decisions" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="format-detection" content="telephone=yes" />
-<meta name="description" content="Pour Decisions — cold-pressed juices, smoothies, wellness shots, salads & wraps in Albany NY. Order ahead, book packages, earn Pour Pass rewards." />
+<meta name="description" content="Pour Decisions — cold-pressed juice, smoothies & shots in Albany NY. Order ahead, book packages, earn Pour Pass rewards." />
 <meta property="og:title" content="Pour Decisions — Order Ahead" />
-<meta property="og:description" content="Cold-pressed juice, smoothies, salads & wraps · 359 Northern Boulevard, Albany NY" />
-<meta property="og:image" content="https://pourdecisionsjuicebar.com/assets/og-image.png" />
+<meta property="og:description" content="Cold-pressed juice and clean fuel · 348 Loudon Rd, Albany NY" />
+<meta property="og:image" content="assets/og-image.png" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://pourdecisionsjuicebar.com/" />
-<meta property="og:site_name" content="Pour Decisions Juice Bar" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://pourdecisionsjuicebar.com/" />
 <title>Pour Decisions — Cold-Pressed Juice · Albany NY</title>
 
 <link rel="manifest" href="manifest.json" />
@@ -38,14 +34,13 @@
    References: Joe & The Juice (color blocks, lifestyle) · Olipop (per-flavor identity, retro-modern type)
 ─────────────────────────────────────────────────────────────── */
 
-:root{--palm:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='122' viewBox='0 0 68 122'%3E%3Cpath d='M30 117 C28 88 27 66 32 47 L37 48 C34 68 35 92 35 117 Z M34 44 Q17.5 40.2 4 57 Q17.5 46.8 34 50 Z M34.9 44.1 Q18.8 34.4 4.5 49.4 Q16.8 40.7 33.1 49.9 Z M35.8 44.6 Q23 31.1 10.4 37.5 Q19 36.3 32.2 49.4 Z M36.4 45.7 Q30 30.5 21.8 31 Q24.6 33.3 31.6 48.3 Z M36.5 47 Q36.8 32.4 34 27 Q31.3 32.4 31.5 47 Z M36.4 48.3 Q43.4 33.3 46.2 31 Q38 30.5 31.6 45.7 Z M35.8 49.4 Q49 36.3 57.6 37.5 Q45 31.1 32.2 44.6 Z M34.9 49.9 Q51.2 40.7 63.5 49.4 Q49.2 34.4 33.1 44.1 Z M34 50 Q50.5 46.8 64 57 Q50.5 40.2 34 44 Z' fill='%23000'/%3E%3Ccircle cx='31' cy='50' r='1.8' fill='%23000'/%3E%3Ccircle cx='36' cy='50' r='1.8' fill='%23000'/%3E%3Ccircle cx='33' cy='52' r='1.8' fill='%23000'/%3E%3C/svg%3E");
+:root{
   --teal:#1F4860; --teal-deep:#143241;
   --gold:#E8B547; --gold-deep:#C68F2C;
   --cream:#FFF8EC; --cream-warm:#FCEFD6;
   --orange:#FF6B35; --pink:#FF3D80;
   --lime:#A3E635; --lime-deep:#65A30D;
   --cyan:#22D3EE; --yellow:#FACC15;
-  --pine:#2E7D54; --pine-deep:#1B5E3F; --moss:#7FB069;
   --ink:#1A1A1A; --ink-soft:#3F3F46;
   --muted:#71717A; --line:rgba(31,72,96,.12); --white:#FFFFFF;
   --f-display:'Fraunces', ui-serif, Georgia, serif;
@@ -81,8 +76,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .container{padding:0 20px;max-width:520px;margin:0 auto}
 
 /* SPLASH */
-#splash{position:fixed;inset:0;z-index:200;background:radial-gradient(120% 80% at 50% 30%, #2a5a76 0%, var(--teal) 50%, var(--pine-deep) 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .6s ease, visibility .6s ease;}
-#splash .treeline{position:absolute;left:0;right:0;bottom:0;height:72px;opacity:.55}
+#splash{position:fixed;inset:0;z-index:200;background:radial-gradient(120% 80% at 50% 30%, #2a5a76 0%, var(--teal) 55%, var(--teal-deep) 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .6s ease, visibility .6s ease;}
 #splash .glow{position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle, rgba(232,181,71,.45) 0%, rgba(232,181,71,0) 65%);filter:blur(20px);animation:pulse 2.6s ease-in-out infinite;}
 #splash .splash-logo{width:min(78vw,360px);height:auto;filter:drop-shadow(0 12px 40px rgba(0,0,0,.4));animation:logoIn 1.2s cubic-bezier(.2,.7,.2,1) both;position:relative;z-index:2;}
 #splash .splash-tag{margin-top:16px;color:#FCEFD6;font-family:var(--f-num);letter-spacing:.4em;font-size:14px;opacity:0;animation:tagIn .9s ease .8s both;position:relative;z-index:2;}
@@ -101,24 +95,6 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .app-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:calc(8px + var(--safe-top)) 16px 8px;background:rgba(255,248,236,.92);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;}
 .app-header .logo-wrap{display:flex;align-items:center;flex:1;min-width:0}
 .app-header .logo-wrap img{height:44px;width:auto}
-/* Slide-out nav drawer */
-.drawer-scrim{position:fixed;inset:0;z-index:300;background:rgba(10,28,37,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
-.drawer-scrim.show{opacity:1;visibility:visible}
-.drawer{position:fixed;top:0;bottom:0;left:0;z-index:301;width:82%;max-width:330px;background:var(--cream,#FFF8EC);transform:translateX(-100%);transition:transform .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:6px 0 30px rgba(0,0,0,.25);overflow-y:auto}
-.drawer.show{transform:translateX(0)}
-.drawer-head{background:linear-gradient(150deg,var(--teal,#1F4860),var(--teal-deep,#0a1c25));color:#fff;padding:calc(20px + var(--safe-top)) 20px 20px;display:flex;align-items:center;gap:12px}
-.drawer-head img{width:46px;height:46px;border-radius:12px}
-.drawer-head .dh-t{font-family:var(--f-display);font-style:italic;font-weight:900;font-size:20px;line-height:1}
-.drawer-head .dh-s{font-size:11.5px;opacity:.8;margin-top:3px}
-.drawer-nav{padding:10px 0;flex:1}
-.drawer-nav a,.drawer-nav button{display:flex;align-items:center;gap:14px;width:100%;padding:14px 22px;background:none;border:0;text-align:left;font-size:15.5px;font-weight:600;color:var(--teal-deep,#0a1c25);cursor:pointer;text-decoration:none}
-.drawer-nav a:active,.drawer-nav button:active{background:rgba(31,72,96,.07)}
-.drawer-nav .di{width:26px;text-align:center;font-size:19px}
-.drawer-sep{height:1px;background:var(--line,#eadfce);margin:8px 22px}
-.drawer-foot{padding:16px 22px calc(20px + var(--safe-bot));border-top:1px solid var(--line,#eadfce)}
-.drawer-foot .addr{font-size:12.5px;color:var(--muted,#7a8a93);line-height:1.5}
-.drawer-foot .socials{display:flex;gap:10px;margin-top:12px}
-.drawer-foot .socials a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--teal,#1F4860);color:#fff;font-size:16px}
 .loc-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:var(--r-pill);background:var(--teal);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-left:10px;white-space:nowrap;}
 .loc-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px rgba(163,230,53,.25);animation:beat 1.6s ease-in-out infinite}
 @keyframes beat{50%{transform:scale(1.4)}}
@@ -138,7 +114,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .btn-lg{padding:18px 28px;font-size:17px}
 
 /* HOME */
-.hero{position:relative;border-radius:var(--r-xl);overflow:hidden;margin:14px 16px 0;background:radial-gradient(120% 80% at 80% 15%, rgba(255,107,53,.95), transparent 52%),radial-gradient(110% 80% at 15% 95%, rgba(163,230,53,.55), transparent 50%),radial-gradient(120% 80% at 20% 45%, rgba(255,61,128,.75), transparent 55%),linear-gradient(160deg, var(--teal) 0%, var(--pine-deep) 100%);color:#fff;padding:28px 22px 80px;min-height:380px;isolation:isolate;}
+.hero{position:relative;border-radius:var(--r-xl);overflow:hidden;margin:14px 16px 0;background:radial-gradient(120% 80% at 80% 20%, rgba(255,107,53,.85), transparent 50%),radial-gradient(120% 80% at 20% 90%, rgba(255,61,128,.85), transparent 55%),linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 100%);color:#fff;padding:28px 22px 26px;min-height:380px;isolation:isolate;}
 .hero::after{content:"";position:absolute;inset:0;background-image:url("https://images.unsplash.com/photo-1570696516188-ade861b84a49?w=900&q=70&auto=format&fit=crop");background-size:cover;background-position:center;mix-blend-mode:overlay;opacity:.32;z-index:-1;}
 .hero .eyebrow{color:var(--gold)}
 .hero h1{color:#fff;margin-top:8px}
@@ -166,7 +142,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 /* Featured carousel */
 .carousel{display:flex;gap:14px;overflow-x:auto;padding:6px 16px 22px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
 .carousel::-webkit-scrollbar{display:none}
-.feat-card{flex:0 0 66%;scroll-snap-align:start;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--white);box-shadow:var(--shadow-card);height:230px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
+.feat-card{flex:0 0 78%;scroll-snap-align:start;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--white);box-shadow:var(--shadow-card);min-height:360px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
 .feat-card .ph{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center}
 .feat-card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%, rgba(0,0,0,.65) 100%)}
 .feat-card .meta{position:relative;z-index:1}
@@ -179,12 +155,26 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .colorblock{margin:28px 0;padding:36px 24px;color:#fff;position:relative;overflow:hidden;text-align:center;}
 .colorblock h2{color:#fff}
 .colorblock p{margin:8px 0 18px;color:rgba(255,255,255,.92);max-width:34ch;margin-inline:auto;font-weight:500}
-.colorblock.orange{background:radial-gradient(110% 90% at 80% 0%, var(--yellow), transparent 55%),linear-gradient(150deg,var(--orange),#E5491D)}
-.colorblock.pink{background:radial-gradient(110% 90% at 15% 0%, var(--orange), transparent 50%),linear-gradient(150deg,var(--pink),#D11A60)}
+.colorblock.orange{background:var(--orange)}
+.colorblock.pink{background:var(--pink)}
 .colorblock.lime{background:var(--lime);color:var(--teal-deep)}
 .colorblock.lime h2,.colorblock.lime p{color:var(--teal-deep)}
-.colorblock.teal{background:radial-gradient(110% 90% at 85% 10%, rgba(163,230,53,.4), transparent 50%),linear-gradient(150deg,var(--teal),var(--pine-deep))}
+.colorblock.teal{background:var(--teal)}
 .colorblock .deco{position:absolute;pointer-events:none;opacity:.35}
+
+/* ── PALM TREE SILHOUETTES ─────────────────────────────────── */
+.palm{position:absolute;pointer-events:none;overflow:visible}
+.hero .palm-l{bottom:-8px;left:-10px;width:110px;opacity:.18;color:#fff;transform:scaleX(1)}
+.hero .palm-r{bottom:-8px;right:-10px;width:90px;opacity:.15;color:#fff;transform:scaleX(-1)}
+.colorblock .palm-l{bottom:-6px;left:-8px;width:90px;opacity:.22;color:#fff}
+.colorblock .palm-r{bottom:-6px;right:-8px;width:75px;opacity:.18;color:#fff;transform:scaleX(-1)}
+.colorblock.lime .palm-l,.colorblock.lime .palm-r{color:var(--teal-deep);opacity:.15}
+.footer .palm-l{bottom:0;left:-12px;width:100px;opacity:.2;color:var(--gold)}
+.footer .palm-r{bottom:0;right:-12px;width:82px;opacity:.16;color:var(--gold);transform:scaleX(-1)}
+.profile-hero .palm-r{bottom:-4px;right:-6px;width:80px;opacity:.15;color:var(--teal-deep);transform:scaleX(-1)}
+.pkg-hero .palm-r{bottom:-4px;right:-6px;width:80px;opacity:.18;color:#fff;transform:scaleX(-1)}
+.confirm-hero .palm-l{bottom:-4px;left:-8px;width:80px;opacity:.15;color:var(--teal-deep)}
+.confirm-hero .palm-r{bottom:-4px;right:-8px;width:70px;opacity:.12;color:var(--teal-deep);transform:scaleX(-1)}
 
 /* MENU */
 .cat-strip{display:flex;gap:10px;overflow-x:auto;padding:0 16px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
@@ -208,16 +198,16 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .menu-card .macros{display:flex;gap:6px;flex-wrap:wrap;font-family:var(--f-num);font-size:13px;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:6px;}
 .menu-card .macros span{display:inline-flex;align-items:center;gap:3px}
 .menu-card .macros .dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.45}
-.menu-card[data-cat="juices"] .img{background-color:#d9f99d}
+.menu-card[data-cat="greens"] .img{background-color:#d9f99d}
+.menu-card[data-cat="citrus"] .img{background-color:#fed7aa}
+.menu-card[data-cat="roots"] .img{background-color:#fbcfe8}
 .menu-card[data-cat="smoothies"] .img{background-color:#fef08a}
 .menu-card[data-cat="shots"] .img{background-color:#a5f3fc}
-.menu-card[data-cat="salads"] .img{background-color:#bbf7d0}
-.menu-card[data-cat="wraps"] .img{background-color:#fed7aa}
-.menu-card[data-cat="juices"] .add{background:var(--lime);color:var(--teal-deep)}
+.menu-card[data-cat="greens"] .add{background:var(--lime);color:var(--teal-deep)}
+.menu-card[data-cat="citrus"] .add{background:var(--orange);color:#fff}
+.menu-card[data-cat="roots"] .add{background:var(--pink);color:#fff}
 .menu-card[data-cat="smoothies"] .add{background:var(--yellow);color:var(--teal-deep)}
 .menu-card[data-cat="shots"] .add{background:var(--cyan);color:var(--teal-deep)}
-.menu-card[data-cat="salads"] .add{background:#22c55e;color:#fff}
-.menu-card[data-cat="wraps"] .add{background:var(--orange);color:#fff}
 
 /* SHEET */
 .scrim{position:fixed;inset:0;z-index:120;background:rgba(20,50,65,.55);opacity:0;visibility:hidden;transition:opacity .25s ease, visibility .25s ease}
@@ -225,7 +215,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .sheet{position:fixed;left:0;right:0;bottom:0;z-index:130;background:var(--cream);border-top-left-radius:24px;border-top-right-radius:24px;transform:translateY(102%);transition:transform .35s cubic-bezier(.2,.7,.2,1);max-height:92dvh;display:flex;flex-direction:column;overflow:hidden;}
 .sheet.show{transform:none}
 .sheet .grab{width:48px;height:5px;background:rgba(31,72,96,.25);border-radius:3px;margin:10px auto 6px}
-.sheet .pic{height:32dvh;max-height:300px;background-size:cover;background-position:center;position:relative;margin:0 14px;border-radius:var(--r-lg);overflow:hidden;}
+.sheet .pic{height:42dvh;background-size:cover;background-position:center;position:relative;margin:0 14px;border-radius:var(--r-lg);overflow:hidden;}
 .sheet .pic .close{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.95);color:var(--teal);display:grid;place-items:center;font-size:18px;font-weight:800;box-shadow:var(--shadow-card)}
 .sheet .pic .cat-tag{position:absolute;top:14px;left:14px;padding:6px 11px;border-radius:var(--r-pill);background:#fff;color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}
 .sheet .body{padding:18px 22px 22px;overflow-y:auto;flex:1}
@@ -245,20 +235,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .size-opt .price{display:block;font-family:var(--f-num);font-size:18px;margin-top:2px}
 .boost-row{display:flex;gap:8px;flex-wrap:wrap}
 .boost{padding:9px 14px;border-radius:var(--r-pill);background:#fff;border:2px solid var(--line);font-size:13px;font-weight:700;color:var(--teal)}
-.boost b{font-family:var(--f-num);font-weight:800;opacity:.6;margin-left:2px}
 .boost.active{background:var(--gold);border-color:var(--gold-deep);color:var(--teal-deep)}
-.boost.active b{opacity:.85}
-/* Combos */
-.combo-head{padding:4px 16px 8px}
-.combo-head h3{font-size:20px;color:var(--teal-deep);margin-top:2px}
-.combo-row{display:flex;gap:12px;overflow-x:auto;padding:0 16px 16px;scrollbar-width:none}
-.combo-row::-webkit-scrollbar{display:none}
-.combo-card{flex:0 0 78%;max-width:300px;display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));color:#fff;border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--shadow-card)}
-.combo-ico{font-size:28px;flex:0 0 auto}
-.combo-info{flex:1;min-width:0}
-.combo-info h4{font-size:15px;font-weight:800;margin-bottom:2px}
-.combo-info p{font-size:12px;line-height:1.35;color:rgba(255,255,255,.82)}
-.combo-price{flex:0 0 auto;font-family:var(--f-num);font-size:26px;font-weight:800;color:var(--gold)}
 .sheet-footer{padding:14px 16px calc(16px + var(--safe-bot));border-top:1px solid var(--line);background:var(--cream);display:flex;gap:12px;align-items:center;}
 .qty-stepper{display:flex;align-items:center;gap:4px;background:#fff;border-radius:var(--r-pill);box-shadow:var(--shadow-card);padding:4px}
 .qty-stepper button{width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:18px}
@@ -318,12 +295,6 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .pass-card .progress{height:8px;background:rgba(255,255,255,.15);border-radius:var(--r-pill);margin-top:14px;overflow:hidden}
 .pass-card .progress span{display:block;height:100%;background:linear-gradient(90deg, var(--gold) 0%, var(--orange) 100%);border-radius:var(--r-pill);width:60%}
 .pass-card .lbl{font-size:12px;font-weight:600;opacity:.85;margin-top:8px}
-.qr-card{margin-top:16px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:18px;display:flex;align-items:center;gap:16px}
-.qr-card img{width:104px;height:104px;border-radius:10px;flex:0 0 auto;background:#f4efe3}
-.qr-card .qt{font-family:var(--f-display);font-style:italic;font-weight:800;color:var(--teal-deep);font-size:18px}
-.qr-card .qs{font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.4}
-.reward-banner{margin:14px 16px 0;background:linear-gradient(135deg,var(--gold) 0%,var(--orange) 100%);color:var(--teal-deep);border-radius:var(--r-lg);padding:16px 18px;font-weight:800;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-pop)}
-.reward-banner .rb-ico{font-size:26px}
 .stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px;padding:0 16px}
 .stamp{aspect-ratio:1;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow-card);position:relative;}
 .stamp.filled{background:var(--gold);}
@@ -398,101 +369,6 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 .event-card .body p{font-size:12px;color:var(--muted);margin:0;font-weight:600}
 .event-card .pill{padding:4px 8px;border-radius:var(--r-pill);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#fff}
 
-/* INSTALL / PWA */
-.install-banner{position:fixed;left:12px;right:12px;bottom:calc(80px + var(--safe-bot) + 8px);z-index:150;display:none;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r-lg);color:#fff;background:radial-gradient(120% 100% at 85% 0%, rgba(163,230,53,.45), transparent 55%),linear-gradient(150deg,var(--pine),var(--pine-deep));box-shadow:var(--shadow-pop);}
-.install-banner.show{display:flex;animation:fadeUp .35s ease both}
-.install-banner img{width:42px;height:42px;border-radius:11px;flex:0 0 auto;background:#fff;padding:4px}
-.install-banner .ib-body{flex:1;min-width:0}
-.install-banner .ib-body strong{display:block;font-size:14px;font-weight:800}
-.install-banner .ib-body span{font-size:11.5px;color:rgba(255,255,255,.85)}
-.install-banner .ib-go{flex:0 0 auto;background:var(--gold);color:var(--teal-deep);font-weight:800;padding:10px 16px;border-radius:var(--r-pill);font-size:13px}
-.install-banner .ib-x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:16px;font-weight:800;display:grid;place-items:center}
-/* iOS / install instruction sheet */
-.ios-sheet{position:fixed;inset:0;z-index:210;background:rgba(15,30,40,.55);backdrop-filter:blur(3px);display:none;align-items:flex-end;}
-.ios-sheet.show{display:flex;animation:fadeUp .3s ease both}
-.ios-sheet .card{background:var(--cream);width:100%;border-radius:var(--r-xl) var(--r-xl) 0 0;padding:24px 22px calc(26px + var(--safe-bot));max-width:520px;margin:0 auto;box-shadow:var(--shadow-pop);position:relative}
-.ios-sheet .grab{width:42px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 16px}
-.ios-sheet h3{color:var(--teal-deep);font-size:22px;margin-bottom:4px}
-.ios-sheet .lead{font-size:13px;color:var(--ink-soft);margin-bottom:18px;font-weight:500}
-.ios-step{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
-.ios-step:last-of-type{border-bottom:0}
-.ios-step .n{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--pine);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px}
-.ios-step .tx{font-size:14px;font-weight:600;color:var(--ink)}
-.ios-step .tx b{color:var(--teal-deep)}
-.ios-step .ic{margin-left:auto;font-size:22px}
-.ios-sheet .done{margin-top:18px}
-
-/* PALM TREELINE — repeating silhouette, two layers for depth */
-.treeline{height:62px;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='150' viewBox='0 0 400 150'%3E%3Cg transform='translate(60 30) scale(0.62 0.62)'%3E%3Cpath d='M30 116 C28 86 27 64 32 46 L36 47 C34 66 34 90 35 116 Z M33 47 Q16 43 3 58 Q18 49 35 50 Z M33 46 Q14 40 2 42 Q17 45 35 49 Z M33 46 Q23 31 17 19 Q28 34 35 48 Z M34 45 Q32 29 35 16 Q39 30 36 47 Z M34 46 Q45 31 52 19 Q41 34 35 48 Z M34 46 Q54 40 66 42 Q51 45 35 49 Z M34 47 Q52 43 65 58 Q51 49 35 50 Z' fill='%23357a52'/%3E%3Ccircle fill='%23357a52' cx='31' cy='49' r='1.6'/%3E%3Ccircle fill='%23357a52' cx='36' cy='49' r='1.6'/%3E%3Ccircle fill='%23357a52' cx='33' cy='51' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(210 28) scale(0.7 0.7)'%3E%3Cpath d='M27 116 C24 88 26 60 34 44 L38 46 C31 62 31 90 32 116 Z M35 45 Q18 36 5 40 Q19 42 36 48 Z M35 44 Q28 28 25 14 Q34 28 37 46 Z M36 44 Q48 28 58 16 Q44 32 37 46 Z M36 45 Q56 34 69 38 Q52 42 37 47 Z M36 46 Q55 44 68 60 Q53 49 36 49 Z M34 46 Q18 44 6 60 Q20 49 35 49 Z' fill='%23357a52'/%3E%3Ccircle fill='%23357a52' cx='34' cy='48' r='1.6'/%3E%3Ccircle fill='%23357a52' cx='37' cy='48' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(320 26) scale(-0.66 0.66)'%3E%3Cpath d='M27 116 C24 88 26 60 34 44 L38 46 C31 62 31 90 32 116 Z M35 45 Q18 36 5 40 Q19 42 36 48 Z M35 44 Q28 28 25 14 Q34 28 37 46 Z M36 44 Q48 28 58 16 Q44 32 37 46 Z M36 45 Q56 34 69 38 Q52 42 37 47 Z M36 46 Q55 44 68 60 Q53 49 36 49 Z M34 46 Q18 44 6 60 Q20 49 35 49 Z' fill='%23357a52'/%3E%3Ccircle fill='%23357a52' cx='34' cy='48' r='1.6'/%3E%3Ccircle fill='%23357a52' cx='37' cy='48' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(6 6) scale(1.05 1.05)'%3E%3Cpath d='M30 116 C28 86 27 64 32 46 L36 47 C34 66 34 90 35 116 Z M33 47 Q16 43 3 58 Q18 49 35 50 Z M33 46 Q14 40 2 42 Q17 45 35 49 Z M33 46 Q23 31 17 19 Q28 34 35 48 Z M34 45 Q32 29 35 16 Q39 30 36 47 Z M34 46 Q45 31 52 19 Q41 34 35 48 Z M34 46 Q54 40 66 42 Q51 45 35 49 Z M34 47 Q52 43 65 58 Q51 49 35 50 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='31' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='36' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='33' cy='51' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(105 -6) scale(1.35 1.35)'%3E%3Cpath d='M27 116 C24 88 26 60 34 44 L38 46 C31 62 31 90 32 116 Z M35 45 Q18 36 5 40 Q19 42 36 48 Z M35 44 Q28 28 25 14 Q34 28 37 46 Z M36 44 Q48 28 58 16 Q44 32 37 46 Z M36 45 Q56 34 69 38 Q52 42 37 47 Z M36 46 Q55 44 68 60 Q53 49 36 49 Z M34 46 Q18 44 6 60 Q20 49 35 49 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='34' cy='48' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='37' cy='48' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(195 4) scale(-0.9 0.9)'%3E%3Cpath d='M30 116 C28 86 27 64 32 46 L36 47 C34 66 34 90 35 116 Z M33 47 Q16 43 3 58 Q18 49 35 50 Z M33 46 Q14 40 2 42 Q17 45 35 49 Z M33 46 Q23 31 17 19 Q28 34 35 48 Z M34 45 Q32 29 35 16 Q39 30 36 47 Z M34 46 Q45 31 52 19 Q41 34 35 48 Z M34 46 Q54 40 66 42 Q51 45 35 49 Z M34 47 Q52 43 65 58 Q51 49 35 50 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='31' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='36' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='33' cy='51' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(285 8) scale(1 1)'%3E%3Cpath d='M27 116 C24 88 26 60 34 44 L38 46 C31 62 31 90 32 116 Z M35 45 Q18 36 5 40 Q19 42 36 48 Z M35 44 Q28 28 25 14 Q34 28 37 46 Z M36 44 Q48 28 58 16 Q44 32 37 46 Z M36 45 Q56 34 69 38 Q52 42 37 47 Z M36 46 Q55 44 68 60 Q53 49 36 49 Z M34 46 Q18 44 6 60 Q20 49 35 49 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='34' cy='48' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='37' cy='48' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(355 2) scale(-0.8 0.8)'%3E%3Cpath d='M30 116 C28 86 27 64 32 46 L36 47 C34 66 34 90 35 116 Z M33 47 Q16 43 3 58 Q18 49 35 50 Z M33 46 Q14 40 2 42 Q17 45 35 49 Z M33 46 Q23 31 17 19 Q28 34 35 48 Z M34 45 Q32 29 35 16 Q39 30 36 47 Z M34 46 Q45 31 52 19 Q41 34 35 48 Z M34 46 Q54 40 66 42 Q51 45 35 49 Z M34 47 Q52 43 65 58 Q51 49 35 50 Z' fill='%231B5E3F'/%3E%3Ccircle fill='%231B5E3F' cx='31' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='36' cy='49' r='1.6'/%3E%3Ccircle fill='%231B5E3F' cx='33' cy='51' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat:repeat-x;
-  background-size:auto 100%;
-  background-position:center bottom;}
-.treeline.on-dark{filter:none;opacity:.9}
-.treeline.on-cream{opacity:.85;margin-top:28px}
-.hero .treeline{position:absolute;left:0;right:0;bottom:-1px;height:92px;opacity:.5;z-index:0}
-
-/* BOOK THE SPACE */
-.book-cta{margin:18px 16px 0;padding:22px;border-radius:var(--r-lg);position:relative;overflow:hidden;color:#fff;
-  background:radial-gradient(110% 90% at 85% 10%, rgba(163,230,53,.5), transparent 50%),linear-gradient(150deg, var(--pine) 0%, var(--pine-deep) 100%);box-shadow:var(--shadow-card);}
-.book-cta .eyebrow{color:var(--gold)}
-.book-cta h3{color:#fff;font-size:24px;margin:6px 0 4px}
-.book-cta p{font-size:13px;color:rgba(255,255,255,.88);margin:0 0 14px;max-width:32ch;font-weight:500}
-.book-cta .trees{position:absolute;right:10px;bottom:6px;font-size:38px;opacity:.5;letter-spacing:-10px}
-.btn-pine{background:var(--pine);color:#fff;box-shadow:0 6px 20px rgba(46,125,84,.4)}
-.book-card{margin:16px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:20px;border-top:6px solid var(--pine)}
-.book-card .field{margin-bottom:14px}
-.book-card label{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--pine-deep);margin-bottom:6px}
-.book-card input,.book-card select,.book-card textarea{width:100%;padding:13px 14px;border-radius:var(--r-md);border:2px solid var(--line);background:var(--cream);color:var(--ink);font-weight:600}
-.book-card input:focus,.book-card select:focus,.book-card textarea:focus{outline:none;border-color:var(--pine)}
-.book-card textarea{resize:vertical;min-height:70px}
-.book-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.book-confirm{margin:16px;background:linear-gradient(150deg,var(--pine) 0%,var(--pine-deep) 100%);border-radius:var(--r-lg);color:#fff;padding:26px 22px;text-align:center;box-shadow:var(--shadow-pop)}
-.book-confirm .big{font-size:46px;margin-bottom:6px}
-.book-confirm h3{color:#fff;font-size:24px}
-.book-confirm .ref{display:inline-block;margin:12px 0;padding:8px 18px;border-radius:var(--r-pill);background:rgba(255,255,255,.16);font-family:var(--f-num);font-size:20px;letter-spacing:.12em;color:var(--gold)}
-.book-confirm p{font-size:13px;color:rgba(255,255,255,.88)}
-
-/* ADMIN DASHBOARD */
-.admin-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px 10px;flex-wrap:wrap}
-.admin-tabs{display:flex;gap:6px;background:#fff;border-radius:var(--r-pill);padding:4px;box-shadow:var(--shadow-card);overflow-x:auto;-webkit-overflow-scrolling:touch}
-.admin-tab{padding:9px 13px;border-radius:var(--r-pill);font-weight:800;font-size:13px;color:var(--teal);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;flex:0 0 auto}
-/* Owner order + customer cards */
-.order-card{background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-card);padding:14px;margin-bottom:10px;border-left:5px solid var(--orange)}
-.order-card.ready{border-left-color:var(--lime)}
-.order-card.done{border-left-color:var(--muted);opacity:.6}
-.order-card .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.order-card .who{font-weight:800;color:var(--teal-deep)}
-.order-card .ref{font-family:var(--f-num);color:var(--muted);font-size:13px}
-.order-card .lines{font-size:13px;color:var(--ink-soft);margin:8px 0;line-height:1.5}
-.order-card .foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
-.order-card .tot{font-family:var(--f-num);font-weight:800;color:var(--teal-deep)}
-.order-card .ostat{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:var(--r-pill);background:var(--cream-warm);color:var(--gold-deep)}
-.cust-card{background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-card);padding:14px;margin-bottom:10px;display:flex;align-items:center;gap:12px}
-.cust-card .ci{flex:1;min-width:0}
-.cust-card .cn{font-weight:800;color:var(--teal-deep)}
-.cust-card .cm{font-size:12px;color:var(--muted)}
-.cust-card .cstars{font-family:var(--f-num);font-weight:800;color:var(--teal);font-size:18px;text-align:center;min-width:42px}
-.cust-card .cstars small{display:block;font-size:9px;color:var(--muted);font-weight:700}
-.cust-card .cbtn{width:34px;height:34px;border-radius:50%;background:var(--cream-warm);color:var(--teal-deep);font-size:20px;font-weight:800;display:grid;place-items:center;flex:0 0 auto}
-.cust-card .cbtn.plus{background:var(--pine);color:#fff}
-.cust-card .reward-pill{background:var(--gold);color:var(--teal-deep);font-size:10px;font-weight:800;padding:3px 8px;border-radius:var(--r-pill);margin-top:3px;display:inline-block}
-.admin-tab.active{background:var(--pine);color:#fff}
-.tab-badge{background:var(--pink);color:#fff;border-radius:9px;min-width:18px;height:18px;padding:0 5px;font-size:11px;font-weight:800;display:inline-grid;place-items:center}
-.admin-status{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:6px 12px;border-radius:var(--r-pill);background:var(--cream-warm);color:var(--gold-deep)}
-.admin-status.cloud{background:#dcfce7;color:var(--pine-deep)}
-.booking-card{background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-card);padding:14px;margin-bottom:10px;border-left:5px solid var(--pine)}
-.booking-card .top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
-.booking-card .who{font-family:var(--f-display);font-style:italic;font-weight:800;color:var(--teal-deep);font-size:16px}
-.booking-card .ref{font-family:var(--f-num);font-size:14px;letter-spacing:.08em;color:var(--gold-deep)}
-.booking-card .meta{font-size:12.5px;color:var(--ink-soft);font-weight:600;line-height:1.5}
-.booking-card .meta b{color:var(--teal-deep)}
-.booking-card .notes{font-size:12.5px;color:var(--muted);margin-top:6px;font-style:italic}
-.booking-card .acts{display:flex;gap:8px;margin-top:10px}
-.booking-card .acts a,.booking-card .acts button{flex:1;text-align:center;padding:9px;border-radius:var(--r-md);font-size:12px;font-weight:800}
-.booking-card .acts .reply{background:var(--pine);color:#fff}
-.booking-card .acts .del{background:var(--cream-warm);color:var(--pink)}
-
 /* PACKAGES */
 .pkg-hero{margin:14px 16px;padding:24px 22px;border-radius:var(--r-xl);background:linear-gradient(135deg, var(--pink) 0%, var(--orange) 100%);color:#fff;position:relative;overflow:hidden;}
 .pkg-hero h2{color:#fff}
@@ -566,49 +442,6 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 
 .tc{text-align:center}
 @media (min-width:520px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
-
-/* Favorites + diet filter chips */
-.fav-btn{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.92);color:#c3cdd0;font-size:16px;line-height:1;display:grid;place-items:center;box-shadow:var(--shadow-card);border:none;cursor:pointer;z-index:2;transition:transform .15s ease,color .15s ease}
-.fav-btn.on{color:var(--pink)}
-.fav-btn:active{transform:scale(.78)}
-.diet-strip{margin-top:8px}
-.diet-chip{font-size:12px;padding:8px 14px;text-transform:none;letter-spacing:0}
-.diet-chip.active{color:#fff;background:var(--pine);border-color:var(--pine-deep)}
-/* Spin-the-wheel */
-.spin-wrap{text-align:center;padding-bottom:6px}
-.spin-wheel-box{position:relative;width:240px;max-width:74vw;aspect-ratio:1;margin:4px auto 16px}
-.spin-wheel{width:100%;height:100%;border-radius:50%;border:7px solid #fff;box-shadow:var(--shadow-pop);position:relative;overflow:hidden;transition:transform 4s cubic-bezier(.16,.7,.18,1)}
-.spin-wheel .seg-label{position:absolute;left:50%;top:50%;font-size:11px;font-weight:800;color:#173a2a;white-space:nowrap;pointer-events:none}
-.spin-hub{position:absolute;top:50%;left:50%;width:34px;height:34px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);z-index:2;box-shadow:0 2px 6px rgba(0,0,0,.2)}
-.spin-pointer{position:absolute;top:-4px;left:50%;transform:translateX(-50%);z-index:3;width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-top:22px solid var(--teal-deep);filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
-.spin-note{font-size:12.5px;color:var(--muted);margin:10px 0 0}
-#spin-btn[disabled]{opacity:.55}
-/* Tap ripple */
-.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.45);transform:scale(0);animation:rippleA .6s ease-out forwards;pointer-events:none;z-index:4}
-@keyframes rippleA{to{transform:scale(2.4);opacity:0}}
-.pass-card .progress span{transition:width .9s cubic-bezier(.2,.7,.2,1)}
-/* Floating hero fruit */
-.hero-fruit{position:absolute;inset:0;pointer-events:none;z-index:0}
-.hero-fruit span{position:absolute;font-size:22px;opacity:.9;filter:drop-shadow(0 4px 6px rgba(0,0,0,.25))}
-@media (prefers-reduced-motion: no-preference){
-  .hero-fruit span{animation:floaty 6s ease-in-out infinite}
-  .palm{transform-origin:50% 100%;animation:palmSway 7s ease-in-out infinite}
-  .palm.flip{animation-delay:-3s}
-  .cb-teal-palm{animation-duration:8s}
-  .pkg-hero .palm-a{animation-duration:6.5s}
-}
-@keyframes floaty{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-13px) rotate(6deg)}}
-@keyframes palmSway{0%,100%{rotate:-1.6deg}50%{rotate:1.6deg}}
-/* Scattered palm-tree silhouettes (tintable via color) */
-.palm{position:absolute;pointer-events:none;z-index:-1;-webkit-mask:var(--palm) center/contain no-repeat;mask:var(--palm) center/contain no-repeat;background-color:currentColor;}
-.palm.flip{transform:scaleX(-1)}
-.pkg-hero,.book-cta{position:relative;overflow:hidden}
-.hero .palm-a{height:212px;width:118px;left:-34px;bottom:-14px;color:#2c6274;opacity:.40}
-.cb-orange-palm{height:212px;width:118px;right:-28px;top:-24px;color:#5e2207;opacity:.20}
-.cb-teal-palm{height:224px;width:125px;left:-30px;bottom:-32px;color:#06231a;opacity:.26}
-.cb-pink-palm{height:196px;width:109px;right:-24px;top:-20px;color:#5e0f33;opacity:.20}
-.pkg-hero .palm-a{height:204px;width:114px;right:-22px;bottom:-18px;color:#06202a;opacity:.34}
-.book-cta .palm-a{height:190px;width:106px;right:-16px;bottom:-12px;color:#0a3322;opacity:.46}
 </style>
 </head>
 <body>
@@ -620,7 +453,6 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <span class="sparkle">✦</span><span class="sparkle">✦</span>
   <img class="splash-logo" src="assets/logo-pour-decisions.png" alt="Pour Decisions" />
   <div class="splash-tag">COLD-PRESSED · ALBANY NY</div>
-  
 </div>
 
 <!-- HEADER -->
@@ -642,49 +474,11 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </button>
 </header>
 
-<!-- NAV DRAWER -->
-<div class="drawer-scrim" id="drawer-scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Menu">
-  <div class="drawer-head">
-    <img src="assets/logo-icon-256.png" alt="" />
-    <div><div class="dh-t">Pour Decisions</div><div class="dh-s">Cold-pressed · Albany NY</div></div>
-  </div>
-  <nav class="drawer-nav" id="drawer-nav">
-    <button data-route="home"><span class="di">🏠</span>Home</button>
-    <button data-route="menu"><span class="di">🥤</span>Order / Menu</button>
-    <button data-route="pass"><span class="di">★</span>Pour Pass</button>
-    <button data-route="calendar"><span class="di">📅</span>Events Calendar</button>
-    <button data-route="packages"><span class="di">🎁</span>Cleanses &amp; Packages</button>
-    <button data-route="account"><span class="di">👤</span>My Account</button>
-    <div class="drawer-sep"></div>
-    <button id="drawer-install"><span class="di">📲</span>Install the App</button>
-    <button data-route="admin"><span class="di">🔑</span>Owner Login</button>
-    <div class="drawer-sep"></div>
-    <a href="tel:+15185557687"><span class="di">📞</span>Call the Shop</a>
-    <a href="https://maps.google.com/?q=359+Northern+Boulevard+Albany+NY+12204" target="_blank" rel="noopener"><span class="di">📍</span>Get Directions</a>
-  </nav>
-  <div class="drawer-foot">
-    <div class="addr">359 Northern Boulevard<br/>Albany, NY 12204<br/>Open 7AM – 7PM daily</div>
-    <div class="addr" style="margin-top:8px;font-size:10px;opacity:.7">App v2.6.1</div>
-    <div class="socials">
-      <a href="https://instagram.com/pourdecisionsjuicebar" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-      <a href="https://facebook.com/pourdecisionsjuicebar" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-    </div>
-  </div>
-</aside>
-
 <main id="app">
 
 <!-- HOME -->
 <section class="view active" data-view="home">
   <div class="hero">
-  <div class="palm palm-a"></div>
-  <div class="hero-fruit" aria-hidden="true">
-    <span style="left:80%;top:11%;animation-delay:0s">🍍</span>
-    <span style="left:90%;top:33%;animation-delay:1.1s">🥥</span>
-    <span style="left:70%;top:21%;animation-delay:2.0s">🍊</span>
-    <span style="left:85%;top:58%;animation-delay:.7s">🍋</span>
-  </div>
     <span class="eyebrow">Cold-Pressed Daily</span>
     <h1>Pour with <em>purpose.</em></h1>
     <p>Fresh cold-pressed juice, smoothies, and shots. Order ahead and skip the line.</p>
@@ -693,7 +487,27 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <button class="btn btn-ghost" style="border-color:#fff;color:#fff" data-route="packages">Book Pkgs</button>
     </div>
     <img class="hero-logo-stamp" src="assets/logo-pour-decisions.png" alt="" />
-    
+    <!-- Palm silhouettes -->
+    <svg class="palm palm-l" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/>
+      <path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32 C53 31 56 30 58 28Z"/>
+      <path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26 C56 25 56 23 57 22Z"/>
+      <path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22 C59 21 57 19 56 18Z"/>
+      <path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32 C67 31 64 29 62 26Z"/>
+      <path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26 C64 25 63 23 63 22Z"/>
+      <path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34 C54 33 55 31 55 30Z"/>
+      <path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34 C66 33 65 31 65 30Z"/>
+    </svg>
+    <svg class="palm palm-r" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/>
+      <path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32 C53 31 56 30 58 28Z"/>
+      <path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26 C56 25 56 23 57 22Z"/>
+      <path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22 C59 21 57 19 56 18Z"/>
+      <path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32 C67 31 64 29 62 26Z"/>
+      <path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26 C64 25 63 23 63 22Z"/>
+      <path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34 C54 33 55 31 55 30Z"/>
+      <path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34 C66 33 65 31 65 30Z"/>
+    </svg>
   </div>
 
   <div class="quick-actions">
@@ -713,7 +527,8 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div class="carousel" id="featured-carousel"></div>
 
   <div class="colorblock orange">
-  <div class="palm cb-orange-palm flip"></div>
+    <svg class="palm palm-l" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/><path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34Z"/><path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34Z"/></svg>
+    <svg class="palm palm-r" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/><path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34Z"/><path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34Z"/></svg>
     <span class="eyebrow" style="color:#fff">7-Day Reset</span>
     <h2>Cleanse like you mean it</h2>
     <p>Curated juice cleanses that actually taste like something. Six bottles a day, zero compromise.</p>
@@ -727,15 +542,16 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     </div>
   </div>
   <div class="quick-actions" style="grid-template-columns:repeat(5,1fr)">
-    <button class="qa" style="background:linear-gradient(180deg,#d9f99d,#a3e635);color:var(--teal-deep)" data-route="menu" data-cat="juices"><span class="ico">🥤</span><span>Juices</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#d9f99d,#a3e635);color:var(--teal-deep)" data-route="menu" data-cat="greens"><span class="ico">🌿</span><span>Greens</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#fed7aa,#fb923c);color:#fff" data-route="menu" data-cat="citrus"><span class="ico">🍊</span><span>Citrus</span></button>
+    <button class="qa" style="background:linear-gradient(180deg,#fbcfe8,#ec4899);color:#fff" data-route="menu" data-cat="roots"><span class="ico">🥕</span><span>Roots</span></button>
     <button class="qa" style="background:linear-gradient(180deg,#fef08a,#facc15);color:var(--teal-deep)" data-route="menu" data-cat="smoothies"><span class="ico">🍓</span><span>Smoothie</span></button>
-    <button class="qa" style="background:linear-gradient(180deg,#bbf7d0,#22c55e);color:#fff" data-route="menu" data-cat="salads"><span class="ico">🥗</span><span>Salads</span></button>
-    <button class="qa" style="background:linear-gradient(180deg,#fed7aa,#fb923c);color:#fff" data-route="menu" data-cat="wraps"><span class="ico">🌯</span><span>Wraps</span></button>
     <button class="qa" style="background:linear-gradient(180deg,#a5f3fc,#22d3ee);color:var(--teal-deep)" data-route="menu" data-cat="shots"><span class="ico">⚡</span><span>Shots</span></button>
   </div>
 
   <div class="colorblock teal">
-  <div class="palm cb-teal-palm"></div>
+    <svg class="palm palm-l" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/><path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34Z"/><path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34Z"/></svg>
+    <svg class="palm palm-r" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/><path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34Z"/><path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34Z"/></svg>
     <span class="eyebrow" style="color:var(--gold)">Loyalty That Pays</span>
     <h2>Buy 9, the 10th is on us</h2>
     <p>Earn a stamp every visit. Unlock free pours, secret menu drops, and birthday bottles.</p>
@@ -752,22 +568,23 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div id="home-events"></div>
 
   <div class="colorblock pink">
-  <div class="palm cb-pink-palm flip"></div>
+    <svg class="palm palm-l" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/><path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34Z"/><path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34Z"/></svg>
+    <svg class="palm palm-r" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/><path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34Z"/><path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34Z"/></svg>
     <span class="eyebrow" style="color:#fff">Bottles in Bulk</span>
     <h2>Cleanses, parties, offices</h2>
     <p>Subscriptions, party packs, corporate catering, and cleanses — built around your week.</p>
     <button class="btn btn-gold" data-route="packages">See All Packages</button>
   </div>
 
-  
   <footer class="footer">
+    <svg class="palm palm-l" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/><path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34Z"/><path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34Z"/></svg>
+    <svg class="palm palm-r" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/><path d="M55 30 C38 28 22 34 8 44 C20 46 38 38 54 34Z"/><path d="M65 30 C82 28 98 34 112 44 C100 46 82 38 66 34Z"/></svg>
     <img src="assets/logo-pour-decisions.png" alt="Pour Decisions" />
     <p class="tag">Pour with purpose.</p>
     <p class="info">
-      359 Northern Boulevard, Albany NY 12204<br/>
+      348 Loudon Rd, Albany NY 12211<br/>
       <a href="tel:+15185557687">(518) 555-POUR</a> · Open 7AM – 7PM<br/>
-      <a href="mailto:hello@pourdecisions.co">hello@pourdecisions.co</a><br/>
-      Delivery on DoorDash &amp; Uber Eats
+      <a href="mailto:hello@pourdecisions.co">hello@pourdecisions.co</a>
     </p>
     <p class="small">© 2026 POUR DECISIONS LLC · MADE IN ALBANY</p>
   </footer>
@@ -778,24 +595,16 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div class="container" style="padding-top:14px">
     <div class="eyebrow">The Pour Menu</div>
     <h1 style="font-size:clamp(34px,9vw,52px)">Fresh, every <em>damn</em> day.</h1>
-    <p style="color:var(--ink-soft);margin:8px 0 16px;font-size:14px">Cold-pressed juices, smoothies, salads & wraps — made fresh daily.</p>
+    <p style="color:var(--ink-soft);margin:8px 0 16px;font-size:14px">Cold-pressed in-house. Calorie & macros on every pour.</p>
   </div>
   <div class="cat-strip" id="cat-strip">
     <button class="cat-chip active" data-cat="all"><span class="swatch" style="background:var(--teal)"></span>All</button>
-    <button class="cat-chip" data-cat="juices"><span class="swatch" style="background:var(--lime)"></span>Juices</button>
+    <button class="cat-chip" data-cat="greens"><span class="swatch" style="background:var(--lime)"></span>Greens</button>
+    <button class="cat-chip" data-cat="citrus"><span class="swatch" style="background:var(--orange)"></span>Citrus</button>
+    <button class="cat-chip" data-cat="roots"><span class="swatch" style="background:var(--pink)"></span>Roots</button>
     <button class="cat-chip" data-cat="smoothies"><span class="swatch" style="background:var(--yellow)"></span>Smoothies</button>
-    <button class="cat-chip" data-cat="salads"><span class="swatch" style="background:#22c55e"></span>Salads</button>
-    <button class="cat-chip" data-cat="wraps"><span class="swatch" style="background:var(--orange)"></span>Wraps</button>
     <button class="cat-chip" data-cat="shots"><span class="swatch" style="background:var(--cyan)"></span>Shots</button>
   </div>
-  <div class="cat-strip diet-strip" id="diet-strip">
-    <button class="cat-chip diet-chip active" data-diet="all">All</button>
-    <button class="cat-chip diet-chip" data-diet="vegan">🌱 Vegan</button>
-    <button class="cat-chip diet-chip" data-diet="protein">💪 High-Protein</button>
-    <button class="cat-chip diet-chip" data-diet="lowsugar">🍃 Low-Sugar</button>
-    <button class="cat-chip diet-chip" data-diet="fav">♥ Favorites</button>
-  </div>
-  <div id="combo-strip"></div>
   <div class="menu-grid" id="menu-grid"></div>
 </section>
 
@@ -820,13 +629,13 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <button class="pickup-opt active" data-pickup="asap"><div class="l">ASAP</div><div class="v">~12 min</div></button>
       <button class="pickup-opt" data-pickup="schedule"><div class="l">Schedule</div><div class="v">Pick a time</div></button>
     </div>
-    <div class="field"><label>Pickup location</label><select><option>359 Northern Boulevard, Albany NY (Default)</option></select></div>
+    <div class="field"><label>Pickup location</label><select><option>348 Loudon Rd, Albany NY (Default)</option></select></div>
   </div>
   <div class="checkout-section">
     <h3>Your info</h3>
-    <div class="field"><label>Name</label><input type="text" id="co-name" placeholder="Your name" /></div>
-    <div class="field"><label>Phone <span style="font-weight:500;color:var(--muted)">· earns your Pour Pass stamp</span></label><input type="tel" inputmode="tel" id="co-phone" placeholder="(518) 555-1234" /></div>
-    <div class="field"><label>Notes for the bar</label><textarea rows="2" id="co-notes" placeholder="Extra ginger, no ice, etc."></textarea></div>
+    <div class="field"><label>Name</label><input type="text" value="Migs Money" /></div>
+    <div class="field"><label>Phone</label><input type="tel" placeholder="(518) 555-1234" /></div>
+    <div class="field"><label>Notes for the bar</label><textarea rows="2" placeholder="Extra ginger, no ice, etc."></textarea></div>
   </div>
   <div class="checkout-section">
     <h3>Tip the team</h3>
@@ -854,16 +663,18 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 <!-- CONFIRM -->
 <section class="view" data-view="confirm">
   <div class="confirm-hero">
+    <svg class="palm palm-l" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/></svg>
+    <svg class="palm palm-r" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/></svg>
     <span class="eyebrow" style="color:var(--teal)">Order Placed</span>
     <h2>You're <em>pouring</em></h2>
     <div class="num" id="conf-num">#PD-1042</div>
     <p>Ready in ~12 minutes</p>
   </div>
   <div class="confirm-info">
-    <div class="info-row"><span>Pickup</span><strong>359 Northern Boulevard</strong></div>
+    <div class="info-row"><span>Pickup</span><strong>348 Loudon Rd</strong></div>
     <div class="info-row"><span>Order #</span><strong id="conf-num-2">PD-1042</strong></div>
     <div class="info-row"><span>Total</span><strong id="conf-total">$0.00</strong></div>
-    <div class="info-row"><span>Pour Pass</span><strong id="conf-stamp">+1 stamp</strong></div>
+    <div class="info-row"><span>Pour Pass</span><strong>+1 stamp · 6/9</strong></div>
   </div>
   <div class="container" style="margin-top:14px">
     <button class="btn btn-primary btn-block btn-lg" data-route="home">Back to Home</button>
@@ -881,43 +692,29 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <div class="eyebrow">Loyalty</div>
     <h1 style="font-size:clamp(34px,9vw,52px)">Pour <em>Pass</em></h1>
   </div>
-  <!-- Signed-out: capture identity so the pass follows the customer -->
-  <form class="book-card" id="pass-signin" style="display:none">
-    <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;font-weight:500">Start your Pour Pass. Enter your name and phone — your stamps follow your number, so they're safe even if you switch phones.</p>
-    <div class="field"><label>Your name</label><input type="text" id="pass-name" placeholder="Migs Money" required /></div>
-    <div class="field"><label>Mobile number</label><input type="tel" inputmode="tel" id="pass-phone" placeholder="(518) 555-0123" required /></div>
-    <button type="submit" class="btn btn-gold btn-block btn-lg">Start My Pour Pass ★</button>
-  </form>
-
-  <!-- Signed-in: live pass -->
-  <div id="pass-live" style="display:none">
-    <div class="pass-card">
-      <div class="eyebrow" id="pass-eyebrow">Member</div>
-      <div class="name" id="pass-card-name">—</div>
-      <div class="num" id="pass-card-num">0<small>/9 stamps</small></div>
-      <div class="progress"><span id="pass-progress"></span></div>
-      <div class="lbl" id="pass-card-lbl">Earn stamps every visit</div>
-    </div>
-    <div id="pass-reward-banner"></div>
-    <div class="section-h"><h2 style="font-size:24px">Stamp card</h2></div>
-    <div class="stamps" id="pass-stamps"></div>
-    <div class="section-h"><h2 style="font-size:24px">Daily Spin 🎡</h2></div>
-    <div class="spin-wrap container">
-      <div class="spin-wheel-box">
-        <div class="spin-pointer"></div>
-        <div class="spin-wheel" id="spin-wheel"></div>
-      </div>
-      <button class="btn btn-gold btn-block btn-lg" id="spin-btn">Spin to win 🎡</button>
-      <p class="spin-note" id="spin-note">One free spin a day — win stamps &amp; treats.</p>
-    </div>
-    <div class="container">
-      <div class="qr-card" id="pass-qr"></div>
-      <button class="btn btn-ghost btn-block" id="pass-signout" style="margin-top:12px">Sign out of this pass</button>
-    </div>
+  <div class="pass-card">
+    <div class="eyebrow">Member Since 2025</div>
+    <div class="name">Migs Money</div>
+    <div class="num">5<small>/9 stamps</small></div>
+    <div class="progress"><span></span></div>
+    <div class="lbl">4 more pours and your 10th is free</div>
+  </div>
+  <div class="section-h"><h2 style="font-size:24px">Stamp card</h2></div>
+  <div class="stamps">
+    <div class="stamp filled"></div>
+    <div class="stamp filled"></div>
+    <div class="stamp filled"></div>
+    <div class="stamp filled"></div>
+    <div class="stamp filled"></div>
+    <div class="stamp next"><span class="n">6</span></div>
+    <div class="stamp"><span class="n">7</span></div>
+    <div class="stamp"><span class="n">8</span></div>
+    <div class="stamp"><span class="n">9</span></div>
+    <div class="stamp" style="background:var(--gold)"><span class="n" style="color:var(--teal-deep);opacity:1">★</span></div>
   </div>
   <div class="section-h"><h2 style="font-size:24px">Rewards Vault</h2></div>
   <div class="reward-grid">
-    <div class="reward"><div class="hd"><span class="ico">🥤</span><h4>Free 16oz Pour</h4></div><p>Any signature juice</p><span class="pts">FREE @ 9</span></div>
+    <div class="reward"><div class="hd"><span class="ico">🥤</span><h4>Free 16oz Pour</h4></div><p>Any green or citrus juice</p><span class="pts">FREE @ 9</span></div>
     <div class="reward"><div class="hd"><span class="ico">🎁</span><h4>Birthday Bottle</h4></div><p>32oz on your big day</p><span class="pts">UNLOCKED</span></div>
     <div class="reward"><div class="hd"><span class="ico">⚡</span><h4>2x Stamp Tuesday</h4></div><p>Double up every Tuesday</p><span class="pts">ACTIVE</span></div>
     <div class="reward locked"><div class="hd"><span class="ico">👑</span><h4>VIP Tier</h4></div><p>$200 spend unlocks 15% off</p><span class="pts">$140 / $200</span></div>
@@ -954,165 +751,12 @@ h3{font-size:22px;font-weight:700;font-style:italic}
       <div id="cal-event-list"></div>
     </div>
   </div>
-  <div class="book-cta">
-  <div class="palm palm-a flip"></div>
-    <span class="eyebrow">Host With Us</span>
-    <h3>Book the space</h3>
-    <p>Birthdays, team off-sites, wellness classes, pop-ups — our bar is yours after hours.</p>
-    <button class="btn btn-gold" data-route="book">Start a Booking →</button>
-    
-  </div>
-</section>
-
-<!-- BOOK THE SPACE -->
-<section class="view" data-view="book">
-  <div class="container" style="padding-top:14px">
-    <div class="eyebrow" style="color:var(--pine)">Private Events</div>
-    <h1 style="font-size:clamp(34px,9vw,52px)">Your <em>pour</em>, your party.</h1>
-    <p style="color:var(--ink-soft);margin:8px 0 0;font-size:14px">Tell us about your event and we'll confirm within 24 hours. Juice bar, smoothie flights, and salad spreads included on request.</p>
-  </div>
-  <form class="book-card" id="book-form">
-    <div class="field"><label>Your name</label><input type="text" id="bk-name" placeholder="Jordan Rivers" required /></div>
-    <div class="field"><label>Email or phone</label><input type="text" id="bk-contact" placeholder="you@email.com / (518) 555-0123" required /></div>
-    <div class="book-row">
-      <div class="field"><label>Date</label><input type="date" id="bk-date" required /></div>
-      <div class="field"><label>Time window</label>
-        <select id="bk-time">
-          <option>Morning (7–11am)</option>
-          <option>Midday (11am–3pm)</option>
-          <option selected>Evening (5–9pm)</option>
-          <option>After hours (7–11pm)</option>
-        </select>
-      </div>
-    </div>
-    <div class="book-row">
-      <div class="field"><label>Event type</label>
-        <select id="bk-type">
-          <option>Birthday</option>
-          <option>Corporate / team event</option>
-          <option>Wellness class</option>
-          <option>Pop-up / market</option>
-          <option>Private buyout</option>
-        </select>
-      </div>
-      <div class="field"><label>Guests</label>
-        <select id="bk-size">
-          <option>Up to 10</option>
-          <option selected>10 – 25</option>
-          <option>25 – 50</option>
-          <option>50+</option>
-        </select>
-      </div>
-    </div>
-    <div class="field"><label>Anything else?</label><textarea id="bk-notes" placeholder="Smoothie bar for 20, two vegan trays, birthday shout-out for Maya…"></textarea></div>
-    <button type="submit" class="btn btn-pine btn-block btn-lg">Request Booking 🌴</button>
-  </form>
-  <div class="book-confirm" id="book-confirm" style="display:none">
-    <div class="big">🌴🎉</div>
-    <h3>Request received!</h3>
-    <span class="ref" id="bk-ref">PD-EVT-0000</span>
-    <p id="bk-summary">We'll confirm by email within 24 hours.</p>
-    <button class="btn btn-gold" style="margin-top:14px" data-route="calendar">Back to Events</button>
-  </div>
-</section>
-
-<!-- OWNER TOOLS / ADMIN (staff only) -->
-<section class="view" data-view="admin">
-  <div class="container" style="padding-top:14px">
-    <div class="eyebrow" style="color:var(--pine)">Owner Dashboard</div>
-    <h1 style="font-size:clamp(34px,9vw,52px)">Run the <em>show</em>.</h1>
-  </div>
-  <form class="book-card" id="admin-gate">
-    <p style="font-size:13px;color:var(--ink-soft);margin:0 0 14px;font-weight:500">Staff only. Enter your PIN to manage events and see booking requests.</p>
-    <div class="field"><label>Staff PIN</label><input type="password" inputmode="numeric" maxlength="6" id="ad-pin" placeholder="••••" autocomplete="off" /></div>
-    <button type="submit" class="btn btn-pine btn-block">Unlock Dashboard</button>
-  </form>
-
-  <div id="admin-shell" style="display:none">
-    <div class="admin-bar">
-      <div class="admin-tabs" id="admin-tabs">
-        <button class="admin-tab active" data-tab="orders">🧾 Orders <span class="tab-badge" id="ord-badge" style="display:none">0</span></button>
-        <button class="admin-tab" data-tab="loyalty">⭐ Loyalty</button>
-        <button class="admin-tab" data-tab="events">📅 Events</button>
-        <button class="admin-tab" data-tab="bookings">📩 Bookings <span class="tab-badge" id="bk-badge" style="display:none">0</span></button>
-      </div>
-      <div class="admin-status" id="admin-status">📱 On-device</div>
-    </div>
-
-    <!-- ORDERS PANEL -->
-    <div id="admin-orders-panel">
-      <div class="cal-list" style="padding:0 16px">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <h3>Live orders</h3>
-          <button class="btn btn-ghost" id="ord-refresh" style="padding:8px 14px;font-size:12px">Refresh</button>
-        </div>
-        <div id="admin-orders-list"></div>
-      </div>
-    </div>
-
-    <!-- LOYALTY PANEL -->
-    <div id="admin-loyalty-panel" style="display:none">
-      <form class="book-card" id="loyalty-form">
-        <h3 style="margin:0 0 10px;font-size:18px">Log an in-store sale / add a stamp</h3>
-        <div class="field"><label>Customer phone</label><input type="tel" inputmode="tel" id="ly-phone" placeholder="(518) 555-0123" required /></div>
-        <div class="book-row">
-          <div class="field"><label>Name (optional)</label><input type="text" id="ly-name" placeholder="Walk-in" /></div>
-          <div class="field"><label>Sale amount $ (optional)</label><input type="number" step="0.01" id="ly-amount" placeholder="0.00" /></div>
-        </div>
-        <button type="submit" class="btn btn-pine btn-block btn-lg">+1 Stamp ★</button>
-      </form>
-      <div class="cal-list" style="padding:0 16px">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <h3>Pour Pass members</h3>
-          <button class="btn btn-ghost" id="ly-refresh" style="padding:8px 14px;font-size:12px">Refresh</button>
-        </div>
-        <div id="admin-loyalty-list"></div>
-      </div>
-    </div>
-
-    <!-- EVENTS PANEL -->
-    <div id="admin-events-panel" style="display:none">
-      <form class="book-card" id="admin-form">
-        <div class="field"><label>Event title</label><input type="text" id="ad-title" placeholder="Smoothie Saturday · Live DJ" required /></div>
-        <div class="book-row">
-          <div class="field"><label>Date</label><input type="date" id="ad-date" required /></div>
-          <div class="field"><label>Type</label>
-            <select id="ad-type">
-              <option value="special">Special</option>
-              <option value="class">Class</option>
-              <option value="popup">Pop-up</option>
-              <option value="cleanse">Cleanse</option>
-              <option value="buyout">Buyout</option>
-            </select>
-          </div>
-        </div>
-        <div class="field"><label>Time</label><input type="text" id="ad-time" placeholder="4:00pm – 6:00pm" required /></div>
-        <div class="field"><label>Description</label><textarea id="ad-desc" placeholder="What's happening, what's included, how to join…"></textarea></div>
-        <button type="submit" class="btn btn-pine btn-block btn-lg">Publish Event 🌴</button>
-      </form>
-      <div class="cal-list" style="padding:0 16px">
-        <h3>Your posted events</h3>
-        <div id="admin-event-list"></div>
-      </div>
-    </div>
-
-    <!-- BOOKINGS PANEL -->
-    <div id="admin-bookings-panel" style="display:none">
-      <div class="cal-list" style="padding:0 16px">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <h3>Booking requests</h3>
-          <button class="btn btn-ghost" id="bk-refresh" style="padding:8px 14px;font-size:12px">Refresh</button>
-        </div>
-        <div id="admin-bookings-list"></div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- PACKAGES -->
 <section class="view" data-view="packages">
   <div class="pkg-hero">
-  <div class="palm palm-a flip"></div>
+    <svg class="palm palm-r" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/></svg>
     <span class="eyebrow" style="color:#fff">Pour, in Bulk</span>
     <h2>Bottles for every <em>occasion</em></h2>
     <p>Subscriptions, parties, offices, cleanses. Pick a package, customize the mix, we deliver.</p>
@@ -1168,7 +812,7 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   </div>
   <div class="checkout-section">
     <div class="field"><label>First delivery / pickup date</label><input type="date" id="pkg-date" /></div>
-    <div class="field"><label>Delivery zip (or pickup)</label><input type="text" placeholder="12204 or 'pickup'" /></div>
+    <div class="field"><label>Delivery zip (or pickup)</label><input type="text" placeholder="12211 or 'pickup'" /></div>
     <div class="field"><label>Anything we should know?</label><textarea rows="2" placeholder="Allergies, occasion, etc."></textarea></div>
   </div>
   <div class="container" style="padding-bottom:20px">
@@ -1184,19 +828,18 @@ h3{font-size:22px;font-weight:700;font-style:italic}
     <h1 style="font-size:clamp(34px,9vw,52px)">My <em>account</em></h1>
   </div>
   <div class="profile-hero">
+    <svg class="palm palm-r" viewBox="0 0 100 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 180 C46 155 43 128 44 105 C45 88 46 72 50 55 C51 44 53 35 55 25 C56 18 58 14 60 14 C62 14 64 18 65 25 C67 35 69 44 70 55 C74 72 75 88 76 105 C77 128 74 155 72 180Z"/><path d="M58 28 C48 20 32 10 12 16 C16 24 32 30 50 32Z"/><path d="M57 22 C46 8 38 -6 20 0 C28 14 42 22 56 26Z"/><path d="M56 18 C50 4 50 -10 62 -14 C64 2 62 14 60 22Z"/><path d="M62 26 C74 18 90 10 108 16 C104 24 88 30 70 32Z"/><path d="M63 22 C74 8 82 -6 100 0 C92 14 78 22 64 26Z"/></svg>
     <div class="av">M</div>
     <h2 style="font-size:26px">Migs Money</h2>
     <p>Member · 5/9 stamps · 12 orders · since 2025</p>
   </div>
   <div class="account-list">
-    <button class="account-row" data-route="pass"><span class="ico ic-1">★</span><div class="body"><h4>Pour Pass</h4><p id="acct-pass-sub">Tap to start your Pour Pass</p></div><span class="chev">›</span></button>
-    <button class="account-row" id="order-history-row"><span class="ico ic-2">📦</span><div class="body"><h4>Order History</h4><p id="order-history-sub">No orders yet</p></div><span class="chev">↻</span></button>
+    <button class="account-row" data-route="pass"><span class="ico ic-1">★</span><div class="body"><h4>Pour Pass</h4><p>5 of 9 stamps · 4 from your next free pour</p></div><span class="chev">›</span></button>
+    <button class="account-row"><span class="ico ic-2">📦</span><div class="body"><h4>Order History</h4><p>12 orders · Last: 2 days ago</p></div><span class="chev">›</span></button>
     <button class="account-row" data-route="packages"><span class="ico ic-3">🔄</span><div class="body"><h4>My Subscriptions</h4><p>1 active · ships every Tuesday</p></div><span class="chev">›</span></button>
     <button class="account-row" data-route="notifications"><span class="ico ic-4">🔔</span><div class="body"><h4>Notifications</h4><p>3 unread</p></div><span class="chev">›</span></button>
     <button class="account-row"><span class="ico ic-5">💳</span><div class="body"><h4>Payment Methods</h4><p>Visa •••• 4429</p></div><span class="chev">›</span></button>
     <button class="account-row"><span class="ico ic-6">⚙️</span><div class="body"><h4>Settings & Privacy</h4><p>Preferences, language, support</p></div><span class="chev">›</span></button>
-    <button class="account-row" id="install-row"><span class="ico" style="background:var(--gold);color:var(--teal-deep)">📲</span><div class="body"><h4>Install the App</h4><p id="install-row-sub">Add to your home screen — iPhone & Android</p></div><span class="chev">›</span></button>
-    <button class="account-row" id="owner-login"><span class="ico" style="background:var(--pine);color:#fff">🌴</span><div class="body"><h4>Owner Tools</h4><p>Staff only · post events & manage the board</p></div><span class="chev">›</span></button>
   </div>
   <div style="padding:30px 16px;text-align:center">
     <img src="assets/logo-pour-decisions.png" style="width:90px;opacity:.45;margin:0 auto" />
@@ -1231,21 +874,17 @@ h3{font-size:22px;font-weight:700;font-style:italic}
   <div class="grab"></div>
   <div class="pic" id="sheet-pic">
     <button class="close" id="sheet-close">×</button>
-    <span class="cat-tag" id="sheet-cat">Juices</span>
+    <span class="cat-tag" id="sheet-cat">Greens</span>
   </div>
   <div class="body">
-    <h2 id="sheet-name">Green Machine</h2>
+    <h2 id="sheet-name">Green Reign</h2>
     <p class="desc" id="sheet-desc"></p>
     <div class="macro-card" id="sheet-macros"></div>
     <div style="margin-top:14px">
       <div class="eyebrow">Ingredients</div>
       <div class="ingredients" id="sheet-ing"></div>
     </div>
-    <div class="opt-group" id="opt-choice-group" style="display:none">
-      <label id="opt-choice-label">Choice</label>
-      <div class="boost-row" id="opt-choice-row"></div>
-    </div>
-    <div class="opt-group" id="size-group">
+    <div class="opt-group">
       <label>Size</label>
       <div class="size-grid" id="size-grid">
         <div class="size-opt" data-size="12">12oz<span class="price">$8</span></div>
@@ -1253,14 +892,14 @@ h3{font-size:22px;font-weight:700;font-style:italic}
         <div class="size-opt" data-size="32">32oz<span class="price">$18</span></div>
       </div>
     </div>
-    <div class="opt-group" id="boost-group">
-      <label>Add-ons</label>
+    <div class="opt-group">
+      <label>Boost it</label>
       <div class="boost-row" id="boost-row">
-        <button class="boost" data-boost="avocado">+ Avocado <b>$2</b></button>
-        <button class="boost" data-boost="protein">+ Protein Powder <b>$3</b></button>
-        <button class="boost" data-boost="chia">+ Chia Seeds <b>$1</b></button>
-        <button class="boost" data-boost="flax">+ Flax Seeds <b>$1</b></button>
-        <button class="boost" data-boost="fruit">+ Extra Fruit <b>$2</b></button>
+        <button class="boost" data-boost="ginger">+ Ginger</button>
+        <button class="boost" data-boost="turmeric">+ Turmeric</button>
+        <button class="boost" data-boost="protein">+ Protein</button>
+        <button class="boost" data-boost="collagen">+ Collagen</button>
+        <button class="boost" data-boost="cbd">+ CBD</button>
       </div>
     </div>
   </div>
@@ -1278,44 +917,13 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 <div class="modal" id="modal">
   <div class="panel">
     <span class="pill" id="m-pill">Class</span>
-    <h3 id="m-title">Piña Power Hour</h3>
+    <h3 id="m-title">Pina Power Hour</h3>
     <div class="when" id="m-when">Sat, May 17 · 4:00 – 6:00pm</div>
     <p id="m-desc">Bring a friend, sip a free pineapple-ginger pour. Live DJ, raffle, and 2x Pour Pass stamps.</p>
     <div class="actions">
       <button class="btn btn-ghost" id="m-close" style="flex:0 0 auto;padding:14px 18px">Close</button>
-      <button class="btn btn-primary" id="m-rsvp" style="flex:1">RSVP →</button>
+      <button class="btn btn-primary" style="flex:1">RSVP →</button>
     </div>
-  </div>
-</div>
-
-<!-- INSTALL BANNER -->
-<div class="install-banner" id="install-banner">
-  <img src="assets/logo-icon-256.png" alt="" />
-  <div class="ib-body">
-    <strong>Get the Pour Decisions app</strong>
-    <span>Install it free — order faster, no app store.</span>
-  </div>
-  <button class="ib-go" id="install-go">Install</button>
-  <button class="ib-x" id="install-x" aria-label="Dismiss">×</button>
-</div>
-
-<!-- INSTALL / ADD-TO-HOME SHEET -->
-<div class="ios-sheet" id="ios-sheet">
-  <div class="card">
-    <div class="grab"></div>
-    <h3>Install Pour Decisions 🌴</h3>
-    <p class="lead" id="ios-lead">Add our app to your home screen — it opens full-screen, works offline, and lives right next to your other apps.</p>
-    <div id="ios-steps-ios">
-      <div class="ios-step"><span class="n">1</span><span class="tx">Tap the <b>Share</b> button in Safari's toolbar</span><span class="ic">􀈂</span></div>
-      <div class="ios-step"><span class="n">2</span><span class="tx">Scroll and tap <b>Add to Home Screen</b></span><span class="ic">➕</span></div>
-      <div class="ios-step"><span class="n">3</span><span class="tx">Tap <b>Add</b> — done! Open it from your home screen</span><span class="ic">✅</span></div>
-    </div>
-    <div id="ios-steps-android" style="display:none">
-      <div class="ios-step"><span class="n">1</span><span class="tx">Tap the <b>⋮ menu</b> in Chrome (top-right)</span><span class="ic">⋮</span></div>
-      <div class="ios-step"><span class="n">2</span><span class="tx">Tap <b>Install app</b> / Add to Home screen</span><span class="ic">➕</span></div>
-      <div class="ios-step"><span class="n">3</span><span class="tx">Confirm <b>Install</b> — find it in your app drawer</span><span class="ic">✅</span></div>
-    </div>
-    <button class="btn btn-pine btn-block done" id="ios-done">Got it</button>
   </div>
 </div>
 
@@ -1325,151 +933,90 @@ h3{font-size:22px;font-weight:700;font-style:italic}
 <script>
 "use strict";
 
-const PIC = (id) => `https://images.unsplash.com/${id}?w=900&h=700&q=80&auto=format&fit=crop`;
+const PIC = (id) => `https://images.unsplash.com/${id}?w=600&q=70&auto=format&fit=crop`;
 
-// Menu mirrors the in-store Pour Decisions menu board.
-// Juices & smoothies are sized (12/16/32oz); shots, salads & wraps are single-serve (sizes:false).
 const MENU = [
-  // ── SIGNATURE JUICES ──
-  {id:'green-machine',name:'Green Machine',cat:'juices',price:9,
-   ing:['kale','spinach','cucumber','celery','green apple','lemon'],
-   desc:'Refreshing, hydrating, and nutrient-rich. The morning power move.',
-   macros:{cal:120,protein:4,carbs:26,fat:0,sugar:16},
+  {id:'green-reign',name:'Green Reign',cat:'greens',price:11,
+   ing:['kale','spinach','cucumber','green apple','lemon','ginger'],
+   desc:'Cold-pressed leafy fuel. The morning power move.',
+   macros:{cal:140,protein:6,carbs:30,fat:0,sugar:18},
    img:PIC('photo-1610970881699-44a5587cabec')},
-  {id:'sunrise-boost',name:'Sunrise Boost',cat:'juices',price:9,
-   ing:['orange','pineapple','carrot','ginger'],
-   desc:'Packed with vitamin C and natural energy. Liquid sunshine.',
-   macros:{cal:140,protein:2,carbs:34,fat:0,sugar:28},
+  {id:'celery-clean',name:'Celery Clean',cat:'greens',price:9,
+   ing:['celery','parsley','lemon','green apple'],
+   desc:'A bright-green hydration reset.',
+   macros:{cal:80,protein:4,carbs:18,fat:0,sugar:10},
+   img:PIC('photo-1622485482518-2b5c40f4d9b9')},
+  {id:'matcha-mojo',name:'Matcha Mojo',cat:'greens',price:10,
+   ing:['matcha','spinach','banana','almond milk','honey'],
+   desc:'Slow-burn caffeine, smooth as it gets.',
+   macros:{cal:220,protein:8,carbs:36,fat:6,sugar:24},
+   img:PIC('photo-1545518514-ce8448f542b3')},
+  {id:'pina-power',name:'Pina Power',cat:'citrus',price:10,
+   ing:['pineapple','orange','turmeric','lemon','black pepper'],
+   desc:"Pina the pineapple's signature pour. Anti-inflammatory glow.",
+   macros:{cal:170,protein:2,carbs:42,fat:0,sugar:34},
+   img:PIC('photo-1546173159-315724a31696')},
+  {id:'sunrise-citrus',name:'Sunrise Citrus',cat:'citrus',price:9,
+   ing:['orange','grapefruit','carrot','lemon'],
+   desc:'Liquid sunshine. Vitamin C plus beta-carotene.',
+   macros:{cal:160,protein:3,carbs:38,fat:0,sugar:30},
    img:PIC('photo-1613478223719-2ab802602423')},
-  {id:'berry-blast',name:'Berry Blast',cat:'juices',price:10,
-   ing:['strawberry','blueberry','raspberry','apple'],
-   desc:'Loaded with antioxidants. A berry-forward heavyweight.',
-   macros:{cal:150,protein:2,carbs:36,fat:0,sugar:28},
+  {id:'lemon-snap',name:'Lemon Snap',cat:'citrus',price:8,
+   ing:['lemon','green apple','mint','cayenne','agave'],
+   desc:'Tart, sweet, with a slow burn. Wakes you up clean.',
+   macros:{cal:120,protein:1,carbs:30,fat:0,sugar:24},
+   img:PIC('photo-1437418747212-8d9709afab22')},
+  {id:'beet-the-day',name:'Beet The Day',cat:'roots',price:11,
+   ing:['beet','carrot','apple','ginger','lemon'],
+   desc:'Endurance in a bottle. Earthy, sweet, unmistakable.',
+   macros:{cal:180,protein:3,carbs:42,fat:0,sugar:32},
+   img:PIC('photo-1618556658017-fd80b6f8b94c')},
+  {id:'turmeric-tonic',name:'Turmeric Tonic',cat:'roots',price:10,
+   ing:['turmeric','carrot','orange','ginger','black pepper'],
+   desc:'Anti-inflammatory glow tonic. Bright and warm.',
+   macros:{cal:150,protein:2,carbs:34,fat:0,sugar:26},
+   img:PIC('photo-1546039907-7fa05f864c02')},
+  {id:'carrot-glow',name:'Carrot Glow',cat:'roots',price:9,
+   ing:['carrot','apple','ginger','lemon'],
+   desc:'A skin-loving classic. Sweet and approachable.',
+   macros:{cal:140,protein:2,carbs:34,fat:0,sugar:28},
+   img:PIC('photo-1626078436805-49a13aa42aab')},
+  {id:'berry-blitz',name:'Berry Blitz',cat:'smoothies',price:11,
+   ing:['strawberry','blueberry','banana','almond milk','protein'],
+   desc:'Antioxidant heavyweight. Built for recovery.',
+   macros:{cal:280,protein:18,carbs:40,fat:7,sugar:28},
    img:PIC('photo-1505252585461-04db1eb84625')},
-  {id:'tropical-paradise',name:'Tropical Paradise',cat:'juices',price:10,
-   ing:['pineapple','mango','coconut water','lime'],
-   desc:'A refreshing tropical escape. Bright and hydrating.',
-   macros:{cal:160,protein:2,carbs:38,fat:0,sugar:32},
+  {id:'tropic-thunder',name:'Tropic Thunder',cat:'smoothies',price:11,
+   ing:['mango','pineapple','banana','coconut milk','lime'],
+   desc:'Vacation in a glass. Creamy and bright.',
+   macros:{cal:300,protein:5,carbs:54,fat:8,sugar:42},
    img:PIC('photo-1623065422902-30a2d299bbe4')},
-  {id:'beet-power',name:'Beet Power',cat:'juices',price:9,
-   ing:['beet','apple','carrot','ginger'],
-   desc:'Supports circulation and endurance. Earthy, sweet, unmistakable.',
-   macros:{cal:150,protein:3,carbs:36,fat:0,sugar:28},
-   img:PIC('photo-1615478503562-ec2d8aa0e24e')},
-  // ── SMOOTHIES ──
-  {id:'island-vibes',name:'Island Vibes',cat:'smoothies',price:11,
-   ing:['mango','pineapple','banana','coconut milk'],
-   desc:'Vacation in a glass. Creamy, bright, and tropical.',
-   macros:{cal:290,protein:5,carbs:52,fat:8,sugar:40},
-   img:PIC('photo-1653542773369-51cce8d08250')},
-  {id:'peanut-butter-power',name:'Peanut Butter Power',cat:'smoothies',price:11,
-   ing:['banana','peanut butter','dates','almond milk'],
-   desc:'A pre-workout with a dessert problem. Rich and filling.',
-   macros:{cal:420,protein:14,carbs:52,fat:18,sugar:30},
+  {id:'pb-banana',name:'PB Banana Boom',cat:'smoothies',price:11,
+   ing:['banana','peanut butter','oats','almond milk','honey','protein'],
+   desc:'A pre-workout with a dessert problem.',
+   macros:{cal:380,protein:22,carbs:48,fat:14,sugar:24},
    img:PIC('photo-1553530666-ba11a7da3888')},
-  {id:'berry-bliss',name:'Berry Protein',cat:'smoothies',price:12,
-   ing:['mixed berries','banana','protein powder','oat milk'],
-   desc:'Antioxidant-packed and built for recovery. 20g of protein.',
-   macros:{cal:300,protein:20,carbs:44,fat:6,sugar:28},
-   img:PIC('photo-1589733955941-5eeaf752f6dd')},
-  {id:'green-energy',name:'Green Energy',cat:'smoothies',price:11,
-   ing:['spinach','banana','mango','coconut water'],
-   desc:'Smooth, green, and clean. Energy without the crash.',
-   macros:{cal:240,protein:6,carbs:48,fat:3,sugar:32},
-   img:PIC('photo-1610622930110-3c076902312a')},
-  // ── WELLNESS SHOTS ──
-  {id:'ginger-shot',name:'Ginger Shot',cat:'shots',price:4,sizes:false,
-   ing:['fresh ginger','lemon'],
+  {id:'ginger-shot',name:'Ginger Shot',cat:'shots',price:5,
+   ing:['ginger','lemon','cayenne','honey'],
    desc:'2oz of fire. Wake up, fight off, get going.',
-   macros:{cal:25,protein:0,carbs:6,fat:0,sugar:4},
-   img:PIC('photo-1630623093145-f606591c2546')},
-  {id:'immunity-shot',name:'Immunity Shot',cat:'shots',price:5,sizes:false,
-   ing:['turmeric','ginger','lemon','black pepper'],
-   desc:'Anti-inflammatory defense in a 2oz hit.',
+   macros:{cal:35,protein:0,carbs:8,fat:0,sugar:6},
+   img:PIC('photo-1556881286-fc6915169721')},
+  {id:'wheatgrass-shot',name:'Wheatgrass Shot',cat:'shots',price:5,
+   ing:['wheatgrass','lemon'],
+   desc:'Pure chlorophyll. The green machine reset.',
+   macros:{cal:15,protein:1,carbs:2,fat:0,sugar:1},
+   img:PIC('photo-1556228720-da4e85bcdac5')},
+  {id:'turmeric-shot',name:'Turmeric Shot',cat:'shots',price:5,
+   ing:['turmeric','ginger','lemon','black pepper','honey'],
+   desc:"Inflammation's worst enemy.",
    macros:{cal:30,protein:0,carbs:7,fat:0,sugar:5},
-   img:PIC('photo-1606486746458-e44951581ade')},
-  {id:'energy-shot',name:'Energy Shot',cat:'shots',price:5,sizes:false,
-   ing:['beet','ginger','lemon'],
-   desc:'Clean, natural energy. No jitters, no sugar crash.',
-   macros:{cal:35,protein:1,carbs:8,fat:0,sugar:6},
-   img:PIC('photo-1638656665182-237966f970a7')},
-  // ── FRESH SALADS ──
-  {id:'garden-fresh-salad',name:'Garden Fresh Salad',cat:'salads',price:12,sizes:false,
-   ing:['mixed greens','cucumbers','tomatoes','carrots','red onions'],
-   desc:'Crisp, clean, and simple. Made fresh daily.',
-   macros:{cal:220,protein:6,carbs:24,fat:12,sugar:8},
-   img:PIC('photo-1512621776951-a57141f2eefd')},
-  {id:'mediterranean-salad',name:'Mediterranean Salad',cat:'salads',price:13,sizes:false,
-   ing:['romaine','cucumbers','tomatoes','olives','feta cheese'],
-   desc:'Briny, bright, and satisfying. A coastal classic.',
-   macros:{cal:320,protein:10,carbs:22,fat:22,sugar:7},
-   img:PIC('photo-1540420773420-3366772f4999')},
-  {id:'cranberry-walnut-salad',name:'Cranberry Walnut Salad',cat:'salads',price:13,sizes:false,
-   ing:['spring mix','cranberries','walnuts','apples','goat cheese'],
-   desc:'Sweet, crunchy, and creamy in every bite.',
-   macros:{cal:360,protein:9,carbs:30,fat:24,sugar:16},
-   img:PIC('photo-1546069901-ba9599a7e63c')},
-  {id:'tropical-fruit-salad',name:'Tropical Fruit Salad',cat:'salads',price:10,sizes:false,
-   ing:['spring mix','mango','strawberries','blueberries','almonds'],
-   desc:'Light, sweet, and refreshing. Fruit-forward greens.',
-   macros:{cal:240,protein:6,carbs:34,fat:10,sugar:22},
-   img:PIC('photo-1490474418585-ba9bad8fd0ea')},
-  // ── FRESH WRAPS ──
-  {id:'veggie-hummus-wrap',name:'Veggie Hummus Wrap',cat:'wraps',price:12,sizes:false,
-   ing:['hummus','spinach','cucumbers','peppers','carrots'],
-   desc:'Garden veggies and creamy hummus, rolled up fresh.',
-   macros:{cal:380,protein:12,carbs:52,fat:14,sugar:6},
-   img:PIC('photo-1626700051175-6818013e1d4f')},
-  {id:'mediterranean-wrap',name:'Mediterranean Wrap',cat:'wraps',price:13,sizes:false,
-   ing:['hummus','feta','cucumbers','tomatoes','olives','spinach wrap'],
-   desc:'A Mediterranean spread wrapped to go.',
-   macros:{cal:440,protein:16,carbs:48,fat:22,sugar:6},
-   img:PIC('photo-1585238342107-49a3cdace47f')},
-  {id:'avocado-crunch-wrap',name:'Avocado Crunch Wrap',cat:'wraps',price:12,sizes:false,
-   ing:['avocado','lettuce','cucumbers','carrots','sprouts'],
-   desc:'Cool, creamy avocado with a satisfying crunch.',
-   macros:{cal:400,protein:10,carbs:46,fat:20,sugar:5},
-   img:PIC('photo-1665469222949-3de88d37ee5a')},
-  {id:'southwest-wrap',name:'Southwest Wrap',cat:'wraps',price:13,sizes:false,
-   ing:['black beans','corn','avocado','lettuce','tomatoes'],
-   desc:'Hearty black beans and avocado with a Southwest kick.',
-   macros:{cal:460,protein:15,carbs:60,fat:18,sugar:7},
-   img:PIC('photo-1621334953222-c60c19143b0a')},
-  // ── SIGNATURE SALADS (with protein) ──
-  {id:'salmon-salad',name:'Salmon Salad',cat:'salads',price:16,sizes:false,
-   opts:{label:'Salmon preparation',choices:['Grilled','Baked']},
-   ing:['salmon','mixed greens','cucumbers','tomatoes','red onion','lemon'],
-   desc:'A generous fillet — grilled or baked — over a crisp garden salad. Protein-packed and clean.',
-   macros:{cal:420,protein:34,carbs:18,fat:24,sugar:6},
-   img:PIC('photo-1467003909585-2f8a72700288')},
-  {id:'shrimp-salad',name:'Shrimp Salad',cat:'salads',price:15,sizes:false,
-   opts:{label:'Shrimp',choices:['On the salad','On the side']},
-   ing:['shrimp','mixed greens','cucumbers','tomatoes','avocado','lemon'],
-   desc:'Seasoned shrimp served right on the greens or plated on the side — your call.',
-   macros:{cal:360,protein:30,carbs:16,fat:18,sugar:5},
-   img:PIC('photo-1551248429-40975aa4de74')}
-];
-
-// Add-on prices match the in-store menu board.
-const BOOSTS = {
-  avocado:{label:'Avocado',price:2},
-  protein:{label:'Protein Powder',price:3},
-  chia:{label:'Chia Seeds',price:1},
-  flax:{label:'Flax Seeds',price:1},
-  fruit:{label:'Extra Fruit',price:2}
-};
-
-// Combo deals from the in-store menu board.
-const COMBOS = [
-  {id:'juice-salad',title:'Any Juice + Salad',price:18,ico:'🥤',desc:'Pick any signature juice and any fresh salad.'},
-  {id:'smoothie-wrap',title:'Any Smoothie + Wrap',price:20,ico:'🥗',desc:'Pair any smoothie with any fresh wrap.'},
-  {id:'add-shot',title:'Add a Wellness Shot',price:3,ico:'⚡',desc:'Add any wellness shot to any order.'}
+   img:PIC('photo-1597306633535-fdba89e5ea30')}
 ];
 
 const NOTIFICATIONS = [
   {ico:'🥤',color:'var(--orange)',title:'Order PD-1041 ready for pickup',body:'Grab it within 20 minutes for peak freshness.',t:'2 MIN AGO',unread:true},
   {ico:'★',color:'var(--gold)',title:'You unlocked 5 stamps!',body:'4 more pours and your 10th is on us.',t:'2 DAYS AGO',unread:true},
-  {ico:'📅',color:'var(--cyan)',title:'Piña Power Hour Saturday',body:'4-6pm · DJ + 2x stamp · RSVP now',t:'YESTERDAY',unread:true},
+  {ico:'📅',color:'var(--cyan)',title:'Pina Power Hour Saturday',body:'4-6pm · DJ + 2x stamp · RSVP now',t:'YESTERDAY',unread:true},
   {ico:'🎁',color:'var(--pink)',title:'Subscription ships Tuesday',body:'12 bottles · greens-heavy mix · changes close Sun 9pm',t:'3 DAYS AGO',unread:false},
   {ico:'⚡',color:'var(--lime)',title:'Tuesday = 2x stamps',body:'Your weekly reminder.',t:'5 DAYS AGO',unread:false}
 ];
@@ -1488,7 +1035,7 @@ function buildEvents(){
     {offset:2,type:'class',title:'Juice Cleanse Kickoff',time:'6:00pm – 7:00pm',desc:'Free intro to the 3-day cleanse with Q&A from our nutritionist. Includes one shot to take home.'},
     {offset:5,type:'special',title:"Mother's Day Pour",time:'All day',desc:'Free 12oz Berry Blitz with any package booking. Treat the boss lady.'},
     {offset:9,type:'popup',title:'Smoothie Pop-up @ Empire Plaza',time:'11:00am – 2:00pm',desc:"We're posting up at Empire State Plaza. Free samples, surprise menu."},
-    {offset:12,type:'class',title:'Piña Power Hour',time:'4:00pm – 6:00pm',desc:'Bring a friend, sip a free pineapple-ginger pour. Live DJ, raffle, and 2x Pour Pass stamps.'},
+    {offset:12,type:'class',title:'Pina Power Hour',time:'4:00pm – 6:00pm',desc:'Bring a friend, sip a free pineapple-ginger pour. Live DJ, raffle, and 2x Pour Pass stamps.'},
     {offset:15,type:'cleanse',title:'3-Day Cleanse Drop',time:'Pickup window 7am – 12pm',desc:'Pre-orders ship for the May cohort. Pickup Tuesday morning.'},
     {offset:19,type:'buyout',title:'Private Buyout · Anniversary',time:'7:00pm – 10:00pm',desc:'Closed for private event. Doors reopen Friday at 7am.'},
     {offset:24,type:'class',title:'Wellness Wednesday: Macros 101',time:'7:00pm – 8:00pm',desc:'Quick session on building a macro plan around cold-pressed juice.'},
@@ -1504,242 +1051,24 @@ function buildEvents(){
     return {date:new Date(d.getFullYear(), d.getMonth(), d.getDate()), ...s};
   });
 }
-// Owner-posted events live in localStorage and merge with the seed calendar.
-/* ─────────────── DATA STORE (cloud-first, on-device fallback) ───────────────
- * Talks to /api/events + /api/bookings when a cloud store is attached (the
- * server reports `configured:true`). Until then, everything persists in
- * localStorage so the app fully works on a single device. The local copy is
- * always kept as a mirror, so reads are instant and offline-safe. */
-const Store = {
-  base: 'api',
-  cloud: false,
-  pin: '',
-  _read(k){ try{ return JSON.parse(localStorage.getItem(k)) || []; }catch(_){ return []; } },
-  _write(k,v){ localStorage.setItem(k, JSON.stringify(v)); },
-
-  // EVENTS
-  localEvents(){ return this._read('pd-owner-events'); },
-  async syncEvents(){
-    try{
-      const r = await fetch(this.base + '/events');
-      if(!r.ok) return false;
-      const d = await r.json();
-      this.cloud = !!d.configured;
-      if(d.configured) this._write('pd-owner-events', d.events || []);
-      return this.cloud;
-    }catch(_){ return false; }
-  },
-  async addEvent(ev){
-    if(this.cloud){
-      const r = await fetch(this.base + '/events', { method:'POST',
-        headers:{'Content-Type':'application/json','x-admin-pin':this.pin},
-        body: JSON.stringify(ev) });
-      if(r.status === 401) throw new Error('pin');
-      if(r.ok){ this._write('pd-owner-events', (await r.json()).events || []); return; }
-    }
-    const list = this.localEvents();
-    list.push({ id:'evt_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), ...ev });
-    this._write('pd-owner-events', list);
-  },
-  async deleteEvent(id){
-    if(this.cloud){
-      const r = await fetch(this.base + '/events?id=' + encodeURIComponent(id),
-        { method:'DELETE', headers:{'x-admin-pin':this.pin} });
-      if(r.ok){ this._write('pd-owner-events', (await r.json()).events || []); return; }
-    }
-    this._write('pd-owner-events', this.localEvents().filter(e => e.id !== id));
-  },
-
-  // BOOKINGS
-  localBookings(){ return this._read('pd-bookings'); },
-  async addBooking(b){
-    let rec = null;
-    if(this.cloud){
-      try{
-        const r = await fetch(this.base + '/bookings', { method:'POST',
-          headers:{'Content-Type':'application/json'}, body: JSON.stringify(b) });
-        if(r.ok) rec = (await r.json()).booking;
-      }catch(_){}
-    }
-    if(!rec) rec = { id:'bkg_'+Date.now().toString(36), status:'new', createdAt:new Date().toISOString(), ...b };
-    const list = this.localBookings(); list.unshift(rec); this._write('pd-bookings', list);
-    return rec;
-  },
-  async getBookings(){
-    if(this.cloud){
-      try{
-        const r = await fetch(this.base + '/bookings', { headers:{'x-admin-pin':this.pin} });
-        if(r.ok){ const d = await r.json(); this._write('pd-bookings', d.bookings || []); return d.bookings || []; }
-      }catch(_){}
-    }
-    return this.localBookings();
-  },
-  async deleteBooking(id){
-    if(this.cloud){
-      try{ await fetch(this.base + '/bookings?id=' + encodeURIComponent(id),
-        { method:'DELETE', headers:{'x-admin-pin':this.pin} }); }catch(_){}
-    }
-    this._write('pd-bookings', this.localBookings().filter(b => b.id !== id));
-  },
-
-  // ── CUSTOMER IDENTITY (the phone that a Pour Pass belongs to) ──
-  normPhone(p){ return String(p||'').replace(/\D/g,''); },
-  me(){ try{ return JSON.parse(localStorage.getItem('pd-customer')); }catch(_){ return null; } },
-  signIn(name, phone){
-    const rec = { name:(name||'').trim(), phone:this.normPhone(phone) };
-    this._write('pd-customer', rec); return rec;
-  },
-  signOut(){ localStorage.removeItem('pd-customer'); },
-
-  // ── ORDERS ──
-  localOrders(){ return this._read('pd-orders'); },
-  async placeOrder(order){
-    let rec = null;
-    if(this.cloud){
-      try{
-        const r = await fetch(this.base + '/orders', { method:'POST',
-          headers:{'Content-Type':'application/json'}, body: JSON.stringify(order) });
-        if(r.ok){ const d = await r.json(); rec = d.order; if(d.customer) this._write('pd-pass', d.customer); }
-      }catch(_){}
-    }
-    if(!rec){
-      rec = { id:'ord_'+Date.now().toString(36), status:'new', createdAt:new Date().toISOString(), ...order };
-      // On-device: award a stamp locally so the pass still moves.
-      this._awardLocal(order.phone, order.name, order.total);
-    }
-    const list = this.localOrders(); list.unshift(rec); this._write('pd-orders', list);
-    return rec;
-  },
-  async getOrders(){
-    if(this.cloud){
-      try{
-        const r = await fetch(this.base + '/orders', { headers:{'x-admin-pin':this.pin} });
-        if(r.ok){ const d = await r.json(); this._write('pd-orders', d.orders||[]); return d.orders||[]; }
-      }catch(_){}
-    }
-    return this.localOrders();
-  },
-  async setOrderStatus(id, status){
-    if(this.cloud){
-      try{ await fetch(this.base + '/orders?id=' + encodeURIComponent(id), { method:'PATCH',
-        headers:{'Content-Type':'application/json','x-admin-pin':this.pin}, body:JSON.stringify({status}) }); }catch(_){}
-    }
-    const list = this.localOrders().map(o => o.id===id ? {...o, status} : o);
-    this._write('pd-orders', list);
-  },
-
-  // ── LOYALTY / POUR PASS ──
-  _localCustomers(){ return this._read('pd-customers'); },
-  _saveLocalCustomers(l){ this._write('pd-customers', l); },
-  _roll(c){ while(c.stars>=9){c.stars-=9;c.rewards++;} while(c.stars<0){ if(c.rewards>0){c.rewards--;c.stars+=9;} else {c.stars=0;break;} } return c; },
-  _awardLocal(phone, name, amount){
-    const ph = this.normPhone(phone); const l = this._localCustomers();
-    let c = l.find(x=>x.phone===ph);
-    if(!c){ c={phone:ph,name:name||'',stars:0,rewards:0,lifetime:0,spent:0,createdAt:new Date().toISOString(),lastVisit:null}; l.unshift(c); }
-    if(name) c.name=name;
-    c.stars++; c.lifetime++; c.spent+=Number(amount)||0; c.lastVisit=new Date().toISOString();
-    this._roll(c); this._saveLocalCustomers(l);
-    if(this.me() && this.me().phone===ph) this._write('pd-pass', c);
-    return c;
-  },
-  _adjustLocal(phone, delta, name){
-    const ph = this.normPhone(phone); const l = this._localCustomers();
-    let c = l.find(x=>x.phone===ph);
-    if(!c){ c={phone:ph,name:name||'',stars:0,rewards:0,lifetime:0,spent:0,createdAt:new Date().toISOString(),lastVisit:null}; l.unshift(c); }
-    if(name) c.name=name;
-    c.stars+=Number(delta)||0; c.lastVisit=new Date().toISOString();
-    this._roll(c); this._saveLocalCustomers(l);
-    if(this.me() && this.me().phone===ph) this._write('pd-pass', c);
-    return c;
-  },
-  async myPass(){
-    const me = this.me(); if(!me) return null;
-    if(this.cloud){
-      try{
-        const r = await fetch(this.base + '/loyalty?phone=' + encodeURIComponent(me.phone));
-        if(r.ok){ const d = await r.json(); if(d.customer){ this._write('pd-pass', d.customer); return d.customer; } }
-      }catch(_){}
-    }
-    const local = this._localCustomers().find(x=>x.phone===me.phone);
-    return local || { phone:me.phone, name:me.name, stars:0, rewards:0, lifetime:0, spent:0 };
-  },
-  async getCustomers(){
-    if(this.cloud){
-      try{
-        const r = await fetch(this.base + '/loyalty', { headers:{'x-admin-pin':this.pin} });
-        if(r.ok){ const d = await r.json(); this._saveLocalCustomers(d.customers||[]); return d.customers||[]; }
-      }catch(_){}
-    }
-    return this._localCustomers();
-  },
-  async adjustStars(phone, delta, name){
-    if(this.cloud){
-      try{
-        const r = await fetch(this.base + '/loyalty', { method:'POST',
-          headers:{'Content-Type':'application/json','x-admin-pin':this.pin},
-          body: JSON.stringify({phone, delta, name}) });
-        if(r.ok){ const d = await r.json(); this._saveLocalCustomers(d.customers||[]); return d.customer; }
-      }catch(_){}
-    }
-    return this._adjustLocal(phone, delta, name);
-  },
-  async logSale(phone, name, amount){
-    if(this.cloud){
-      try{
-        const r = await fetch(this.base + '/loyalty', { method:'POST',
-          headers:{'Content-Type':'application/json','x-admin-pin':this.pin},
-          body: JSON.stringify({phone, name, sale:amount}) });
-        if(r.ok){ const d = await r.json(); this._saveLocalCustomers(d.customers||[]); return d.customer; }
-      }catch(_){}
-    }
-    return this._awardLocal(phone, name, amount);
-  }
-};
-
-function loadOwnerEvents(){
-  return Store.localEvents().map(e => ({ ...e, date:new Date(e.iso + 'T12:00:00'), custom:true }));
-}
-let EVENTS = [];
-function rebuildEvents(){
-  EVENTS = buildEvents().concat(loadOwnerEvents()).sort((a,b) => a.date - b.date);
-}
-rebuildEvents();
+const EVENTS = buildEvents();
 
 const STATE = {
-  cart:[], view:'home', filter:'all', diet:'all',
+  cart:[], view:'home', filter:'all',
   currentItem:null, qty:1, size:16, boosts:new Set(),
-  tip:.15, calMonth:null, pkg:null,
-  favorites:new Set((()=>{ try{ return JSON.parse(localStorage.getItem('pd-favorites'))||[]; }catch(_){ return []; } })())
+  tip:.15, calMonth:null, pkg:null
 };
-function saveFavorites(){ localStorage.setItem('pd-favorites', JSON.stringify([...STATE.favorites])); }
-// Derive diet tags from each item's ingredients + macros.
-function dietTags(item){
-  const ing = item.ing.join(' ').toLowerCase();
-  const animal = /feta|goat cheese|salmon|shrimp/.test(ing);
-  const t = [];
-  if(!animal) t.push('vegan');
-  if(item.macros.protein >= 14) t.push('protein');
-  if(item.macros.sugar <= 10) t.push('lowsugar');
-  return t;
-}
 
 function go(view){
   STATE.view = view;
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.dataset.view===view));
-  const navMap = {home:'home',menu:'menu',cart:'menu',checkout:'menu',confirm:'home',calendar:'calendar',book:'calendar',admin:'account',packages:'packages','pkg-detail':'packages',pass:'account',notifications:'account',account:'account'};
+  const navMap = {home:'home',menu:'menu',cart:'menu',checkout:'menu',confirm:'home',calendar:'calendar',packages:'packages','pkg-detail':'packages',pass:'account',notifications:'account',account:'account'};
   document.querySelectorAll('.bottom-nav .nav-item').forEach(n => n.classList.toggle('active', n.dataset.route===navMap[view]));
   window.scrollTo({top:0,behavior:'instant'});
   if(view==='cart') renderCart();
   if(view==='checkout') renderCheckoutSummary();
   if(view==='calendar') renderCalendar();
   if(view==='notifications') renderNotifications();
-  if(view==='book'){
-    document.getElementById('book-form').style.display='';
-    document.getElementById('book-confirm').style.display='none';
-  }
-  if(view==='admin'){ hideInstallBanner(); renderAdminList(); }
-  if(view==='pass') renderPass();
-  if(view==='account') renderAccount();
 }
 
 document.addEventListener('click', (e) => {
@@ -1759,18 +1088,11 @@ document.addEventListener('click', (e) => {
 
 function renderMenu(){
   const grid = document.getElementById('menu-grid');
-  let items = STATE.filter==='all' ? MENU : MENU.filter(i => i.cat===STATE.filter);
-  if(STATE.diet==='fav') items = items.filter(i => STATE.favorites.has(i.id));
-  else if(STATE.diet && STATE.diet!=='all') items = items.filter(i => dietTags(i).includes(STATE.diet));
-  if(!items.length){
-    grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1;padding:30px 20px"><p>${STATE.diet==='fav'?'No favorites yet — tap the ♥ on any item to save it here.':'Nothing matches that filter. Try another.'}</p></div>`;
-    return;
-  }
+  const items = STATE.filter==='all' ? MENU : MENU.filter(i => i.cat===STATE.filter);
   grid.innerHTML = items.map(item => `
     <div class="menu-card" data-cat="${item.cat}" data-id="${item.id}">
       <div class="img" style="background-image:url('${item.img}')">
         <span class="cat-tag">${item.cat}</span>
-        <button class="fav-btn ${STATE.favorites.has(item.id)?'on':''}" data-fav="${item.id}" aria-label="Save to favorites">♥</button>
       </div>
       <div class="body">
         <h4>${item.name}</h4>
@@ -1787,17 +1109,8 @@ function renderMenu(){
     </div>
   `).join('');
   grid.querySelectorAll('.menu-card').forEach(c => {
-    c.addEventListener('click', (e) => { if(e.target.closest('[data-fav]')) return; openSheet(c.dataset.id); });
+    c.addEventListener('click', () => openSheet(c.dataset.id));
   });
-  grid.querySelectorAll('[data-fav]').forEach(b => {
-    b.addEventListener('click', (e) => { e.stopPropagation(); toggleFav(b.dataset.fav, b); });
-  });
-}
-function toggleFav(id, btn){
-  if(STATE.favorites.has(id)){ STATE.favorites.delete(id); btn && btn.classList.remove('on'); }
-  else { STATE.favorites.add(id); btn && btn.classList.add('on'); toast('Saved to favorites ♥'); }
-  saveFavorites();
-  if(STATE.diet==='fav') renderMenu();
 }
 function activateChip(cat){
   document.querySelectorAll('#cat-strip .cat-chip').forEach(ch => ch.classList.toggle('active', ch.dataset.cat===cat));
@@ -1809,19 +1122,12 @@ document.querySelectorAll('#cat-strip .cat-chip').forEach(ch => {
     renderMenu();
   });
 });
-document.querySelectorAll('#diet-strip .diet-chip').forEach(ch => {
-  ch.addEventListener('click', () => {
-    STATE.diet = ch.dataset.diet;
-    document.querySelectorAll('#diet-strip .diet-chip').forEach(x => x.classList.toggle('active', x===ch));
-    renderMenu();
-  });
-});
 
 function renderFeatured(){
   const carousel = document.getElementById('featured-carousel');
-  const featured = ['green-machine','island-vibes','garden-fresh-salad','avocado-crunch-wrap'].map(id => MENU.find(m => m.id===id));
-  const colorByCat = {juices:'var(--lime)',smoothies:'var(--yellow)',shots:'var(--cyan)',salads:'#22c55e',wraps:'var(--orange)'};
-  const txtByCat = {juices:'var(--teal-deep)',smoothies:'var(--teal-deep)',shots:'var(--teal-deep)',salads:'#fff',wraps:'#fff'};
+  const featured = ['green-reign','pina-power','beet-the-day','berry-blitz'].map(id => MENU.find(m => m.id===id));
+  const colorByCat = {greens:'var(--lime)',citrus:'var(--orange)',roots:'var(--pink)',smoothies:'var(--yellow)',shots:'var(--cyan)'};
+  const txtByCat = {greens:'var(--teal-deep)',citrus:'#fff',roots:'#fff',smoothies:'var(--teal-deep)',shots:'var(--teal-deep)'};
   carousel.innerHTML = featured.map(item => `
     <div class="feat-card" data-id="${item.id}">
       <div class="ph" style="background-image:url('${item.img}')"></div>
@@ -1836,29 +1142,6 @@ function renderFeatured(){
   carousel.querySelectorAll('.feat-card').forEach(c => {
     c.addEventListener('click', () => openSheet(c.dataset.id));
   });
-}
-
-function renderCombos(){
-  const root = document.getElementById('combo-strip');
-  if(!root) return;
-  root.innerHTML = `
-    <div class="combo-head">
-      <div class="eyebrow">Save with</div>
-      <h3>Pour Decisions Combos</h3>
-    </div>
-    <div class="combo-row">
-      ${COMBOS.map(c => `
-        <div class="combo-card">
-          <span class="combo-ico">${c.ico}</span>
-          <div class="combo-info">
-            <h4>${c.title}</h4>
-            <p>${c.desc}</p>
-          </div>
-          <span class="combo-price">${c.id==='add-shot' ? '+' : ''}$${c.price}</span>
-        </div>
-      `).join('')}
-    </div>
-  `;
 }
 
 function renderHomeEvents(){
@@ -1876,7 +1159,7 @@ function openSheet(id){
   const item = MENU.find(m => m.id===id);
   if(!item) return;
   STATE.currentItem = item;
-  STATE.qty = 1; STATE.size = 16; STATE.boosts = new Set(); STATE.choice = null;
+  STATE.qty = 1; STATE.size = 16; STATE.boosts = new Set();
   document.getElementById('sheet-pic').style.backgroundImage = `url('${item.img}')`;
   document.getElementById('sheet-cat').textContent = item.cat;
   document.getElementById('sheet-name').textContent = item.name;
@@ -1888,25 +1171,7 @@ function openSheet(id){
     <div><div class="v">${item.macros.fat}g</div><div class="l">FAT</div></div>
   `;
   document.getElementById('sheet-ing').innerHTML = item.ing.map(i => `<span>${i}</span>`).join('');
-  // Size tiers are derived from the item's base (16oz) price; hidden for single-serve items.
-  const grid = document.getElementById('size-grid');
-  grid.querySelector('[data-size="12"] .price').textContent = '$' + Math.round(item.price * .85);
-  grid.querySelector('[data-size="16"] .price').textContent = '$' + item.price;
-  grid.querySelector('[data-size="32"] .price').textContent = '$' + Math.round(item.price * 1.6);
   document.querySelectorAll('#size-grid .size-opt').forEach(o => o.classList.toggle('active', o.dataset.size==='16'));
-  // Item choices (e.g. salmon grilled/baked, shrimp on salad/side)
-  const choiceGroup = document.getElementById('opt-choice-group');
-  if(item.opts){
-    STATE.choice = item.opts.choices[0];
-    document.getElementById('opt-choice-label').textContent = item.opts.label;
-    document.getElementById('opt-choice-row').innerHTML = item.opts.choices
-      .map((c,i) => `<button class="boost${i===0?' active':''}" data-choice="${c}">${c}</button>`).join('');
-    choiceGroup.style.display = '';
-  } else {
-    choiceGroup.style.display = 'none';
-  }
-  document.getElementById('size-group').style.display = item.sizes===false ? 'none' : '';
-  document.getElementById('boost-group').style.display = (item.cat==='shots'||item.cat==='salads'||item.cat==='wraps') ? 'none' : '';
   document.querySelectorAll('#boost-row .boost').forEach(b => b.classList.remove('active'));
   document.getElementById('qty-n').textContent = '1';
   updateAddPrice();
@@ -1930,23 +1195,14 @@ document.querySelectorAll('#boost-row .boost').forEach(b => {
     updateAddPrice();
   });
 });
-// Single-select item choices (grilled/baked, on salad/on side)
-document.getElementById('opt-choice-row').addEventListener('click', (e) => {
-  const btn = e.target.closest('[data-choice]'); if(!btn) return;
-  document.querySelectorAll('#opt-choice-row .boost').forEach(x => x.classList.remove('active'));
-  btn.classList.add('active');
-  STATE.choice = btn.dataset.choice;
-});
 document.getElementById('qty-plus').addEventListener('click', () => { STATE.qty++; document.getElementById('qty-n').textContent = STATE.qty; updateAddPrice(); });
 document.getElementById('qty-minus').addEventListener('click', () => { if(STATE.qty>1){STATE.qty--; document.getElementById('qty-n').textContent = STATE.qty; updateAddPrice();} });
 
 function unitPrice(){
   if(!STATE.currentItem) return 0;
-  const it = STATE.currentItem;
-  const base = it.price;
-  const sizeMult = it.sizes===false ? 1 : (STATE.size===12 ? .85 : STATE.size===32 ? 1.6 : 1);
-  let boost = 0;
-  STATE.boosts.forEach(b => { boost += (BOOSTS[b] ? BOOSTS[b].price : 0); });
+  const base = STATE.currentItem.price;
+  const sizeMult = STATE.size===12 ? .85 : STATE.size===32 ? 1.6 : 1;
+  const boost = STATE.boosts.size * 1.5;
   return Math.round((base * sizeMult + boost) * 100) / 100;
 }
 function updateAddPrice(){ document.getElementById('add-price').textContent = '$' + (unitPrice()*STATE.qty).toFixed(2); }
@@ -1954,10 +1210,8 @@ function updateAddPrice(){ document.getElementById('add-price').textContent = '$
 document.getElementById('btn-add-cart').addEventListener('click', () => {
   const item = STATE.currentItem; if(!item) return;
   STATE.cart.push({
-    id:item.id, name:item.name,
-    size: item.sizes===false ? (item.cat==='shots' ? '2oz' : 'regular') : STATE.size+'oz',
-    choice: STATE.choice || '',
-    boosts:[...STATE.boosts].map(b => BOOSTS[b] ? BOOSTS[b].label : b), qty:STATE.qty,
+    id:item.id, name:item.name, size:STATE.size+'oz',
+    boosts:[...STATE.boosts], qty:STATE.qty,
     price:unitPrice(), img:item.img, cat:item.cat
   });
   closeSheet();
@@ -1997,7 +1251,7 @@ function renderCart(){
           <div class="pic" style="background-image:url('${it.img}')"></div>
           <div>
             <h4>${it.name}</h4>
-            <div class="opts">${it.choice?it.choice+' · ':''}${it.size}${it.boosts.length?' · +'+it.boosts.join(' +'):''} · qty ${it.qty}</div>
+            <div class="opts">${it.size}${it.boosts.length?' · +'+it.boosts.join(' +'):''} · qty ${it.qty}</div>
             <button class="rm" data-rm="${i}">REMOVE</button>
           </div>
           <span class="price">$${(it.price*it.qty).toFixed(2)}</span>
@@ -2025,12 +1279,6 @@ function renderCart(){
 }
 
 function renderCheckoutSummary(){
-  const me = Store.me();
-  if(me){
-    const nm = document.getElementById('co-name'), ph = document.getElementById('co-phone');
-    if(nm && !nm.value) nm.value = me.name || '';
-    if(ph && !ph.value) ph.value = me.phone || '';
-  }
   const t = cartTotals();
   document.getElementById('checkout-summary').innerHTML = `
     <div class="row"><span>Subtotal</span><span>$${t.subtotal.toFixed(2)}</span></div>
@@ -2053,38 +1301,12 @@ document.querySelectorAll('.pickup-opt').forEach(p => {
     p.classList.add('active');
   });
 });
-document.getElementById('btn-place-order').addEventListener('click', async () => {
-  if(!STATE.cart.length){ toast('Your bag is empty'); return; }
+document.getElementById('btn-place-order').addEventListener('click', () => {
   const t = cartTotals();
   const num = 'PD-' + Math.floor(1000 + Math.random()*9000);
-  const name = (document.getElementById('co-name').value || '').trim();
-  const phone = (document.getElementById('co-phone').value || '').trim();
-  const notes = (document.getElementById('co-notes').value || '').trim();
-
-  // Remember the customer so their pass follows them next time.
-  if(Store.normPhone(phone).length >= 7){ Store.signIn(name || (Store.me()&&Store.me().name) || 'Guest', phone); }
-
-  const order = {
-    num, name, phone: Store.normPhone(phone),
-    items: STATE.cart.map(it => ({ name:it.name, choice:it.choice, size:it.size, boosts:it.boosts, qty:it.qty, price:it.price })),
-    subtotal:+t.subtotal.toFixed(2), tax:+t.tax.toFixed(2), tip:+t.tip.toFixed(2), total:+t.total.toFixed(2),
-    notes, pickup:'359 Northern Boulevard'
-  };
-
-  const btn = document.getElementById('btn-place-order');
-  btn.disabled = true; btn.textContent = 'Placing…';
-  let pass = null;
-  try{
-    if(Store.normPhone(phone).length >= 7){ await Store.placeOrder(order); pass = await Store.myPass(); }
-  }catch(_){}
-  btn.disabled = false; btn.textContent = 'Place Order →';
-
   document.getElementById('conf-num').textContent = '#' + num;
   document.getElementById('conf-num-2').textContent = num;
   document.getElementById('conf-total').textContent = '$' + t.total.toFixed(2);
-  document.getElementById('conf-stamp').textContent = pass
-    ? `+1 stamp · ${pass.stars}/9${pass.rewards?` · ${pass.rewards} free pour ready 🎉`:''}`
-    : 'Add your phone next time to earn stamps';
   STATE.cart = []; updateCartBadge();
   go('confirm');
 });
@@ -2102,184 +1324,6 @@ function renderNotifications(){
     </div>
   `).join('');
 }
-
-/* ─────────────── POUR PASS (customer-facing loyalty) ─────────────── */
-async function renderPass(){
-  const me = Store.me();
-  const signin = document.getElementById('pass-signin');
-  const live = document.getElementById('pass-live');
-  if(!me){ signin.style.display=''; live.style.display='none'; return; }
-  signin.style.display='none'; live.style.display='';
-  setupSpin();
-
-  // Optimistic from cache, then refresh from server.
-  let pass = (()=>{ try{ return JSON.parse(localStorage.getItem('pd-pass')); }catch(_){ return null; } })()
-             || { name:me.name, phone:me.phone, stars:0, rewards:0, lifetime:0, spent:0 };
-  paintPass(pass, me);
-  const fresh = await Store.myPass();
-  if(fresh) paintPass(fresh, me);
-}
-
-/* ─────────────── DAILY SPIN-THE-WHEEL ─────────────── */
-const SPIN_PRIZES = [
-  { label:'+1 Stamp',     color:'#E8B547', act:'stamp1' },
-  { label:'Free Shot',    color:'#22d3ee', act:'shot'   },
-  { label:'10% Off',      color:'#a3e635', act:'off10'  },
-  { label:'+2 Stamps',    color:'#fb7185', act:'stamp2' },
-  { label:'Free Topping', color:'#fbbf24', act:'topping'},
-  { label:'Spin Again',   color:'#94a3b8', act:'again'  }
-];
-const SEG = 360 / SPIN_PRIZES.length;
-const spinDayKey = () => new Date().toISOString().slice(0,10);
-const spinAvailable = () => localStorage.getItem('pd-lastspin') !== spinDayKey();
-let spinning = false, spinAngle = 0;
-
-function setupSpin(){
-  const wheel = document.getElementById('spin-wheel');
-  if(wheel && !wheel.dataset.built){
-    wheel.style.background = `conic-gradient(${SPIN_PRIZES.map((p,i)=>`${p.color} ${i*SEG}deg ${(i+1)*SEG}deg`).join(',')})`;
-    wheel.innerHTML = SPIN_PRIZES.map((p,i)=>{
-      const mid = i*SEG + SEG/2;
-      return `<span class="seg-label" style="transform:translate(-50%,-50%) rotate(${mid}deg) translateY(-78px) rotate(${-mid}deg)">${p.label}</span>`;
-    }).join('') + '<div class="spin-hub"></div>';
-    wheel.dataset.built = '1';
-  }
-  const btn = document.getElementById('spin-btn'), note = document.getElementById('spin-note');
-  const avail = spinAvailable();
-  if(btn){ btn.disabled = !avail; btn.textContent = avail ? 'Spin to win 🎡' : 'Come back tomorrow'; }
-  if(note) note.textContent = avail ? 'One free spin a day — win stamps & treats.' : 'You already spun today — see you tomorrow!';
-}
-function addCoupon(label){
-  let c; try{ c = JSON.parse(localStorage.getItem('pd-coupons'))||[]; }catch(_){ c = []; }
-  c.unshift({ label, date: spinDayKey() });
-  localStorage.setItem('pd-coupons', JSON.stringify(c));
-}
-async function applyPrize(p){
-  const me = Store.me();
-  if(p.act==='stamp1' && me){ await Store.adjustStars(me.phone, 1, me.name); renderPass(); toast('🎉 +1 stamp added!'); }
-  else if(p.act==='stamp2' && me){ await Store.adjustStars(me.phone, 2, me.name); renderPass(); toast('🎉 +2 stamps added!'); }
-  else if(p.act==='again'){ localStorage.removeItem('pd-lastspin'); setupSpin(); toast('🎡 Spin again — free re-roll!'); return; }
-  else { addCoupon(p.label); toast('🎉 You won: ' + p.label + '! Saved to your rewards.'); }
-}
-function doSpin(){
-  if(spinning) return;
-  if(!Store.me()){ toast('Start your Pour Pass first ★'); return; }
-  if(!spinAvailable()){ toast('Come back tomorrow for your next spin 🎡'); return; }
-  spinning = true;
-  const idx = Math.floor(Math.random()*SPIN_PRIZES.length);
-  const wheel = document.getElementById('spin-wheel');
-  // land segment idx under the top pointer, plus 5 full turns
-  spinAngle += 360*5 + (360 - (idx*SEG + SEG/2));
-  wheel.style.transform = `rotate(${spinAngle}deg)`;
-  const btn = document.getElementById('spin-btn');
-  if(btn) btn.disabled = true;
-  setTimeout(async () => {
-    localStorage.setItem('pd-lastspin', spinDayKey());
-    await applyPrize(SPIN_PRIZES[idx]);
-    spinning = false;
-    setupSpin();
-  }, 4200);
-}
-(function(){ const b = document.getElementById('spin-btn'); if(b) b.addEventListener('click', doSpin); })();
-
-/* ─────────────── Tap ripple feedback ─────────────── */
-document.addEventListener('pointerdown', (e) => {
-  const t = e.target.closest('.btn, .qa, .cat-chip, .account-row, .qa-2, .qa-1');
-  if(!t || t.disabled) return;
-  const rect = t.getBoundingClientRect();
-  const size = Math.max(rect.width, rect.height);
-  const span = document.createElement('span');
-  span.className = 'ripple';
-  span.style.width = span.style.height = size + 'px';
-  span.style.left = (e.clientX - rect.left - size/2) + 'px';
-  span.style.top  = (e.clientY - rect.top  - size/2) + 'px';
-  const cs = getComputedStyle(t);
-  if(cs.position === 'static') t.style.position = 'relative';
-  if(cs.overflow === 'visible') t.style.overflow = 'hidden';
-  t.appendChild(span);
-  setTimeout(() => span.remove(), 600);
-}, { passive:true });
-function countUp(el, to){
-  if(!el) return;
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent = to; return; }
-  const t0 = performance.now(), dur = 650;
-  (function step(t){
-    const p = Math.min(1, (t-t0)/dur);
-    el.textContent = Math.round(to * p);
-    if(p < 1) requestAnimationFrame(step);
-  })(t0);
-}
-function paintPass(p, me){
-  const stars = p.stars||0, rewards = p.rewards||0, left = 9 - stars;
-  document.getElementById('pass-card-name').textContent = p.name || me.name || 'Member';
-  document.getElementById('pass-eyebrow').textContent = p.lifetime ? (p.lifetime + ' pours all-time') : 'New member';
-  const numEl = document.getElementById('pass-card-num');
-  numEl.innerHTML = '<span id="pass-num-n">0</span><small>/9 stamps</small>';
-  countUp(document.getElementById('pass-num-n'), stars);
-  document.getElementById('pass-progress').style.width = Math.round(stars/9*100) + '%';
-  document.getElementById('pass-card-lbl').textContent = stars===0
-    ? 'Buy 9, your 10th pour is free' : (left + (left===1?' more pour and your 10th is free':' more pours and your 10th is free'));
-  // Stamp grid: 9 stamps + the free 10th
-  let html = '';
-  for(let i=1;i<=9;i++){
-    const cls = i<=stars ? 'stamp filled' : (i===stars+1 ? 'stamp next' : 'stamp');
-    html += `<div class="${cls}">${i>stars?`<span class="n">${i}</span>`:''}</div>`;
-  }
-  html += `<div class="stamp" style="background:var(--gold)"><span class="n" style="color:var(--teal-deep);opacity:1">★</span></div>`;
-  document.getElementById('pass-stamps').innerHTML = html;
-  // Banked free pours
-  document.getElementById('pass-reward-banner').innerHTML = rewards>0
-    ? `<div class="reward-banner"><span class="rb-ico">🎉</span><div>You've got ${rewards} free pour${rewards>1?'s':''} waiting! Show this at the counter to redeem.</div></div>`
-    : '';
-  // Scannable pass for the counter (encodes the phone for owner lookup)
-  const data = encodeURIComponent('PDPASS:' + me.phone);
-  document.getElementById('pass-qr').innerHTML = `
-    <img alt="Your Pour Pass QR" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&data=${data}" />
-    <div><div class="qt">Scan at the counter</div><div class="qs">Show this to staff to add a stamp to your pass — no app needed on their end.<br/><b>${me.phone}</b></div></div>`;
-}
-document.getElementById('pass-signin').addEventListener('submit', e => {
-  e.preventDefault();
-  const name = document.getElementById('pass-name').value.trim();
-  const phone = document.getElementById('pass-phone').value.trim();
-  if(!name || Store.normPhone(phone).length < 7){ toast('Enter your name and a valid phone'); return; }
-  Store.signIn(name, phone);
-  renderPass();
-  toast('Pour Pass started ★');
-});
-document.getElementById('pass-signout').addEventListener('click', () => {
-  Store.signOut(); renderPass(); renderAccount(); toast('Signed out');
-});
-
-/* ─────────────── ACCOUNT header (who's signed in) ─────────────── */
-function renderAccount(){
-  const me = Store.me();
-  const sub = document.getElementById('acct-pass-sub');
-  if(sub){
-    let pass = (()=>{ try{ return JSON.parse(localStorage.getItem('pd-pass')); }catch(_){ return null; } })();
-    sub.textContent = me
-      ? `${me.name} · ${pass ? pass.stars : 0} of 9 stamps`
-      : 'Tap to start your Pour Pass';
-  }
-  const oh = document.getElementById('order-history-sub');
-  if(oh){
-    const orders = Store.localOrders();
-    oh.textContent = orders.length ? `${orders.length} order${orders.length>1?'s':''} · tap to reorder your last` : 'No orders yet';
-  }
-}
-// One-tap reorder: rebuild the cart from the most recent order.
-function reorderLast(){
-  const orders = Store.localOrders();
-  if(!orders.length || !orders[0].items || !orders[0].items.length){ toast('No past orders to reorder yet'); return; }
-  STATE.cart = orders[0].items.map(it => {
-    const m = MENU.find(x => x.name===it.name) || {};
-    return { id:m.id||it.name, name:it.name, size:it.size||'regular', choice:it.choice||'',
-             boosts:it.boosts||[], qty:it.qty||1, price:it.price||m.price||0, img:m.img||'', cat:m.cat||'' };
-  });
-  updateCartBadge();
-  toast('Reordered your last order ↻');
-  go('cart');
-}
-document.getElementById('order-history-row').addEventListener('click', reorderLast);
 
 function renderCalendar(){
   const today = new Date();
@@ -2358,241 +1402,10 @@ function openModal(ev){
   pill.textContent = EVENT_TYPES[ev.type].label;
   pill.style.background = EVENT_TYPES[ev.type].color;
   pill.style.color = (ev.type==='class'||ev.type==='special') ? 'var(--teal-deep)' : '#fff';
-  STATE.currentEvent = ev;
-  syncRsvpBtn(ev);
   modal.classList.add('show');
 }
 document.getElementById('m-close').addEventListener('click', () => modal.classList.remove('show'));
 modal.addEventListener('click', e => { if(e.target===modal) modal.classList.remove('show'); });
-
-// RSVP — toggle attendance per event (keyed by title + date)
-STATE.rsvps = new Set();
-const rsvpBtn = document.getElementById('m-rsvp');
-function rsvpKey(ev){ return ev.title + '|' + ev.date.toDateString(); }
-function syncRsvpBtn(ev){
-  const going = STATE.rsvps.has(rsvpKey(ev));
-  rsvpBtn.textContent = going ? "✓ You're going" : 'RSVP →';
-  rsvpBtn.classList.toggle('btn-pine', going);
-  rsvpBtn.classList.toggle('btn-primary', !going);
-}
-rsvpBtn.addEventListener('click', () => {
-  const ev = STATE.currentEvent; if(!ev) return;
-  const k = rsvpKey(ev);
-  if(STATE.rsvps.has(k)){ STATE.rsvps.delete(k); toast('RSVP removed'); }
-  else { STATE.rsvps.add(k); toast("You're on the list · " + ev.title); }
-  syncRsvpBtn(ev);
-});
-
-// BOOK THE SPACE — persists the request (cloud when configured, else on-device)
-document.getElementById('book-form').addEventListener('submit', async e => {
-  e.preventDefault();
-  const name = document.getElementById('bk-name').value.trim();
-  const contact = document.getElementById('bk-contact').value.trim();
-  const date = document.getElementById('bk-date').value;
-  if(!name || !contact || !date){ toast('Please fill name, contact & date'); return; }
-  const type = document.getElementById('bk-type').value;
-  const time = document.getElementById('bk-time').value;
-  const size = document.getElementById('bk-size').value;
-  const ref = 'PD-EVT-' + String(Math.floor(1000 + Math.random()*9000));
-  const rec = await Store.addBooking({ ref, name, contact, date, type, time, size,
-    notes: document.getElementById('bk-notes').value.trim() });
-  document.getElementById('bk-ref').textContent = rec.ref || ref;
-  document.getElementById('bk-summary').textContent =
-    `${type} · ${date} · ${time} · ${size} guests. We'll confirm with ${name} within 24 hours.`;
-  document.getElementById('book-form').style.display = 'none';
-  document.getElementById('book-confirm').style.display = '';
-  document.getElementById('book-form').reset();
-  window.scrollTo({top:0,behavior:'smooth'});
-  toast('Booking request sent 🌴');
-  refreshBkBadge();
-});
-
-/* ─── OWNER DASHBOARD — PIN-gated (default 7687 = "POUR"; set ADMIN_PIN to change) ───
- * Events publish to the cloud store when attached, so they appear on every
- * customer's calendar. Booking requests land in the Bookings inbox. */
-STATE.admin = false;
-function setAdminStatus(){
-  const el = document.getElementById('admin-status');
-  el.textContent = Store.cloud ? '☁️ Cloud sync on' : '📱 On-device';
-  el.classList.toggle('cloud', Store.cloud);
-}
-function showAdminShell(){
-  document.getElementById('admin-gate').style.display = STATE.admin ? 'none' : '';
-  document.getElementById('admin-shell').style.display = STATE.admin ? '' : 'none';
-  if(STATE.admin) setAdminStatus();
-}
-document.getElementById('owner-login').addEventListener('click', () => { showAdminShell(); go('admin'); });
-document.getElementById('admin-gate').addEventListener('submit', e => {
-  e.preventDefault();
-  const pin = document.getElementById('ad-pin').value;
-  if(pin === '7687' || (Store.cloud && pin.length >= 4)){
-    STATE.admin = true; Store.pin = pin;
-    showAdminShell(); renderOrders(); renderCustomers(); renderAdminList(); renderBookings();
-    toast('Welcome back, boss 🌴');
-  } else toast('Wrong PIN');
-  document.getElementById('ad-pin').value = '';
-});
-
-// Tabs
-const ADMIN_PANELS = { orders:'admin-orders-panel', loyalty:'admin-loyalty-panel', events:'admin-events-panel', bookings:'admin-bookings-panel' };
-document.querySelectorAll('#admin-tabs .admin-tab').forEach(t => {
-  t.addEventListener('click', () => {
-    document.querySelectorAll('#admin-tabs .admin-tab').forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-    const tab = t.dataset.tab;
-    Object.entries(ADMIN_PANELS).forEach(([k,id]) => { document.getElementById(id).style.display = k===tab ? '' : 'none'; });
-    if(tab==='bookings') renderBookings();
-    if(tab==='orders') renderOrders();
-    if(tab==='loyalty') renderCustomers();
-  });
-});
-document.getElementById('bk-refresh').addEventListener('click', renderBookings);
-document.getElementById('ord-refresh').addEventListener('click', renderOrders);
-document.getElementById('ly-refresh').addEventListener('click', renderCustomers);
-
-/* ─── Owner: live orders ─── */
-const ORDER_NEXT = { new:'ready', ready:'done', done:'new' };
-const ORDER_ACTION = { new:'Mark ready', ready:'Mark picked up', done:'Reopen' };
-function timeAgo(iso){
-  const s = Math.floor((Date.now() - new Date(iso).getTime())/1000);
-  if(s<60) return 'just now'; if(s<3600) return Math.floor(s/60)+'m ago';
-  if(s<86400) return Math.floor(s/3600)+'h ago'; return Math.floor(s/86400)+'d ago';
-}
-async function refreshOrdBadge(){
-  const n = (await Store.getOrders()).filter(o => o.status==='new').length;
-  const badge = document.getElementById('ord-badge');
-  if(n>0){ badge.style.display=''; badge.textContent = n; } else badge.style.display='none';
-}
-async function renderOrders(){
-  const root = document.getElementById('admin-orders-list');
-  root.innerHTML = '<div class="empty-state" style="padding:20px"><p>Loading…</p></div>';
-  const list = await Store.getOrders();
-  if(Store.cloud) setAdminStatus();
-  refreshOrdBadge();
-  if(!list.length){ root.innerHTML = '<div class="empty-state" style="padding:20px"><p>No orders yet. Orders placed in the app land here live — name, items, total, and a button to mark them ready.</p></div>'; return; }
-  root.innerHTML = list.map(o => {
-    const lines = (o.items||[]).map(it => `${it.qty}× ${it.name}${it.choice?` (${it.choice})`:''}${it.size&&it.size!=='regular'?` · ${it.size}`:''}`).join('<br/>');
-    return `
-    <div class="order-card ${o.status}">
-      <div class="top"><span class="who">${o.name||'Guest'} ${o.phone?`· ${o.phone}`:''}</span><span class="ref">${o.num}</span></div>
-      <div class="lines">${lines}${o.notes?`<br/><i>"${o.notes}"</i>`:''}</div>
-      <div class="foot">
-        <span class="tot">$${(o.total||0).toFixed(2)} · <span class="ostat">${o.status}</span> · ${timeAgo(o.createdAt)}</span>
-        <button class="btn btn-pine" data-ord="${o.id}" data-st="${ORDER_NEXT[o.status]}" style="padding:7px 12px;font-size:12px">${ORDER_ACTION[o.status]}</button>
-      </div>
-    </div>`;
-  }).join('');
-  root.querySelectorAll('[data-ord]').forEach(b => {
-    b.addEventListener('click', async () => { await Store.setOrderStatus(b.dataset.ord, b.dataset.st); renderOrders(); });
-  });
-}
-
-/* ─── Owner: loyalty / Pour Pass members ─── */
-async function renderCustomers(){
-  const root = document.getElementById('admin-loyalty-list');
-  root.innerHTML = '<div class="empty-state" style="padding:20px"><p>Loading…</p></div>';
-  const list = await Store.getCustomers();
-  if(Store.cloud) setAdminStatus();
-  if(!list.length){ root.innerHTML = '<div class="empty-state" style="padding:20px"><p>No members yet. Customers appear here when they start a Pour Pass or place an order. Use the form above to add a stamp for a walk-in.</p></div>'; return; }
-  const sorted = [...list].sort((a,b) => (b.lastVisit||'').localeCompare(a.lastVisit||''));
-  root.innerHTML = sorted.map(c => `
-    <div class="cust-card">
-      <div class="ci">
-        <div class="cn">${c.name||'Walk-in'}</div>
-        <div class="cm">${c.phone} · ${c.lifetime||0} pours · $${(c.spent||0).toFixed(0)} spent</div>
-        ${c.rewards>0?`<span class="reward-pill">🎉 ${c.rewards} free pour${c.rewards>1?'s':''}</span>`:''}
-      </div>
-      <button class="cbtn" data-star="${c.phone}" data-d="-1" aria-label="Remove stamp">−</button>
-      <div class="cstars">${c.stars||0}<small>/ 9</small></div>
-      <button class="cbtn plus" data-star="${c.phone}" data-d="1" aria-label="Add stamp">+</button>
-    </div>
-  `).join('');
-  root.querySelectorAll('[data-star]').forEach(b => {
-    b.addEventListener('click', async () => { await Store.adjustStars(b.dataset.star, parseInt(b.dataset.d,10)); renderCustomers(); });
-  });
-}
-document.getElementById('loyalty-form').addEventListener('submit', async e => {
-  e.preventDefault();
-  const phone = document.getElementById('ly-phone').value.trim();
-  if(Store.normPhone(phone).length < 7){ toast('Enter a valid phone'); return; }
-  const name = document.getElementById('ly-name').value.trim();
-  const amount = parseFloat(document.getElementById('ly-amount').value) || 0;
-  await Store.logSale(phone, name, amount);
-  e.target.reset();
-  renderCustomers();
-  toast('Stamp added ★');
-});
-
-const MONTH_ABBR = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-function renderAdminList(){
-  const root = document.getElementById('admin-event-list');
-  const own = loadOwnerEvents().sort((a,b) => a.date - b.date);
-  root.innerHTML = own.length ? own.map(ev => `
-    <div class="event-card">
-      <div class="date-stack">
-        <div class="mo">${MONTH_ABBR[ev.date.getMonth()]}</div>
-        <div class="d">${ev.date.getDate()}</div>
-      </div>
-      <div class="body"><h4>${ev.title}</h4><p>${ev.time}</p></div>
-      <button class="btn btn-ghost" data-del-ev="${ev.id}" style="padding:8px 12px;font-size:12px;border-color:var(--pink);color:var(--pink)">Delete</button>
-    </div>
-  `).join('') : '<div class="empty-state" style="padding:20px"><p>Nothing posted yet. Publish your first event above.</p></div>';
-  root.querySelectorAll('[data-del-ev]').forEach(b => {
-    b.addEventListener('click', async () => {
-      await Store.deleteEvent(b.dataset.delEv);
-      rebuildEvents(); renderAdminList(); renderHomeEvents();
-      toast('Event removed');
-    });
-  });
-}
-document.getElementById('admin-form').addEventListener('submit', async e => {
-  e.preventDefault();
-  const title = document.getElementById('ad-title').value.trim();
-  const iso = document.getElementById('ad-date').value;
-  const time = document.getElementById('ad-time').value.trim();
-  if(!title || !iso || !time){ toast('Title, date & time required'); return; }
-  try{
-    await Store.addEvent({ iso, type:document.getElementById('ad-type').value, title, time,
-      desc:document.getElementById('ad-desc').value.trim() || 'Posted by the Pour Decisions crew.' });
-  }catch(err){
-    if(err.message === 'pin'){ toast('Session expired — re-enter PIN'); STATE.admin=false; showAdminShell(); return; }
-  }
-  rebuildEvents(); renderAdminList(); renderHomeEvents();
-  e.target.reset();
-  toast(Store.cloud ? 'Event published to everyone 🌴' : 'Event live on the calendar 🌴');
-});
-
-// Bookings inbox
-async function refreshBkBadge(){
-  const n = (await Store.getBookings()).filter(b => b.status !== 'done').length;
-  const badge = document.getElementById('bk-badge');
-  if(n > 0){ badge.style.display=''; badge.textContent = n; } else badge.style.display='none';
-}
-async function renderBookings(){
-  const root = document.getElementById('admin-bookings-list');
-  root.innerHTML = '<div class="empty-state" style="padding:20px"><p>Loading…</p></div>';
-  const list = await Store.getBookings();
-  if(Store.cloud) setAdminStatus();
-  refreshBkBadge();
-  if(!list.length){ root.innerHTML = '<div class="empty-state" style="padding:20px"><p>No booking requests yet. They\'ll show up here the moment someone books the space.</p></div>'; return; }
-  root.innerHTML = list.map(b => {
-    const tel = /^[-+()\d\s]+$/.test(b.contact);
-    const link = tel ? 'tel:' + b.contact.replace(/[^\d+]/g,'') : 'mailto:' + b.contact;
-    return `
-    <div class="booking-card">
-      <div class="top"><span class="who">${b.name}</span><span class="ref">${b.ref||''}</span></div>
-      <div class="meta"><b>${b.type||'Event'}</b> · ${b.date}${b.time?' · '+b.time:''}${b.size?' · '+b.size+' guests':''}<br/>${b.contact}</div>
-      ${b.notes ? `<div class="notes">"${b.notes}"</div>` : ''}
-      <div class="acts">
-        <a class="reply" href="${link}">${tel?'Call':'Email'} back</a>
-        <button class="del" data-del-bk="${b.id}">Archive</button>
-      </div>
-    </div>`;
-  }).join('');
-  root.querySelectorAll('[data-del-bk]').forEach(btn => {
-    btn.addEventListener('click', async () => { await Store.deleteBooking(btn.dataset.delBk); renderBookings(); });
-  });
-}
 
 const PKGS = {
   sub:{title:'Weekly subscription',eyebrow:'Subscription',blurb:'Pick a tier. Skip or cancel anytime.',
@@ -2668,312 +1481,17 @@ function toast(msg){
   toastTO = setTimeout(() => document.getElementById('toast').classList.remove('show'), 2200);
 }
 
-/* ───────────────── INSTALL / ADD-TO-HOME (iOS + Android) ───────────────── */
-const PWA = { deferredPrompt:null };
-function isStandalone(){
-  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-}
-function isIOS(){
-  return /iphone|ipad|ipod/i.test(navigator.userAgent) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-}
-function platformLabel(){
-  if(isStandalone()) return "You're using the installed app 🎉";
-  return isIOS() ? 'Add to your home screen — iPhone & iPad' : 'Add to your home screen — iPhone & Android';
-}
-const iosSheet = document.getElementById('ios-sheet');
-function openInstallSheet(){
-  // Show platform-appropriate manual steps (used on iOS, or when no native prompt).
-  document.getElementById('ios-steps-ios').style.display = isIOS() ? '' : 'none';
-  document.getElementById('ios-steps-android').style.display = isIOS() ? 'none' : '';
-  document.getElementById('ios-lead').textContent = isIOS()
-    ? "Safari can add Pour Decisions to your home screen — it opens full-screen and works offline."
-    : "Add Pour Decisions to your home screen — it opens full-screen and works offline.";
-  iosSheet.classList.add('show');
-}
-function closeInstallSheet(){ iosSheet.classList.remove('show'); }
-document.getElementById('ios-done').addEventListener('click', closeInstallSheet);
-iosSheet.addEventListener('click', e => { if(e.target===iosSheet) closeInstallSheet(); });
-
-async function triggerInstall(){
-  // Android/desktop Chrome: fire the captured native prompt. iOS/others: show steps.
-  if(PWA.deferredPrompt){
-    PWA.deferredPrompt.prompt();
-    const { outcome } = await PWA.deferredPrompt.userChoice;
-    PWA.deferredPrompt = null;
-    hideInstallBanner();
-    toast(outcome === 'accepted' ? 'Installing the app… 🌴' : 'No worries — install anytime from Account');
-  } else {
-    openInstallSheet();
-  }
-}
-const installBanner = document.getElementById('install-banner');
-function showInstallBanner(){
-  if(isStandalone()) return;
-  if(localStorage.getItem('pd-install-dismissed') === '1') return;
-  installBanner.classList.add('show');
-}
-function hideInstallBanner(){ installBanner.classList.remove('show'); }
-document.getElementById('install-go').addEventListener('click', triggerInstall);
-document.getElementById('install-x').addEventListener('click', () => {
-  hideInstallBanner();
-  localStorage.setItem('pd-install-dismissed','1');
-});
-document.getElementById('install-row').addEventListener('click', () => {
-  if(isStandalone()){ toast("You're already using the installed app 🎉"); return; }
-  triggerInstall();
-});
-
-// ── Nav drawer (top-left hamburger) ──
-const drawer = document.getElementById('drawer');
-const drawerScrim = document.getElementById('drawer-scrim');
-function openDrawer(){ drawer.classList.add('show'); drawerScrim.classList.add('show'); }
-function closeDrawer(){ drawer.classList.remove('show'); drawerScrim.classList.remove('show'); }
-document.getElementById('btn-menu-burger').addEventListener('click', openDrawer);
-drawerScrim.addEventListener('click', closeDrawer);
-// Any route button or link inside the drawer closes it after acting.
-document.getElementById('drawer-nav').addEventListener('click', (e) => {
-  if(e.target.closest('[data-route],a')) closeDrawer();
-});
-document.getElementById('drawer-install').addEventListener('click', () => {
-  closeDrawer();
-  if(isStandalone()){ toast("You're already using the installed app 🎉"); return; }
-  triggerInstall();
-});
-
-// Android/desktop Chrome hands us the install event — capture it for our own button.
-window.addEventListener('beforeinstallprompt', e => {
-  e.preventDefault();
-  PWA.deferredPrompt = e;
-  setTimeout(showInstallBanner, 2600);
-});
-window.addEventListener('appinstalled', () => {
-  PWA.deferredPrompt = null;
-  hideInstallBanner();
-  toast('Installed! Find Pour Decisions on your home screen 🌴');
-});
-
-function initInstallUI(){
-  document.getElementById('install-row-sub').textContent = platformLabel();
-  if(isStandalone()) return;            // already installed — stay quiet
-  // iOS never fires beforeinstallprompt, so surface the banner ourselves.
-  if(isIOS()) setTimeout(showInstallBanner, 2600);
-}
-
 function init(){
   renderFeatured();
-  renderCombos();
   renderMenu();
   renderHomeEvents();
   updateCartBadge();
-  initInstallUI();
   setTimeout(() => document.getElementById('splash').classList.add('gone'), 1700);
   if('serviceWorker' in navigator){
-    // Auto-update the installed app: when a new service worker takes control,
-    // reload once so the home-screen app always shows the latest version.
-    if(navigator.serviceWorker.controller){
-      let reloaded = false;
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if(reloaded) return; reloaded = true; location.reload();
-      });
-    }
-    navigator.serviceWorker.register('sw.js').then(reg => {
-      reg.update();
-      // Check for a new version whenever the app is reopened or refocused.
-      document.addEventListener('visibilitychange', () => {
-        if(document.visibilityState === 'visible') reg.update();
-      });
-      setInterval(() => reg.update(), 30*60*1000);
-    }).catch(() => {});
+    navigator.serviceWorker.register('sw.js').catch(() => {});
   }
-  // Pull any cloud-published events so the calendar/home reflect the latest.
-  Store.syncEvents().then(cloud => {
-    if(cloud){ rebuildEvents(); renderHomeEvents(); if(STATE.view==='calendar') renderCalendar(); }
-  });
 }
 window.addEventListener('DOMContentLoaded', init);
 </script>
-
-<!-- PINA CHATBOT -->
-<style>
-/* ── Piña Chat Widget ── */
-#pina-fab{position:fixed;bottom:calc(80px + var(--safe-bot) + 12px);right:16px;z-index:200;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--orange));border:none;cursor:pointer;box-shadow:0 4px 18px rgba(232,181,71,.45);display:flex;align-items:center;justify-content:center;font-size:22px;transition:transform .2s ease,box-shadow .2s ease;}
-#pina-fab:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(232,181,71,.55);}
-#pina-fab .pina-badge{position:absolute;top:-4px;right:-4px;background:var(--pink);color:#fff;border-radius:50%;width:18px;height:18px;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;display:none;}
-
-#pina-chat{position:fixed;bottom:calc(80px + var(--safe-bot) + 76px);right:16px;z-index:201;width:min(340px, calc(100vw - 32px));background:var(--cream);border-radius:var(--r-xl);box-shadow:var(--shadow-pop);display:flex;flex-direction:column;overflow:hidden;transform:translateY(16px) scale(.96);opacity:0;pointer-events:none;transition:transform .3s cubic-bezier(.2,.7,.2,1),opacity .3s ease;max-height:min(480px,calc(100dvh - 200px));}
-#pina-chat.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto;}
-
-.pina-head{background:linear-gradient(135deg,var(--teal-deep),var(--teal));color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.pina-head .pina-avatar{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.pina-head .pina-info{flex:1;min-width:0;}
-.pina-head .pina-name{font-family:var(--f-display);font-weight:800;font-size:15px;line-height:1.2;}
-.pina-head .pina-status{font-size:11px;opacity:.8;font-weight:500;}
-.pina-head .pina-close{background:none;border:none;color:#fff;font-size:20px;cursor:pointer;padding:0;line-height:1;opacity:.8;flex-shrink:0;}
-.pina-head .pina-close:hover{opacity:1;}
-
-#pina-messages{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:8px;overscroll-behavior:contain;}
-.pina-msg{max-width:80%;padding:9px 13px;border-radius:18px;font-size:14px;line-height:1.45;word-break:break-word;animation:msgIn .2s ease both;}
-@keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.pina-msg.assistant{background:var(--teal-deep);color:#fff;align-self:flex-start;border-bottom-left-radius:6px;}
-.pina-msg.user{background:var(--gold);color:var(--ink);align-self:flex-end;border-bottom-right-radius:6px;font-weight:600;}
-
-.pina-typing{align-self:flex-start;background:var(--teal-deep);color:#fff;padding:9px 14px;border-radius:18px;border-bottom-left-radius:6px;display:none;align-items:center;gap:4px;}
-.pina-typing.show{display:flex;}
-.pina-typing span{width:6px;height:6px;background:rgba(255,255,255,.7);border-radius:50%;animation:blink 1.2s ease infinite;}
-.pina-typing span:nth-child(2){animation-delay:.2s;}
-.pina-typing span:nth-child(3){animation-delay:.4s;}
-@keyframes blink{0%,80%,100%{opacity:.3}40%{opacity:1}}
-
-.pina-suggestions{display:flex;gap:6px;flex-wrap:wrap;padding:0 12px 10px;flex-shrink:0;}
-.pina-suggestion{background:#fff;border:1.5px solid var(--line);border-radius:var(--r-pill);padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;color:var(--teal);transition:background .15s,border-color .15s;white-space:nowrap;}
-.pina-suggestion:hover{background:var(--cream-warm);border-color:var(--teal);}
-
-.pina-input-row{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line);background:#fff;flex-shrink:0;}
-#pina-input{flex:1;border:1.5px solid var(--line);border-radius:var(--r-pill);padding:9px 14px;font-family:var(--f-body);font-size:14px;outline:none;background:var(--cream);color:var(--ink);transition:border-color .15s;}
-#pina-input:focus{border-color:var(--teal);}
-#pina-send{background:var(--teal);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s,transform .15s;}
-#pina-send:hover{background:var(--teal-deep);transform:scale(1.05);}
-#pina-send:disabled{opacity:.5;cursor:not-allowed;transform:none;}
-</style>
-
-<!-- Piña FAB -->
-<button id="pina-fab" aria-label="Chat with Piña">
-  <span>🍍</span>
-  <span class="pina-badge" id="pina-badge">1</span>
-</button>
-
-<!-- Piña Chat Window -->
-<div id="pina-chat" role="dialog" aria-label="Chat with Piña">
-  <div class="pina-head">
-    <div class="pina-avatar">🍍</div>
-    <div class="pina-info">
-      <div class="pina-name">Piña</div>
-      <div class="pina-status">Your Pour Decisions guide</div>
-    </div>
-    <button class="pina-close" id="pina-close" aria-label="Close chat">×</button>
-  </div>
-  <div id="pina-messages">
-    <div class="pina-typing" id="pina-typing">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-  <div class="pina-suggestions" id="pina-suggestions">
-    <button class="pina-suggestion" data-msg="What's on the menu?">Menu</button>
-    <button class="pina-suggestion" data-msg="What are your hours?">Hours</button>
-    <button class="pina-suggestion" data-msg="Where are you located?">Location</button>
-    <button class="pina-suggestion" data-msg="Tell me about cleanses">Cleanses</button>
-  </div>
-  <div class="pina-input-row">
-    <input id="pina-input" type="text" placeholder="Ask Piña anything..." maxlength="300" autocomplete="off" />
-    <button id="pina-send" aria-label="Send">&#10148;</button>
-  </div>
-</div>
-
-<script>
-(function(){
-  'use strict';
-
-  const fab       = document.getElementById('pina-fab');
-  const chat      = document.getElementById('pina-chat');
-  const closeBtn  = document.getElementById('pina-close');
-  const messagesEl= document.getElementById('pina-messages');
-  const inputEl   = document.getElementById('pina-input');
-  const sendBtn   = document.getElementById('pina-send');
-  const typingEl  = document.getElementById('pina-typing');
-  const suggestEl = document.getElementById('pina-suggestions');
-  const badge     = document.getElementById('pina-badge');
-
-  let isOpen = false;
-  let history = [];
-  let waiting = false;
-  let greeted = false;
-
-  function toggleChat() {
-    isOpen = !isOpen;
-    chat.classList.toggle('open', isOpen);
-    if (isOpen) {
-      badge.style.display = 'none';
-      if (!greeted) { greet(); greeted = true; }
-      setTimeout(() => inputEl.focus(), 350);
-    }
-  }
-
-  function greet() {
-    addMessage("Hey! I'm Piña 🍍 — your guide to Pour Decisions. Ask me about our menu, hours, cleanses, or anything else!", 'assistant');
-  }
-
-  function addMessage(text, role) {
-    const div = document.createElement('div');
-    div.className = 'pina-msg ' + role;
-    div.textContent = text;
-    messagesEl.insertBefore(div, typingEl);
-    messagesEl.scrollTop = messagesEl.scrollHeight;
-  }
-
-  function showTyping() {
-    typingEl.classList.add('show');
-    messagesEl.scrollTop = messagesEl.scrollHeight;
-  }
-
-  function hideTyping() {
-    typingEl.classList.remove('show');
-  }
-
-  async function send(text) {
-    const msg = text.trim();
-    if (!msg || waiting) return;
-
-    waiting = true;
-    sendBtn.disabled = true;
-    inputEl.value = '';
-    suggestEl.style.display = 'none';
-
-    addMessage(msg, 'user');
-    showTyping();
-
-    try {
-      const res = await fetch('/api/pina', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: msg, history })
-      });
-      const data = await res.json();
-      hideTyping();
-      const reply = data.reply || "Sorry, I had a little hiccup! Try again or give us a call.";
-      addMessage(reply, 'assistant');
-      history.push({ role: 'user', content: msg });
-      history.push({ role: 'assistant', content: reply });
-    } catch (e) {
-      hideTyping();
-      addMessage("Sorry, I'm having a moment! Try again or call us directly.", 'assistant');
-    } finally {
-      waiting = false;
-      sendBtn.disabled = false;
-    }
-  }
-
-  fab.addEventListener('click', toggleChat);
-  closeBtn.addEventListener('click', toggleChat);
-
-  sendBtn.addEventListener('click', () => send(inputEl.value));
-  inputEl.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(inputEl.value); }
-  });
-
-  suggestEl.querySelectorAll('.pina-suggestion').forEach(btn => {
-    btn.addEventListener('click', () => send(btn.dataset.msg));
-  });
-
-  // Show badge after a short delay to draw attention on first visit
-  setTimeout(() => {
-    if (!isOpen) {
-      badge.style.display = 'flex';
-      badge.textContent = '1';
-    }
-  }, 3500);
-})();
-</script>
-
 </body>
 </html>
